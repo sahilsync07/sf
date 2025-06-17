@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-4xl mx-auto p-4">
-    <!-- Header with SF Rayagada, Refresh, and Admin -->
+    <!-- Header with SF Srikakulam, Refresh, and Admin -->
     <div
       class="flex items-center justify-between mb-4 bg-gray-800 py-2 px-4 rounded-lg"
     >
@@ -15,9 +15,9 @@
       />
       <!-- Placeholder to maintain centering when refresh is not visible -->
       <div v-else class="w-10 h-10"></div>
-      <!-- SF Rayagada (Center) -->
+      <!-- SF Srikakulam (Center) -->
       <div class="text-2xl font-bold text-center flex-1 text-white">
-        SF Srikakulam
+        Shree Footwear SKLM Stock
       </div>
       <!-- Admin Icon (Right) -->
       <img
@@ -42,66 +42,21 @@
         All
       </button>
       <button
-        v-for="brand in brands"
-        :key="brand.name"
-        @click="selectGroup(brand.name)"
-        :class="[
-          'h-10 rounded-lg bg-white border border-gray-300 w-[25%] sm:w-auto',
-          selectedGroup === brand.name
-            ? 'border-blue-500'
-            : 'hover:border-gray-500',
-        ]"
-      >
-        <img
-          :src="brand.logo"
-          :alt="`${brand.name} Logo`"
-          class="h-full w-auto object-contain"
-        />
-      </button>
-      <button
-        @click="selectGroup('Kids')"
+        v-for="group in groups"
+        :key="group"
+        @click="selectGroup(group)"
         :class="[
           'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === 'Kids' ? 'bg-blue-600' : 'hover:bg-gray-700',
+          selectedGroup === group ? 'bg-blue-600' : 'hover:bg-gray-700',
         ]"
       >
-        Kids
-      </button>
-      <button
-        @click="selectGroup('Hawai')"
-        :class="[
-          'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === 'Hawai' ? 'bg-blue-600' : 'hover:bg-gray-700',
-        ]"
-      >
-        Hawai
-      </button>
-      <button
-        @click="selectGroup('Loose')"
-        :class="[
-          'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === 'Loose' ? 'bg-blue-600' : 'hover:bg-gray-700',
-        ]"
-      >
-        Loose
-      </button>
-      <button
-        @click="selectGroup('Box')"
-        :class="[
-          'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === 'Box' ? 'bg-blue-600' : 'hover:bg-gray-700',
-        ]"
-      >
-        Box
-      </button>
-      <button
-        @click="selectGroup('Shoe')"
-        :class="[
-          'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === 'Shoe' ? 'bg-blue-600' : 'hover:bg-gray-700',
-        ]"
-      >
-        Shoe
+        {{
+          group
+            .replace("@12%", "")
+            .replace("@ 12%", "")
+            .replace("12%", "")
+            .trim()
+        }}
       </button>
     </div>
     <!-- Search Bar -->
@@ -121,11 +76,6 @@
         class="w-full sm:w-1/2 px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:border-blue-500 text-sm"
       >
         <option value="All">All</option>
-        <option value="Kids">Kids</option>
-        <option value="Hawai">Hawai</option>
-        <option value="Loose">Loose</option>
-        <option value="Box">Box</option>
-        <option value="Shoe">Shoes</option>
         <option
           v-for="group in stockData"
           :key="group.groupName"
@@ -452,44 +402,29 @@ export default {
       currentGroupName: "",
       touchStartX: 0,
       viewMode: "image",
-      brands: [
-        {
-          name: "Paragon",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/paragonLogo_rqk3hu.webp",
-        },
-        {
-          name: "Reliance",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/relianceLogo_bvgwwz.png",
-        },
-        {
-          name: "Cubix",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667073/cubixLogo_bwawj3.jpg",
-        },
-        {
-          name: "Florex",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/florexLogo_wn50tj.jpg",
-        },
-        {
-          name: "Eeken",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749668232/eekenLogo_rg5xwa.webp",
-        },
-        {
-          name: "Escoute",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/escouteLogo_maieji.jpg",
-        },
+      groups: [
+        "Hawai @ 12%",
+        "Stimulus @ 12%",
+        "Paragon @ 12%",
+        "PARAGON MAX 12%",
+        "Paralite @ 12%",
+        "P-Toes @ 12%",
+        "School Shoes @ 12%",
+        "Solea @ 12%",
+        "Vertex & Slickers @ 12%",
+        "Walkahoic@12%",
       ],
       paragonSubgroups: [
-        "Walkaholic",
-        "VERTEX, SLICKERS & FENDER",
-        "Stimulus",
-        "Solea & Meriva , Mascara",
-        "P-TOES",
-        "Paralite",
-        "PARAGON COMFY",
-        "Paragon Blot",
-        "PARAGON",
-        "Max",
-        "Hawai Chappal",
+        "Hawai @ 12%",
+        "Stimulus @ 12%",
+        "Paragon @ 12%",
+        "PARAGON MAX 12%",
+        "Paralite @ 12%",
+        "P-Toes @ 12%",
+        "School Shoes @ 12%",
+        "Solea @ 12%",
+        "Vertex & Slickers @ 12%",
+        "Walkahoic@12%",
       ],
     };
   },
@@ -509,78 +444,9 @@ export default {
           .filter((group) => group.products.length > 0);
       }
       if (this.selectedGroup !== "All") {
-        if (this.selectedGroup === "Paragon") {
-          filtered = filtered.filter((group) =>
-            this.paragonSubgroups.includes(group.groupName)
-          );
-        } else if (this.selectedGroup === "Reliance") {
-          filtered = filtered.filter(
-            (group) => group.groupName === "RELIANCE FOOTWEAR"
-          );
-        } else if (this.selectedGroup === "Florex") {
-          filtered = filtered.filter(
-            (group) => group.groupName === "Florex (Swastik)"
-          );
-        } else if (this.selectedGroup === "Cubix") {
-          filtered = filtered.filter((group) => group.groupName === "CUBIX");
-        } else if (this.selectedGroup === "Kids") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/kid|toes|boy|girl|chu|1\*|child/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Hawai") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/hawai|walkaholic|cushion/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Loose") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/loose|era ladies|bond|r.k|r k/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Box") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/seltos|airson|airsun|lion|fencer/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Shoe") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName.toLowerCase().match(/shoe/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else {
-          filtered = filtered.filter(
-            (group) => group.groupName === this.selectedGroup
-          );
-        }
+        filtered = filtered.filter(
+          (group) => group.groupName === this.selectedGroup
+        );
       }
       return filtered;
     },
