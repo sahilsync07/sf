@@ -520,9 +520,7 @@ export default {
           const response = await axios.get("http://localhost:3000/api/stock");
           this.stockData = response.data;
         } else {
-          const response = await fetch(
-            "/sf/Frontend/src/assets/stock-data.json"
-          );
+          const response = await fetch("/sf/assets/stock-data.json");
           this.stockData = await response.json();
         }
         this.error = null;
