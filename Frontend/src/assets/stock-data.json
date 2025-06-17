@@ -20,7 +20,7 @@
         "quantity": -528,
         "rate": 1656.71,
         "amount": 874740.68,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750086269/033_RED_BLU.jpg"
       },
       {
         "productName": "Acusole 0145 Gents 06*10 Mrp 144 /-",
@@ -34,7 +34,7 @@
         "quantity": 202,
         "rate": 81.47,
         "amount": -16457.14,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750086269/033_RED_BLU.jpg"
       },
       {
         "productName": "Acusole Hawai 0145 06*10 Mrp 139 /-",
@@ -48,49 +48,49 @@
         "quantity": -9,
         "rate": 61.78,
         "amount": 556.02,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "CUSHION 01*03 MRP 124 /-",
         "quantity": 182,
         "rate": 79.44,
         "amount": -14458.42,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Cushion 04*05 Mrp 128 /-",
         "quantity": 1,
         "rate": 79.63,
         "amount": -79.63,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Cushion 04*05 Mrp 138 /-",
         "quantity": 1489,
         "rate": 88.32,
         "amount": -131515.14,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "CUSHION 06*09 MRP 139 /-",
         "quantity": 5805,
         "rate": 88.95,
         "amount": -516374.08,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Cushion 10*12 Gents Mrp 159 /-",
         "quantity": 228,
         "rate": 102.07,
         "amount": -23271.35,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "PRINCESS 04*08 MRP 139 /-",
         "quantity": 2329,
         "rate": 88.62,
         "amount": -206384.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       }
     ],
     "totalAmount": -98814.30000000002
@@ -303,21 +303,21 @@
         "quantity": -3,
         "rate": 68,
         "amount": 204,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Cushion 06*09 Mrp 114 /-",
         "quantity": 8,
         "rate": 75.25,
         "amount": -602,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Cushion 06*09 Mrp 119 /-",
         "quantity": 10,
         "rate": 81.1,
         "amount": -811.03,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Mascara 5215 05*08 Mrp 309 /-",
@@ -331,63 +331,63 @@
         "quantity": 1,
         "rate": 173.74,
         "amount": -173.74,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140134/MERIVA_2329_BLUE.jpg"
       },
       {
         "productName": "Meriva 2340 Ladies 05*08 Mrp 329 /-",
         "quantity": 1,
         "rate": 186.38,
         "amount": -186.38,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140145/Meriva_2340_Maroon.jpg"
       },
       {
         "productName": "Paragon 16048 06*10 Mrp 349 /-",
         "quantity": -31,
         "rate": 230.6,
         "amount": 7148.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749480152/16048.jpg"
       },
       {
         "productName": "Paralite 1125 06*10 Mrp 125 /-",
         "quantity": -7,
         "rate": 81.3,
         "amount": 569.1,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749878819/1125_BLK.jpg"
       },
       {
         "productName": "Paralite 1129 06*10 Mrp 139/-",
         "quantity": -1,
         "rate": 83.5,
         "amount": 83.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140167/PARALITE_1129.jpg"
       },
       {
         "productName": "Paralite 1190 06*10 Mrp 125/-",
         "quantity": -10,
         "rate": 89.43,
         "amount": 894.3,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876522/1190_BLK.jpg"
       },
       {
         "productName": "Paralite 1190 06*10 Mrp 130 /-",
         "quantity": -16,
         "rate": 84.5,
         "amount": 1352,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876522/1190_BLK.jpg"
       },
       {
         "productName": "Paralite 1190 06*10 Mrp 155.50 /-",
         "quantity": -14,
         "rate": 99.66,
         "amount": 1395.24,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876522/1190_BLK.jpg"
       },
       {
         "productName": "Paralite 1215 04*08 Mrp 169 /-",
         "quantity": -1,
         "rate": 101.5,
         "amount": 101.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140210/1215_BKB.jpg"
       },
       {
         "productName": "Princess 04*08 Mrp 105/-",
@@ -471,7 +471,7 @@
         "quantity": -1,
         "rate": 173.5,
         "amount": 173.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140455/SOLEA_7358.jpg"
       },
       {
         "productName": "Solea 7415 Mrp 229/-",
@@ -485,28 +485,28 @@
         "quantity": 8,
         "rate": 274.5,
         "amount": -2196,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140444/SOLEA_SOFTY_75110.jpg"
       },
       {
         "productName": "Solea 77050@249",
         "quantity": 1,
         "rate": 135.75,
         "amount": -135.75,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140436/77050.jpg"
       },
       {
         "productName": "Solea 77075 05*08 Mrp 299 /-",
         "quantity": -1,
         "rate": 135.75,
         "amount": 135.75,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140426/SOLEA_77075.jpg"
       },
       {
         "productName": "Solea 7950 Mrp 159.50 /-",
         "quantity": -3,
         "rate": 151.5,
         "amount": 454.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140409/7950.jpg"
       },
       {
         "productName": "Vertax 6736@249",
@@ -1689,49 +1689,49 @@
         "quantity": 42,
         "rate": 251.21,
         "amount": -10550.85,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140686/6233109140323025206.jpg"
       },
       {
         "productName": "Paragon Comfy 60005 Gents 06*10 Mrp 499 /-",
         "quantity": 24,
         "rate": 258.73,
         "amount": -6209.4,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140703/6190528448003424590.jpg"
       },
       {
         "productName": "Paragon Comfy 60006 Gents 06*10 Mrp 499 /-",
         "quantity": 6,
         "rate": 251.21,
         "amount": -1507.26,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140717/6190528448003424594.jpg"
       },
       {
         "productName": "Slickers 8611E Gents 06*10 Mrp 329 /-",
         "quantity": 12,
         "rate": 182.85,
         "amount": -2194.19,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140738/6133928419788966419.jpg"
       },
       {
         "productName": "Slickers 8612E Gents 06*10 Mrp 329 /-",
         "quantity": 5,
         "rate": 182.59,
         "amount": -912.96,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140753/6262354453109785135.jpg"
       },
       {
         "productName": "Slickers 8613E Gents 06*10 Mrp 329 /-",
         "quantity": 13,
         "rate": 181.99,
         "amount": -2365.87,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140770/6262354453109785136.jpg"
       },
       {
         "productName": "Slickers 8614E Gents 06*10 Mrp 339 /-",
         "quantity": 24,
         "rate": 186.28,
         "amount": -4470.69,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140787/6262354453109785139.jpg"
       },
       {
         "productName": "Slickers 8760 06*10 Mtp 459 /-",
@@ -1745,49 +1745,49 @@
         "quantity": 12,
         "rate": 201.11,
         "amount": -2413.35,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140814/6233109140323025223.jpg"
       },
       {
         "productName": "Vertax 6685@299",
         "quantity": 24,
         "rate": 179.03,
         "amount": -4296.61,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140829/6156943178138240272.jpg"
       },
       {
         "productName": "Vertex 6153 Gents 06*10 Mrp 274 /-",
         "quantity": 12,
         "rate": 150.56,
         "amount": -1806.76,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140848/6210739288493114774.jpg"
       },
       {
         "productName": "Vertex 6173 06*10 Mrp 299 /-",
         "quantity": -12,
         "rate": 129.75,
         "amount": 1557.03,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140864/6093923423651742152.jpg"
       },
       {
         "productName": "Vertex 6173 Gents 06*10 Mrp 309 /-",
         "quantity": 15,
         "rate": 175.2,
         "amount": -2627.94,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140880/6093923423651742153.jpg"
       },
       {
         "productName": "Vertex 6174 06*10 Mrp 349 /-",
         "quantity": 1,
         "rate": 197.56,
         "amount": -197.56,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140903/6316534563605692830.jpg"
       },
       {
         "productName": "Vertex 6174E Gents 06*10 Mrp 334 /-",
         "quantity": 23,
         "rate": 183.53,
         "amount": -4221.28,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140914/6316534563605692829.jpg"
       },
       {
         "productName": "Vertex 6179 06*10 Mrp 279 /-",
@@ -1808,35 +1808,35 @@
         "quantity": 65,
         "rate": 146.06,
         "amount": -9493.71,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140937/6073310535568442501.jpg"
       },
       {
         "productName": "Vertex 6195E Gents 06*10 Mrp 259 /-",
         "quantity": 54,
         "rate": 143.58,
         "amount": -7753.37,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140951/6073310535568442502.jpg"
       },
       {
         "productName": "Vertex 6198E 06*10 Mrp 239 /- P. Vasool",
         "quantity": 6,
         "rate": 134.43,
         "amount": -806.58,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140965/6316534563605692836.jpg"
       },
       {
         "productName": "Vertex 6198E Gents 06*10 Mrp 249 /-",
         "quantity": 72,
         "rate": 140.41,
         "amount": -10109.38,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140978/6316534563605692835.jpg"
       },
       {
         "productName": "Vertex 6201 06*10 Mrp 384 /-",
         "quantity": 48,
         "rate": 214.9,
         "amount": -10315.11,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140995/6210739288493114779.jpg"
       },
       {
         "productName": "VERTEX 6201 GENTS  (11*12) MRP424/-",
@@ -1850,21 +1850,21 @@
         "quantity": -2,
         "rate": 203.5,
         "amount": 407,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141008/6316352791999794180.jpg"
       },
       {
         "productName": "Vertex 6212 06*10 Mrp 359 /-",
         "quantity": -24,
         "rate": 203.38,
         "amount": 4881.14,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141025/6185766312819670665.jpg"
       },
       {
         "productName": "Vertex 6212 Gents 06*10 Mrp 364 /-",
         "quantity": 24,
         "rate": 201.62,
         "amount": -4838.85,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141035/6185902562067201397.jpg"
       },
       {
         "productName": "Vertex 6223 Gents (30 Pairs) Mrp.389/-",
@@ -1885,7 +1885,7 @@
         "quantity": 24,
         "rate": 211.01,
         "amount": -5064.33,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141067/6210739288493114800.jpg"
       },
       {
         "productName": "Vertex 6256 06*10 Mep 269 /-",
@@ -1899,105 +1899,105 @@
         "quantity": 59,
         "rate": 121.63,
         "amount": -7176.23,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141096/6156943178138240192.jpg"
       },
       {
         "productName": "Vertex 6259E 06*10 MRP 229 /- P Vasool",
         "quantity": 6,
         "rate": 129.34,
         "amount": -776.01,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141110/6208487488679429063.jpg"
       },
       {
         "productName": "Vertex 6259E Gents 06*10 Mrp 234 /-",
         "quantity": 18,
         "rate": 129.52,
         "amount": -2331.27,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141122/6208487488679429062.jpg"
       },
       {
         "productName": "Vertex 650001 Gents 06*10 Mrp 279 /-",
         "quantity": 6,
         "rate": 158.82,
         "amount": -952.91,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141138/6260102653296099734.jpg"
       },
       {
         "productName": "Vertex 650006 Gents 06*10 Mrp 269 /-",
         "quantity": 336,
         "rate": 152.88,
         "amount": -51368.8,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141152/6260102653296099757.jpg"
       },
       {
         "productName": "Vertex 650007 Gents 06*10 Mrp 349 /-",
         "quantity": 48,
         "rate": 191.78,
         "amount": -9205.45,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141165/6210739288493114810.jpg"
       },
       {
         "productName": "Vertex 650008 Gents 06*10 Mrp 369 /-",
         "quantity": 30,
         "rate": 202.77,
         "amount": -6083.07,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141179/6260102653296099716.jpg"
       },
       {
         "productName": "Vertex 650025 Gents 06*10 Mrp 289 /-",
         "quantity": 54,
         "rate": 161.91,
         "amount": -8743.12,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141201/6260102653296099671.jpg"
       },
       {
         "productName": "Vertex 650029 Gents 06*10 Mrp 359 /-",
         "quantity": 18,
         "rate": 201.21,
         "amount": -3621.73,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141216/6069093839756445151.jpg"
       },
       {
         "productName": "Vertex 650034 Gents 06*10 Mrp 289 /-",
         "quantity": 60,
         "rate": 161.97,
         "amount": -9718.25,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141233/6131676619975280668.jpg"
       },
       {
         "productName": "Vertex 650037 Gents 06*10 Mrp 349 /-",
         "quantity": 36,
         "rate": 191.78,
         "amount": -6904.13,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141246/6260102653296099662.jpg"
       },
       {
         "productName": "Vertex 650038S Gents 06*10 Mrp 239 /-",
         "quantity": 66,
         "rate": 133.86,
         "amount": -8834.62,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141262/6260102653296099634.jpg"
       },
       {
         "productName": "Vertex 650040S Gents 06*10 Mrp 239 /-",
         "quantity": 198,
         "rate": 131.33,
         "amount": -26003,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141277/6163192832295288677.jpg"
       },
       {
         "productName": "Vertex 650042 Gents 06*10 Mrp 299 /-",
         "quantity": 60,
         "rate": 168.49,
         "amount": -10109.12,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141290/6210773747015730918.jpg"
       },
       {
         "productName": "Vertex 650047 Gents 06*10 Mrp 259 /-",
         "quantity": 120,
         "rate": 146.72,
         "amount": -17606.4,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141306/6069093839756445021.jpg"
       },
       {
         "productName": "Vertex 6600 06*10 Mrp 399 /-",
