@@ -659,28 +659,28 @@
         "quantity": 41,
         "rate": 194.52,
         "amount": -7975.48,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154378/STIMULUS_3330.jpg"
       },
       {
         "productName": "Bolt Sandal 9137E Gents 06*10 Mrp 469 /-",
         "quantity": 1,
         "rate": 265.69,
         "amount": -265.69,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154386/Blot_9137EG_Grey-Sea_Green.jpg"
       },
       {
         "productName": "Bolt Sandals 9138E Gents 06*10 Mrp 499 /-",
         "quantity": 18,
         "rate": 274.2,
         "amount": -4935.59,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154394/Blot_9138EG_Black-Red.jpg"
       },
       {
         "productName": "Bolt Sandals 9139E Gents 06*10 Mrp 499 /-",
         "quantity": 15,
         "rate": 274.2,
         "amount": -4113,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154403/Blot_9139EG_Black-Red.jpg"
       },
       {
         "productName": "Paragon 16043 04*08 Mrp 229 /-",
@@ -694,7 +694,7 @@
         "quantity": -102,
         "rate": 181.28,
         "amount": 18491.06,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156521/PARALITE_16049_ROYAL_BLUE.jpg"
       },
       {
         "productName": "Paragon Sandal 9097 Gens 06*10 Mrp 559 /-",
@@ -708,35 +708,35 @@
         "quantity": 26,
         "rate": 414.68,
         "amount": -10781.68,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156547/9818_DGY.jpg"
       },
       {
         "productName": "Paralite 16048 Gents 06*10 Mrp 354 /-",
         "quantity": 29,
         "rate": 184.43,
         "amount": -5348.38,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156863/PARALITE_16048_MILITARY_GREEN.jpg"
       },
       {
         "productName": "Paralite 16049 Gents 06*10 Mrp 354 /-",
         "quantity": 130,
         "rate": 184.57,
         "amount": -23993.54,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156521/PARALITE_16049_ROYAL_BLUE.jpg"
       },
       {
         "productName": "PARALITE 16061 GENTS 06*10 MRP 364 /-",
         "quantity": 346,
         "rate": 183.25,
         "amount": -63405.25,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896387/16061_M_GREEN.jpg"
       },
       {
         "productName": "Paralite 1749 Gents 06*10 Mrp 199 /-",
         "quantity": 60,
         "rate": 113.02,
         "amount": -6781.2,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156892/1749.jpg"
       }
     ],
     "totalAmount": -227540.68000000002
@@ -749,21 +749,21 @@
         "quantity": -136,
         "rate": 282.67,
         "amount": 38442.98,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154319/PARAGON_MAX_9613_BROWN.jpg"
       },
       {
         "productName": "Paragon Max 9613 06*10 Mrp 504 /-",
         "quantity": 27,
         "rate": 286.55,
         "amount": -7736.83,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154324/PARAGON_MAX_9613_TAN.jpg"
       },
       {
         "productName": "Paragon Max 9613 Gents 11*12 Mrp 554 /-",
         "quantity": 6,
         "rate": 313.53,
         "amount": -1881.2,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154332/Paragon_Max_9613_Black.jpg"
       },
       {
         "productName": "Paragon Max 9621 Gents 06*10 Mrp 579 /-",
@@ -791,7 +791,7 @@
         "quantity": 4,
         "rate": 276.5,
         "amount": -1105.99,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749802552/9641_BRN.jpg"
       },
       {
         "productName": "Paragon Max 9644 Gents 06*10 Mrp 479 /-",
@@ -811,14 +811,14 @@
         "quantity": 458,
         "rate": 143.49,
         "amount": -65719.31,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749879021/STIMULUS_1250.jpg"
       },
       {
         "productName": "Paragon 1251 06*10 Mrp 249 /-",
         "quantity": -551,
         "rate": 137.54,
         "amount": 75786.29,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749879091/PARAGON_1251_BLACK-RED.jpg"
       },
       {
         "productName": "Paragon 1452 06*10 Mrp 349 /-",
@@ -832,112 +832,112 @@
         "quantity": 27,
         "rate": 208.26,
         "amount": -5622.99,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153883/Paralite_1454_Black_Grey.jpg"
       },
       {
         "productName": "Paragon 1721 06*10 Mrp 219.00/-",
         "quantity": -1809,
         "rate": 222.49,
         "amount": 402488.43,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153936/PARALITE_1721_TURQUOISE-NAVY_BLUE.jpg"
       },
       {
         "productName": "Paralite 1110 06*10 Mrp 199 /-",
         "quantity": -90,
         "rate": 115.77,
         "amount": 10418.91,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153905/PARALITE_1110.jpg"
       },
       {
         "productName": "Paralite 1125 06*10 Mrp 159 /-",
         "quantity": 1061,
         "rate": 100.54,
         "amount": -106676.17,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749878819/1125_BLK.jpg"
       },
       {
         "productName": "Paralite 1170 04*08 Mrp 179 /-",
         "quantity": 108,
         "rate": 103.88,
         "amount": -11219.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153956/1170_BLK.jpg"
       },
       {
         "productName": "Paralite 1180 06*10 Mrp 239 /-",
         "quantity": -551,
         "rate": 130.02,
         "amount": 71641.33,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154074/1180.jpg"
       },
       {
         "productName": "Paralite 1181 06*10 Mrp 229 /-",
         "quantity": -166,
         "rate": 441.42,
         "amount": 73275.72,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154085/1181.jpg"
       },
       {
         "productName": "Paralite 1190 06*10 Mrp 179 /-",
         "quantity": 2073,
         "rate": 112.19,
         "amount": -232564.71,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876522/1190_BLK.jpg"
       },
       {
         "productName": "Paralite 1210 06*10 Mrp 169 /-",
         "quantity": 276,
         "rate": 106.78,
         "amount": -29470.44,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876281/1210_BLK.jpg"
       },
       {
         "productName": "Paralite 1210 Gents 11*12 Mrp 219 /-",
         "quantity": 36,
         "rate": 137.46,
         "amount": -4948.39,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876281/1210_BLK.jpg"
       },
       {
         "productName": "Paralite 1212 06*10 Mrp 199 /-",
         "quantity": 36,
         "rate": 113.53,
         "amount": -4086.9,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154139/PARALITE_1212.jpg"
       },
       {
         "productName": "Paralite 1215 05*08 Mrp 149 /-",
         "quantity": -1206,
         "rate": 91.08,
         "amount": 109842.37,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140210/1215_BKB.jpg"
       },
       {
         "productName": "Paralite 1220 05*08  Mrp 149 /-",
         "quantity": -871,
         "rate": 76.64,
         "amount": 66756.23,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154154/1220_BLK_RED.jpg"
       },
       {
         "productName": "Paralite 1220 Ledish 05*08 Mrp 164 /-",
         "quantity": -1,
         "rate": 94.75,
         "amount": 94.75,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154154/1220_BLK_RED.jpg"
       },
       {
         "productName": "Paralite 1222 06*10 Mrp 169 /-",
         "quantity": 72,
         "rate": 96.5,
         "amount": -6947.8,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154169/1222.jpg"
       },
       {
         "productName": "Paralite 1228 Gents 06*10 Mrp 154 /-",
         "quantity": 84,
         "rate": 93.61,
         "amount": -7863.61,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154176/1228.jpg"
       },
       {
         "productName": "Paralite 1231 Gents 06*10 Mrp 199 /-",
@@ -958,42 +958,42 @@
         "quantity": -72,
         "rate": 67.41,
         "amount": 4853.54,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154208/Paralite_1417_Peach.jpg"
       },
       {
         "productName": "Paralite 1422 Ladies 05*08 Mrp 159 /-",
         "quantity": 36,
         "rate": 87.86,
         "amount": -3162.93,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154215/Paralite_1422_Pista_1.jpg"
       },
       {
         "productName": "Paralite 1454 Gents Mrp.159/-",
         "quantity": 15,
         "rate": 90.07,
         "amount": -1351.05,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153883/Paralite_1454_Black_Grey.jpg"
       },
       {
         "productName": "Paralite 1455 06*10 Mrp 139 /-",
         "quantity": -90,
         "rate": 78.52,
         "amount": 7066.42,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154238/Paralite_1455_Black-Red.jpg"
       },
       {
         "productName": "Paralite 1460 Gents 06*10 Mrp 249 /-",
         "quantity": 11,
         "rate": 141.06,
         "amount": -1551.66,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154248/Paralite_1460_Black_Red.jpg"
       },
       {
         "productName": "Paralite 1476 Gents 06*10 Mrp 249 /-",
         "quantity": 60,
         "rate": 136.83,
         "amount": -8209.69,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154259/1476_BEG.jpg"
       },
       {
         "productName": "Paralite 1477 Gents 06*10 Mrp 229 /-",
@@ -1028,14 +1028,14 @@
         "quantity": 417,
         "rate": 120.39,
         "amount": -50204.39,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153898/PARALITE_1721_GREY-NAVY_BLUE.jpg"
       },
       {
         "productName": "Paralite 1753 Gents 06*0 Mrp 234 /-",
         "quantity": 5,
         "rate": 133.89,
         "amount": -669.43,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154296/1753_NYB.jpg"
       },
       {
         "productName": "Paralite 2522 Gents 06*10 Mrp 239 /-",
@@ -1125,7 +1125,7 @@
         "quantity": 29,
         "rate": 90.07,
         "amount": -2612.03,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153666/P-Toes_1221_Navy_Blue.jpg"
       },
       {
         "productName": "P-Toes 16048 Boys 02*05 Mrp 314 /-",
@@ -1139,7 +1139,7 @@
         "quantity": 30,
         "rate": 177.97,
         "amount": -5339.09,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749825459/16049_BLK_P_TOES.jpg"
       },
       {
         "productName": "P-TOES 1905E 04*05 MRP 129/- P.VASOOL",
@@ -1153,14 +1153,14 @@
         "quantity": 11,
         "rate": 101.54,
         "amount": -1116.97,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153530/P-TOES_264_BLUE.jpg"
       },
       {
         "productName": "P-Toes 3661 Boys 01*03 Mp 114 /-",
         "quantity": 45,
         "rate": 62.64,
         "amount": -2818.92,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153329/P-TOES_3661_SKYBLUE.jpg"
       },
       {
         "productName": "P-Toes 3664 Boys 02*05 Mrp 119 /-",
@@ -1209,14 +1209,14 @@
         "quantity": 30,
         "rate": 155.22,
         "amount": -4656.6,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749825322/6767_P-TOES_BLK.jpg"
       },
       {
         "productName": "P-Toes 6767 Boys 12*01 Mrp 254 /-",
         "quantity": 30,
         "rate": 143.89,
         "amount": -4316.7,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749825344/6767_P-TOES_BRN.jpg"
       },
       {
         "productName": "P-Toes 8828 02*05 Mrp 249 /-",
@@ -1230,14 +1230,14 @@
         "quantity": 22,
         "rate": 183.44,
         "amount": -4035.77,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153336/P-TOES_8850.jpg"
       },
       {
         "productName": "P-Toes E3661 Kids 09*13 Mrp 104 /-",
         "quantity": 50,
         "rate": 57.15,
         "amount": -2857.62,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153329/P-TOES_3661_SKYBLUE.jpg"
       }
     ],
     "totalAmount": -229878.44000000006
@@ -1250,63 +1250,63 @@
         "quantity": 30,
         "rate": 214.7,
         "amount": -6441,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153193/SCHOOL_SHOES_751_BLACK.jpg"
       },
       {
         "productName": "PVC School Shoes 751 Boys 02*05 Mrp 379 /- Wht",
         "quantity": 30,
         "rate": 214.7,
         "amount": -6441,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153217/SCHOOL_SHOES_751_WHITE.jpg"
       },
       {
         "productName": "PVC School Shoes 751 Boys 06*10 Boys Mrp 419 /- Blk",
         "quantity": 20,
         "rate": 237.36,
         "amount": -4747.2,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153193/SCHOOL_SHOES_751_BLACK.jpg"
       },
       {
         "productName": "PVC School Shoes 751 Boys 06*10 Boys Mrp 419 /- Wht",
         "quantity": 20,
         "rate": 237.36,
         "amount": -4747.2,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153217/SCHOOL_SHOES_751_WHITE.jpg"
       },
       {
         "productName": "PVC School Shoes 751 Boys 07*11 Boys Mrp 299 /- Blk",
         "quantity": 30,
         "rate": 169.38,
         "amount": -5081.4,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153193/SCHOOL_SHOES_751_BLACK.jpg"
       },
       {
         "productName": "PVC School Shoes 751 Boys 12*01 Boys Mrp 339 /-Blk",
         "quantity": 30,
         "rate": 192.04,
         "amount": -5761.2,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153193/SCHOOL_SHOES_751_BLACK.jpg"
       },
       {
         "productName": "PVC School Shoes 751 Boys 12*01 Boys Mrp 339 /-Wht.",
         "quantity": 30,
         "rate": 192.04,
         "amount": -5761.2,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153217/SCHOOL_SHOES_751_WHITE.jpg"
       },
       {
         "productName": "School Shoes 752 Boys 02*05 Mrp 319 /-",
         "quantity": 14,
         "rate": 191.5,
         "amount": -2681,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153261/SCHOOL_SHOES_REGULAR_VELCRO_752.jpg"
       },
       {
         "productName": "School Shoes 770 Boys 06*10 Mrp 429 /-",
         "quantity": 29,
         "rate": 257.5,
         "amount": -7467.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153272/SCHOOL_SHOES_770.jpg"
       }
     ],
     "totalAmount": -98257.39999999998
@@ -1319,14 +1319,14 @@
         "quantity": 2,
         "rate": 152.39,
         "amount": -304.78,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148960/5028.jpg"
       },
       {
         "productName": "Mascara 5030 05*08 Mrp 329 /-",
         "quantity": 30,
         "rate": 183.58,
         "amount": -5507.54,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750151999/Mascara_5030_Navy_Blue.jpg"
       },
       {
         "productName": "Mascara 5031 Ladies Mrp.329/-",
@@ -1340,14 +1340,14 @@
         "quantity": 5,
         "rate": 166.61,
         "amount": -833.04,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152025/MASCARA_5260_OLIVEGREEN.jpg"
       },
       {
         "productName": "Mascara 5260 Ladies Mrp.304/-",
         "quantity": 35,
         "rate": 167.05,
         "amount": -5846.87,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152027/MASCARA_5260_PEACH.jpg"
       },
       {
         "productName": "Mascara 5282 05*08 Mrp 165 /-",
@@ -1361,21 +1361,21 @@
         "quantity": 2,
         "rate": 169.35,
         "amount": -338.7,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152046/MASCARA_5418_OLIVE_GREEN.jpg"
       },
       {
         "productName": "Mascara 5419  05*08  Mrp 159 /-",
         "quantity": 4,
         "rate": 90.07,
         "amount": -360.28,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152052/MASCARA_5419_COPPER.jpg"
       },
       {
         "productName": "Mascara 5425 05*08 Mrp 219 /-",
         "quantity": 6,
         "rate": 121.4,
         "amount": -728.38,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152061/5425.jpg"
       },
       {
         "productName": "Mascara 5433 05*08 Mrp 219 /-",
@@ -1389,126 +1389,126 @@
         "quantity": 15,
         "rate": 175.05,
         "amount": -2625.75,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152079/Solea_7014EL_Maroon.jpg"
       },
       {
         "productName": "Solea 7033E Ladies Mrp.219/- Paisa Vasool",
         "quantity": 18,
         "rate": 124.06,
         "amount": -2233.08,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152319/Solea_7033_Maroon.jpg"
       },
       {
         "productName": "Solea 7034 05*08 Mrp 169 /- P Vasool",
         "quantity": 100,
         "rate": 94.8,
         "amount": -9480.14,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152329/7034_RED.jpg"
       },
       {
         "productName": "Solea 7049E 05*08 Mrp 189 /-P. Vasool",
         "quantity": 95,
         "rate": 107.07,
         "amount": -10171.65,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152337/7049_BLK_PNK.jpg"
       },
       {
         "productName": "Solea 7054E Ladies 05*08 Mrp 319 /-",
         "quantity": 24,
         "rate": 180.71,
         "amount": -4337.04,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152347/7054_BRN.jpg"
       },
       {
         "productName": "Solea 7066E 05*08 Mrp 179 /-P.Vasool",
         "quantity": 100,
         "rate": 101.4,
         "amount": -10140,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152353/7066_PNK.jpg"
       },
       {
         "productName": "Solea 7067E 05*08 Mrp 189 /- P. Vasool",
         "quantity": 30,
         "rate": 107.07,
         "amount": -3212.1,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152362/7067_PNK.jpg"
       },
       {
         "productName": "Solea 7068 Ladies 04*08 Mrp 159 /- P.V",
         "quantity": 97,
         "rate": 88.18,
         "amount": -8553.08,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153136/download_23.jpg"
       },
       {
         "productName": "Solea 7068 Ladies 05*08 Mrp 149 /-",
         "quantity": 149,
         "rate": 82.38,
         "amount": -12275.17,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153119/download_22.jpg"
       },
       {
         "productName": "Solea 7084 05*08 Mrp 249 /-",
         "quantity": 9,
         "rate": 141.06,
         "amount": -1269.54,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152378/7084_BLK.jpg"
       },
       {
         "productName": "Solea 7094 Ladies 05*08 Mrp 339 /-",
         "quantity": 56,
         "rate": 188.14,
         "amount": -10535.66,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153101/download_21.jpg"
       },
       {
         "productName": "Solea 7097 Ladies 05*08 Mrp 324 /-",
         "quantity": 60,
         "rate": 182.51,
         "amount": -10950.49,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152391/7097_BLK.jpg"
       },
       {
         "productName": "Solea 7099 Ladies 05*08 Mrp 339 /-",
         "quantity": 65,
         "rate": 191.04,
         "amount": -12417.32,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153085/download_20.jpg"
       },
       {
         "productName": "Solea 7102 Ladies 05*08 Mrp 339 /-",
         "quantity": 45,
         "rate": 189.99,
         "amount": -8549.74,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153062/download_19.jpg"
       },
       {
         "productName": "Solea 7103 Ladies 05*08 Mrp 359 /-",
         "quantity": 20,
         "rate": 205.14,
         "amount": -4102.8,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153042/download_18.jpg"
       },
       {
         "productName": "Solea 7138 Ladies 05*08 Mrp 199 /-",
         "quantity": 375,
         "rate": 110.57,
         "amount": -41463.53,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153027/download_17.jpg"
       },
       {
         "productName": "SOLEA 7175 05*08 MRP 329 /-",
         "quantity": 24,
         "rate": 177.34,
         "amount": -4256.17,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152421/Solea_Plus_7175_Pista_Green.jpg"
       },
       {
         "productName": "Solea 7178E 05*08 Mrp 299 /- P.VASOOL",
         "quantity": 2,
         "rate": 169.38,
         "amount": -338.76,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152429/Solea_7178_Mehandi.jpg"
       },
       {
         "productName": "Solea 7226E Ladies 05*08 Mrp 279/-",
@@ -1522,7 +1522,7 @@
         "quantity": 35,
         "rate": 186.38,
         "amount": -6523.3,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152450/7252_BLU.jpg"
       },
       {
         "productName": "Solea 7286E Ladies 05*08 Mrp 259 /-",
@@ -1536,63 +1536,63 @@
         "quantity": 20,
         "rate": 169.38,
         "amount": -3387.6,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152461/7302_SAND.jpg"
       },
       {
         "productName": "Solea 7324 Ladies Mrp.319/-",
         "quantity": 10,
         "rate": 175.29,
         "amount": -1752.89,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152996/download_16.jpg"
       },
       {
         "productName": "Solea 7329 Ladies 05*08 Mrp 279 /-",
         "quantity": 25,
         "rate": 156.37,
         "amount": -3909.23,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152984/download_15.jpg"
       },
       {
         "productName": "Solea 7339 Ladies 05*08 Mrp 329 /-",
         "quantity": 35,
         "rate": 183.19,
         "amount": -6411.74,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152970/download_14.jpg"
       },
       {
         "productName": "Solea 7347 Ladies 05*08 Mrp 329 /-",
         "quantity": 5,
         "rate": 180.79,
         "amount": -903.94,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152954/download_13.jpg"
       },
       {
         "productName": "Solea 7348 Ladies 05*08 Mrp 309 /-",
         "quantity": 5,
         "rate": 173.86,
         "amount": -869.31,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152883/download_12.jpg"
       },
       {
         "productName": "Solea 7388 Ladies 05*08 Mrp 329 /-",
         "quantity": 33,
         "rate": 180.79,
         "amount": -5966.03,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152869/download_11.jpg"
       },
       {
         "productName": "Solea 7428 05*08 Mrp 299 /-",
         "quantity": 32,
         "rate": 169.38,
         "amount": -5420.16,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152501/SOLEA_7428.jpg"
       },
       {
         "productName": "Solea 7710 Ladies 05*08 Mrp 304 /-",
         "quantity": 120,
         "rate": 171.13,
         "amount": -20535.96,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152509/SOLEA_7710.jpg"
       },
       {
         "productName": "Solea 7714 05*08 Mrp 314 /-",
@@ -1606,70 +1606,70 @@
         "quantity": 40,
         "rate": 209.04,
         "amount": -8361.6,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152845/download_10.jpg"
       },
       {
         "productName": "Solea 7731E Ladies 05*08 Mrp 369 /-",
         "quantity": 75,
         "rate": 202.77,
         "amount": -15207.65,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152832/download_9.jpg"
       },
       {
         "productName": "Solea 7742 Ladies  05*08  Mrp 349 /-",
         "quantity": 9,
         "rate": 191.78,
         "amount": -1726.01,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152812/download_8.jpg"
       },
       {
         "productName": "Solea 7746 Ladies  05*08  Mrp 349 /-",
         "quantity": -1,
         "rate": 191.78,
         "amount": 191.78,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152796/download_7.jpg"
       },
       {
         "productName": "Solea 7923 Ladies 05*08 Mrp 259 /-",
         "quantity": 24,
         "rate": 142.32,
         "amount": -3415.64,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152549/SOLEA_7923.jpg"
       },
       {
         "productName": "Solea 7950 Exl Ladies 09*10 Mrp 234 /-",
         "quantity": 80,
         "rate": 130.41,
         "amount": -10433.13,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749566614/7950LL_GREY.jpg"
       },
       {
         "productName": "Solea 7950 Ladies 05*08 Mrp 204 /-",
         "quantity": 582,
         "rate": 115.32,
         "amount": -67117.38,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140409/7950.jpg"
       },
       {
         "productName": "Solea 7953 05*08 Mrp 209 /-",
         "quantity": 46,
         "rate": 117.69,
         "amount": -5413.67,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152747/SOLEA_7953.jpg"
       },
       {
         "productName": "Solea Plus 7043 05*08 Mrp 314 /-",
         "quantity": 4,
         "rate": 172.54,
         "amount": -690.17,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152756/Solea_7043_Gold.jpg"
       },
       {
         "productName": "Solea Plus 7193 Ladies 05*08 Mrp 319 /-",
         "quantity": 1,
         "rate": 171.95,
         "amount": -171.95,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750152764/7193_BLU.jpg"
       },
       {
         "productName": "Solea Plus 7709 05*08 Mrp 339 /-",
@@ -2402,91 +2402,91 @@
         "quantity": 48,
         "rate": 70.89,
         "amount": -3402.61,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148429/download.jpg"
       },
       {
         "productName": "Eva Hawai 2623 Gents 06*10 Mrp 129 /-",
         "quantity": 48,
         "rate": 70.89,
         "amount": -3402.6,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148471/download_1.jpg"
       },
       {
         "productName": "Eva Hawai 2624 Gents 06*10 Mrp 129 /-",
         "quantity": 60,
         "rate": 70.89,
         "amount": -4253.26,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148498/download_2.jpg"
       },
       {
         "productName": "Eva Hawai 2626 Gents 06*10 Mrp 129 /-",
         "quantity": 36,
         "rate": 70.89,
         "amount": -2551.95,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148511/download_3.jpg"
       },
       {
         "productName": "Eva Hawai 2627 Gents 06*10 Mrp 129 /-",
         "quantity": 48,
         "rate": 70.89,
         "amount": -3402.6,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148531/download_4.jpg"
       },
       {
         "productName": "Eva Hawai 2628 Gents 06*10 Mrp 129 /-",
         "quantity": 24,
         "rate": 70.89,
         "amount": -1701.3,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148558/download_5.jpg"
       },
       {
         "productName": "Eva Hawai 2629 Gents 06*10 Mrp 129 /-",
         "quantity": 84,
         "rate": 71.98,
         "amount": -6046.64,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148642/download_6.jpg"
       },
       {
         "productName": "Paralite 1976 Gents 06*10 Mrp 189/-",
         "quantity": 36,
         "rate": 107.07,
         "amount": -3854.54,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896413/1976_NYB.jpg"
       },
       {
         "productName": "Paralite 2511 Gents 06*10 Mrp 129 /-",
         "quantity": 38,
         "rate": 69.48,
         "amount": -2640.12,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148679/2511_RED.jpg"
       },
       {
         "productName": "Paralite 2512 Gents 06*10 Mrp 129 /-",
         "quantity": 12,
         "rate": 69.6,
         "amount": -835.16,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148697/2512_TRQ.jpg"
       },
       {
         "productName": "Paralite 2516 Gents 06*10 Mrp 149 /-",
         "quantity": 31,
         "rate": 81.88,
         "amount": -2538.21,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148704/2516_SBL.jpg"
       },
       {
         "productName": "Paralite 2517 Gents 06*10 Mrp 149 /-",
         "quantity": 135,
         "rate": 81.88,
         "amount": -11053.49,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148711/2517_BLU.jpg"
       },
       {
         "productName": "Paralite 2518 Gents 06*10 Mrp 149 /-",
         "quantity": 97,
         "rate": 81.88,
         "amount": -7942.14,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896444/2518_TRQ.jpg"
       },
       {
         "productName": "Paralite 2551 Ladies Mrp.124/-",
@@ -2500,84 +2500,84 @@
         "quantity": 72,
         "rate": 103.28,
         "amount": -7436.16,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148745/WALKAHOLIC_16054_RED.jpg"
       },
       {
         "productName": "Walkaholic 1905E Gents 06*10 Mrp 139.50 /-",
         "quantity": 96,
         "rate": 70.23,
         "amount": -6741.89,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896402/Walkaholic_1905EG_Blue.jpg"
       },
       {
         "productName": "Walkaholic 1924 04*08 Mrp 119.50 /-",
         "quantity": 48,
         "rate": 71.75,
         "amount": -3444,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896353/PARAGON_WALKAHOLIC_1924.jpg"
       },
       {
         "productName": "Walkaholic 1926 06*10 Mrp 129 /-",
         "quantity": 36,
         "rate": 77.5,
         "amount": -2790,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148779/PARAGON_WALKAHOLIC_1926.jpg"
       },
       {
         "productName": "Walkaholic 1927 05*08 Mrp 169 /-",
         "quantity": 23,
         "rate": 101.5,
         "amount": -2334.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896363/WALKAHOLIC_1927_SKY_BLUE.jpg"
       },
       {
         "productName": "Walkaholic 1954 06*10 Mrp 169 /-",
         "quantity": 24,
         "rate": 90.5,
         "amount": -2172,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749897368/WALKAHOLIC_E1954_TURQUOISE.jpg"
       },
       {
         "productName": "Walkaholic 1962 06*10 Mrp 159 /-",
         "quantity": 12,
         "rate": 78.74,
         "amount": -944.88,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749897459/1962_GRY.png"
       },
       {
         "productName": "WALKAHOLIC 1972 06*10 MRP 159 /-",
         "quantity": 18,
         "rate": 90.07,
         "amount": -1621.26,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148806/Walkaholic_1972_Red.jpg"
       },
       {
         "productName": "Walkaholic 1973E 06*10 MRP 129 /-",
         "quantity": 79,
         "rate": 66.87,
         "amount": -5282.5,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148823/Walkaholic_1973EG_Grey.jpg"
       },
       {
         "productName": "WALKAHOLIC 1975 06*10 MRP 189 /--",
         "quantity": 145,
         "rate": 107.07,
         "amount": -15525.19,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749898249/Walkaholic1975_Tan.jpg"
       },
       {
         "productName": "WALKAHOLIC 1979E 06*10 MRP 129 /-",
         "quantity": -102,
         "rate": 71.85,
         "amount": 7329.1,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148837/Walkaholic_1979EG_Tan.jpg"
       },
       {
         "productName": "Walkaholic 1979E Gents 06*10 Mrp 139 /-",
         "quantity": 96,
         "rate": 69.98,
         "amount": -6717.68,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749898218/Walkaholic_1979EG_Red.jpg"
       },
       {
         "productName": "Walkaholic 1984 05*08 Mrp 159 /-",
@@ -2591,35 +2591,35 @@
         "quantity": 48,
         "rate": 64.94,
         "amount": -3117.19,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749898181/Walkaholic_1992EL_Turquoise.jpg"
       },
       {
         "productName": "Walkaholic 2508E Gents 06*10 Mrp 139 /-",
         "quantity": 96,
         "rate": 69.98,
         "amount": -6717.68,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148869/2508_TRQ.jpg"
       },
       {
         "productName": "Walkaholic 2509E Gents 06*10 Mrp 139 /-",
         "quantity": 36,
         "rate": 69.98,
         "amount": -2519.13,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749896434/2509.jpg"
       },
       {
         "productName": "Walkaholic 2510E Gents 06*10 Mrp 139 /-",
         "quantity": 24,
         "rate": 69.98,
         "amount": -1679.42,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148889/2510_GRY.jpg"
       },
       {
         "productName": "Walkaholic 2514 Gents 06*10 Mrp 129 /-",
         "quantity": 72,
         "rate": 70.89,
         "amount": -5103.91,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750148896/2514_GRY.jpg"
       },
       {
         "productName": "Walkaholic 2557 Ladies 05*08 Mrp 129 /-",
@@ -2640,7 +2640,7 @@
         "quantity": -192,
         "rate": 107.07,
         "amount": 20557.44,
-        "imageUrl": null
+        "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749897750/WALKAHOLIC_54_YELLOW.jpg"
       },
       {
         "productName": "Walkaholic 57 06*10 Mrp 124 /-",
