@@ -2,39 +2,39 @@ name: Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+
+permissions:
+  contents: write # Grants GITHUB_TOKEN write access
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2: Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "20.x"
+          cache: "npm"
+          cache-dependency-path: Frontend/package-lock.json # Adjust for your lock file
 
-      # Step 3: Install dependencies
-      - name: Install Dependencies
-        run: npm install
-        working-directory: ./Frontend
+      - name: Install dependencies
+        run: |
+          cd Frontend
+          npm install
 
-      # Step 4: Build the Vue.js app
-      - name: Build
-        run: npm run build
-        working-directory: ./Frontend
+      - name: Build frontend
+        run: |
+          cd Frontend
+          npm run build
 
-      # Step 5: Deploy to GitHub Pages
-      - name: Deploy
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GH_PAT }} # Use PAT instead of GITHUB_TOKEN
-          publish_dir: ./Frontend/dist
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Use GITHUB_TOKEN with write permissions
+          publish_dir: Frontend/dist
           publish_branch: gh-pages
-          force_orphan: true # Ensures a clean deployment
+          force_orphan: true
