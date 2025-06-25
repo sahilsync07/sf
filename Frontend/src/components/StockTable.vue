@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-4xl mx-auto p-4">
-    <!-- Header with SF Srikakulam, Refresh, and Admin -->
+    <!-- Header with Shree Footwear SKLM Stock, Refresh, and Admin -->
     <div
       class="flex items-center justify-between mb-4 bg-gray-800 py-2 px-4 rounded-lg"
     >
@@ -15,7 +15,7 @@
       />
       <!-- Placeholder to maintain centering when refresh is not visible -->
       <div v-else class="w-10 h-10"></div>
-      <!-- SF Srikakulam (Center) -->
+      <!-- Shree Footwear SKLM Stock (Center) -->
       <div class="text-2xl font-bold text-center flex-1 text-white">
         Shree Footwear SKLM Stock
       </div>
@@ -35,28 +35,26 @@
       <button
         @click="selectGroup('All')"
         :class="[
-          'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === 'All' ? 'bg-blue-600' : 'hover:bg-gray-700',
+          'flex items-center justify-center h-10 rounded-lg bg-white text-black font-bold text-sm w-[25%] sm:w-auto px-3',
+          selectedGroup === 'All' ? 'bg-blue-600' : 'hover:bg-gray-200',
         ]"
       >
         All
       </button>
       <button
         v-for="group in groups"
-        :key="group"
-        @click="selectGroup(group)"
+        :key="group.name"
+        @click="selectGroup(group.name)"
         :class="[
-          'flex items-center justify-center h-10 rounded-lg bg-gray-800 text-white font-bold text-sm w-[25%] sm:w-auto px-3',
-          selectedGroup === group ? 'bg-blue-600' : 'hover:bg-gray-700',
+          'flex items-center justify-center h-10 rounded-lg bg-white text-white font-bold text-sm w-[25%] sm:w-auto px-3',
+          selectedGroup === group.name ? 'bg-blue-600' : 'hover:bg-gray-200',
         ]"
       >
-        {{
-          group
-            .replace("@12%", "")
-            .replace("@ 12%", "")
-            .replace("12%", "")
-            .trim()
-        }}
+        <img
+          :src="group.image"
+          :alt="group.name"
+          class="w-full h-full object-contain"
+        />
       </button>
     </div>
     <!-- Search Bar -->
@@ -403,28 +401,76 @@ export default {
       touchStartX: 0,
       viewMode: "image",
       groups: [
-        "Hawai @ 12%",
-        "Stimulus @ 12%",
-        "Paragon @ 12%",
-        "PARAGON MAX 12%",
-        "Paralite @ 12%",
-        "P-Toes @ 12%",
-        "School Shoes @ 12%",
-        "Solea @ 12%",
-        "Vertex & Slickers @ 12%",
-        "Walkahoic@12%",
-      ],
-      paragonSubgroups: [
-        "Hawai @ 12%",
-        "Stimulus @ 12%",
-        "Paragon @ 12%",
-        "PARAGON MAX 12%",
-        "Paralite @ 12%",
-        "P-Toes @ 12%",
-        "School Shoes @ 12%",
-        "Solea @ 12%",
-        "Vertex & Slickers @ 12%",
-        "Walkahoic@12%",
+        {
+          name: "Hawai @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838246/Screenshot_20250625_131642_Drive_jaq67u.jpg",
+        },
+        {
+          name: "Stimulus @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838245/Screenshot_20250625_131533_Drive_txmurb.jpg",
+        },
+        {
+          name: "Paragon @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/paragonLogo_rqk3hu.webp",
+        },
+        {
+          name: "PARAGON MAX 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838246/Screenshot_20250625_131419_Drive_nifhx5.jpg",
+        },
+        {
+          name: "Paralite @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838246/Screenshot_20250625_131323_Drive_k9majz.jpg",
+        },
+        {
+          name: "P-Toes @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838245/Screenshot_20250625_131533_Drive_txmurb.jpg",
+        },
+        {
+          name: "School Shoes @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838756/FB_IMG_1750838671500_ke53cc.jpg",
+        },
+        {
+          name: "Solea @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838246/Screenshot_20250625_131724_Drive_tlg3zu.jpg",
+        },
+        {
+          name: "Vertex & Slickers @ 12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838246/Screenshot_20250625_131140_Drive_vce1gi.jpg",
+        },
+        {
+          name: "Walkahoic@12%",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1750838247/Screenshot_20250625_131241_Drive_xj5vnn.jpg",
+        },
+        {
+          name: "Cubix",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1749667073/cubixLogo_bwawj3.jpg",
+        },
+        {
+          name: "Florex",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/florexLogo_wn50tj.jpg",
+        },
+        {
+          name: "Eeken",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1749668232/eekenLogo_rg5xwa.webp",
+        },
+        {
+          name: "Escoute",
+          image:
+            "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/escouteLogo_maieji.jpg",
+        },
       ],
     };
   },
