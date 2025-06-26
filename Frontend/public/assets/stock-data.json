@@ -87,8 +87,8 @@
       {
         "productName": "Cushion 04*05 Mrp 138 /-",
         "quantity": 1093,
-        "rate": 88.55,
-        "amount": -96789.92,
+        "rate": 88.46,
+        "amount": -96686.35,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
@@ -100,23 +100,23 @@
       },
       {
         "productName": "CUSHION 06*09 MRP 139 /-",
-        "quantity": 2737,
-        "rate": 89.22,
-        "amount": -244182.93,
+        "quantity": 2725,
+        "rate": 89.14,
+        "amount": -242910.34,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "Cushion 10*12 Gents Mrp 159 /-",
-        "quantity": 327,
-        "rate": 101.77,
-        "amount": -33280.05,
+        "quantity": 317,
+        "rate": 101.63,
+        "amount": -32217.61,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
         "productName": "PRINCESS 04*08 MRP 139 /-",
-        "quantity": 2131,
-        "rate": 88.77,
-        "amount": -189163.37,
+        "quantity": 2119,
+        "rate": 88.72,
+        "amount": -188007.45,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750087553/Cushion_1.jpg"
       },
       {
@@ -127,7 +127,7 @@
         "imageUrl": null
       }
     ],
-    "totalAmount": -1219668.1
+    "totalAmount": -1212479.0599999998
   },
   {
     "groupName": "Local Mall 12 %",
@@ -162,9 +162,9 @@
       },
       {
         "productName": "HAMPER @12%",
-        "quantity": 5794,
-        "rate": 73.29,
-        "amount": -424657.24,
+        "quantity": 5746,
+        "rate": 73.38,
+        "amount": -421657.24,
         "imageUrl": null
       },
       {
@@ -343,7 +343,7 @@
         "imageUrl": null
       }
     ],
-    "totalAmount": -2571920.5600000005
+    "totalAmount": -2565920.5600000005
   },
   {
     "groupName": "Old No Stock",
@@ -1344,15 +1344,15 @@
       {
         "productName": "Paralite 16048 Gents 06*10 Mrp 354 /-",
         "quantity": 47,
-        "rate": 185.13,
-        "amount": -8701.13,
+        "rate": 184.92,
+        "amount": -8691.06,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156863/PARALITE_16048_MILITARY_GREEN.jpg"
       },
       {
         "productName": "Paralite 16049 Gents 06*10 Mrp 354 /-",
         "quantity": 151,
-        "rate": 184.84,
-        "amount": -27911.17,
+        "rate": 184.76,
+        "amount": -27898.32,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750156521/PARALITE_16049_ROYAL_BLUE.jpg"
       },
       {
@@ -1370,7 +1370,7 @@
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750835774/6262354453109784695.jpg"
       }
     ],
-    "totalAmount": -297409.87999999995
+    "totalAmount": -297364.04
   },
   {
     "groupName": "PARAGON MAX 12%",
@@ -1392,8 +1392,8 @@
       {
         "productName": "Paragon Max 9613 06*10 Mrp 504 /-",
         "quantity": 27,
-        "rate": 286.58,
-        "amount": -7737.56,
+        "rate": 286.51,
+        "amount": -7735.84,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154324/PARAGON_MAX_9613_TAN.jpg"
       },
       {
@@ -1439,7 +1439,7 @@
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750835933/download_26.jpg"
       }
     ],
-    "totalAmount": -113749.51999999999
+    "totalAmount": -113746.07999999999
   },
   {
     "groupName": "Paralite @ 12%",
@@ -1447,8 +1447,8 @@
       {
         "productName": "Paragon 1250 06*10 Mrp 249 /-",
         "quantity": 848,
-        "rate": 143.75,
-        "amount": -121896.89,
+        "rate": 143.65,
+        "amount": -121819.2,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749879021/STIMULUS_1250.jpg"
       },
       {
@@ -1488,9 +1488,9 @@
       },
       {
         "productName": "Paralite 1125 06*10 Mrp 159 /-",
-        "quantity": 597,
-        "rate": 100.69,
-        "amount": -60112.95,
+        "quantity": 582,
+        "rate": 100.66,
+        "amount": -58582.43,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749878819/1125_BLK.jpg"
       },
       {
@@ -1503,29 +1503,29 @@
       {
         "productName": "Paralite 1180 06*10 Mrp 239 /-",
         "quantity": 133,
-        "rate": 149.95,
-        "amount": -19942.81,
+        "rate": 149.77,
+        "amount": -19919.78,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154074/1180.jpg"
       },
       {
         "productName": "Paralite 1181 06*10 Mrp 229 /-",
         "quantity": 38,
-        "rate": 131.23,
-        "amount": -4986.56,
+        "rate": 131.01,
+        "amount": -4978.21,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750154085/1181.jpg"
       },
       {
         "productName": "Paralite 1190 06*10 Mrp 179 /-",
         "quantity": 2538,
-        "rate": 112.27,
-        "amount": -284942.1,
+        "rate": 112.25,
+        "amount": -284899.89,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876522/1190_BLK.jpg"
       },
       {
         "productName": "Paralite 1210 06*10 Mrp 169 /-",
         "quantity": 396,
-        "rate": 106.83,
-        "amount": -42304.08,
+        "rate": 106.81,
+        "amount": -42298.11,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1749876281/1210_BLK.jpg"
       },
       {
@@ -1544,9 +1544,9 @@
       },
       {
         "productName": "Paralite 1215 05*08 Mrp 149 /-",
-        "quantity": 1086,
+        "quantity": 1068,
         "rate": 93.58,
-        "amount": -101622.72,
+        "amount": -99938.37,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750140210/1215_BKB.jpg"
       },
       {
@@ -1622,8 +1622,8 @@
       {
         "productName": "Paralite 1477 Gents 06*10 Mrp 229 /-",
         "quantity": 61,
-        "rate": 130.47,
-        "amount": -7958.82,
+        "rate": 130.39,
+        "amount": -7953.73,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750836065/6233109140323025073.jpg"
       },
       {
@@ -1650,8 +1650,8 @@
       {
         "productName": "Paralite 1721EGents 06*10 Mrp 209 /-",
         "quantity": 342,
-        "rate": 120.53,
-        "amount": -41220.46,
+        "rate": 120.5,
+        "amount": -41209.29,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750153898/PARALITE_1721_GREY-NAVY_BLUE.jpg"
       },
       {
@@ -1669,7 +1669,7 @@
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750836205/download_31.jpg"
       }
     ],
-    "totalAmount": -1720820.22
+    "totalAmount": -1714043.4599999997
   },
   {
     "groupName": "Polissh & Brush @ 18 %",
@@ -1781,15 +1781,15 @@
       {
         "productName": "P-Toes 1180 04*05 Mrp 229 /-",
         "quantity": 37,
-        "rate": 142.62,
-        "amount": -5276.82,
+        "rate": 142.29,
+        "amount": -5264.71,
         "imageUrl": null
       },
       {
         "productName": "P-Toes 1190 04*05 Mrp 176 /-",
         "quantity": 240,
-        "rate": 110.7,
-        "amount": -26567.48,
+        "rate": 110.65,
+        "amount": -26555.91,
         "imageUrl": null
       },
       {
@@ -1954,7 +1954,7 @@
         "imageUrl": null
       }
     ],
-    "totalAmount": -228012.18
+    "totalAmount": -227964.82
   },
   {
     "groupName": "School Shoes @ 12%",
@@ -2989,8 +2989,8 @@
       {
         "productName": "Vertex 6662 Gents 06*10 Mrp 374 /-",
         "quantity": 30,
-        "rate": 212.25,
-        "amount": -6367.57,
+        "rate": 212.22,
+        "amount": -6366.67,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141952/6133928419788966497.jpg"
       },
       {
@@ -3017,8 +3017,8 @@
       {
         "productName": "Vertex 6685 06*10 Mrp 349 /-",
         "quantity": 105,
-        "rate": 197.81,
-        "amount": -20769.86,
+        "rate": 197.8,
+        "amount": -20769.26,
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750141880/6156943178138240271.jpg"
       },
       {
@@ -3267,7 +3267,7 @@
         "imageUrl": "https://res.cloudinary.com/dg365ewal/image/upload/v1750836781/6208487488679429069.jpg"
       }
     ],
-    "totalAmount": -1070057.7599999993
+    "totalAmount": -1070054.7599999995
   },
   {
     "groupName": "Walkahoic@12%",
