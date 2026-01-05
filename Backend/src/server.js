@@ -18,11 +18,11 @@ app.use(express.json());
 const tallyUrl = "http://localhost:9000/";
 const stockDataPath = path.resolve(
   __dirname,
-  "../../Frontend/src/assets/stock-data.json"
+  "../../frontend/src/assets/stock-data.json"
 );
 const publicStockDataPath = path.resolve(
   __dirname,
-  "../../Frontend/public/assets/stock-data.json"
+  "../../frontend/public/assets/stock-data.json"
 );
 const tallyTimeout = 30000;
 
@@ -89,11 +89,19 @@ async function fetchTallyData() {
     // Hardcoded list of group names (case-insensitive comparison)
     const groupNames = [
       "4WAY SPORT",
+      "AAGAM POLYMER",
       "ADDA",
       "ADDOXY",
+      "A G ENTERPRISES",
       "AGRA",
+      "AIRFAX",
+      "AIRSON",
       "AIRSUN",
+      "AMBIKA FOOTWEAR",
+      "ASHU",
       "Avon International (WOODS)",
+      "Balaji",
+      "Barun",
       "CUBIX",
       "Eeken",
       "Electrical & Electronic",
@@ -102,31 +110,59 @@ async function fetchTallyData() {
       "Fender",
       "Florex (Swastik)",
       "GLAMIUM",
+      "GOKUL FOOTWEAR",
       "Hawai Chappal",
       "HITWAY",
+      "J.K Plastic",
+      "J.K.Plastic",
       "KHADIM",
       "Kohinoor",
       "LEO",
       "Magnet",
+      "MARUTI PLASTICS",
       "Max",
+      "Mini F/w",
+      "NAV DURGA ENTERPRISES",
+      "NEXGEN FOOTWEAR",
+      "NEXUS",
       "NON BRAND",
+      "NX KIDS SANDEL",
       "OTHERS",
+      "PANKAJ PLASTIC",
       "PARAGON",
       "Paragon Blot",
       "PARAGON COMFY",
+      "PARAGON GENTS",
+      "PARAGON LADIES",
       "Paralite",
+      "Pareek Soucks",
+      "PARIS",
+      "Polish Liquid @18%",
       "P-TOES",
       "PU-LION",
       "RELIANCE FOOTWEAR",
+      "R K TRADERS",
+      "R R POLYPLAST",
+      "Ruban F/w",
       "Safety",
       "School",
+      "SCHOOL SHOE DUROLITE",
+      "Shree Shyam Ind",
+      "SHYAM",
       "Solea & Meriva , Mascara",
+      "SRG ENTERPRISES",
       "S S BANSAL",
       "Stimulus",
+      "TEUZ",
+      "UAM FOOTWEAR",
+      "VAISHNO PLASTIC",
+      "VARDHMAN PLASTICS",
       "VERTEX, SLICKERS & FENDER",
       "Walkaholic",
       "Xpania",
+      "YASH FOOTWEAR",
       "ZYF TEX",
+      "ARITCLE WRONGLY ENTERED"
     ];
 
     dspAccNames.forEach((acc, index) => {
@@ -155,8 +191,7 @@ async function fetchTallyData() {
         stockGroups[currentGroup].products.push({
           productName: name,
           quantity: qtyValue,
-          rate,
-          amount,
+          // rate and amount removed for privacy
           imageUrl: null,
         });
         stockGroups[currentGroup].totalAmount += amount;
@@ -166,7 +201,7 @@ async function fetchTallyData() {
     const stockData = Object.entries(stockGroups).map(([groupName, value]) => ({
       groupName,
       products: value.products,
-      totalAmount: value.totalAmount,
+      // totalAmount removed for privacy
     }));
 
     if (!stockData.length) {
@@ -192,10 +227,13 @@ app.get("/api/stock", async (req, res) => {
   }
 });
 
+// ... (all imports, constants, fetchTallyData, other routes unchanged)
+
 app.post("/api/updateStockData", async (req, res) => {
   try {
     console.log("Starting updateStockData, stockDataPath:", stockDataPath);
 
+    // ---- 1. Verify file access ------------------------------------------------
     try {
       await fs.access(stockDataPath, fs.constants.R_OK | fs.constants.W_OK);
       console.log("stock-data.json is readable and writable");
@@ -204,47 +242,76 @@ app.post("/api/updateStockData", async (req, res) => {
       throw new Error(`Cannot access stock-data.json: ${err.message}`);
     }
 
+    // ---- 2. Load existing JSON ------------------------------------------------
     let existingData = [];
     try {
       const fileContent = await fs.readFile(stockDataPath, "utf-8");
       if (fileContent.trim()) {
         existingData = JSON.parse(fileContent);
-        console.log(
-          "Existing stock-data.json loaded, groups:",
-          existingData.length
-        );
+        console.log("Existing stock-data.json loaded, groups:", existingData.length);
       }
     } catch (err) {
       console.error("Error reading stock-data.json:", err.message, err.stack);
       existingData = [];
     }
 
-    const imageUrls = {};
+    // ---- 3. Preserve images + zero-stock products that have images ----------
+    const imageUrls = {};               // productName → imageUrl
+    const zeroStockProducts = {};       // groupName → [product,…]
+
     existingData.forEach((group) => {
-      if (group.products) {
-        group.products.forEach((product) => {
-          if (product.imageUrl) {
-            imageUrls[product.productName] = product.imageUrl;
-          }
-        });
-      }
+      if (!group.products) return;
+
+      group.products.forEach((product) => {
+        if (product.imageUrl) {
+          imageUrls[product.productName] = product.imageUrl;
+        }
+        if (product.quantity === 0 && product.imageUrl) {
+          const { rate, amount, ...cleanProduct } = product; // Remove sensitive data
+          (zeroStockProducts[group.groupName] ??= []).push(cleanProduct);
+        }
+      });
     });
     console.log("Preserved image URLs:", Object.keys(imageUrls).length);
+    console.log("Preserved zero-stock products with images:", Object.keys(zeroStockProducts).length);
 
+    // ---- 4. Fetch fresh data from Tally --------------------------------------
     const stockData = await fetchTallyData();
 
+    // ---- 5. Re-attach images & re-inject zero-stock items --------------------
+    // ---- 6. De-duplicate by productName ------------------------------------
     stockData.forEach((group) => {
-      group.products.forEach((product) => {
-        product.imageUrl = imageUrls[product.productName] || null;
+      // attach saved images to live products
+      group.products.forEach((p) => {
+        p.imageUrl = imageUrls[p.productName] ?? null;
+      });
+
+      // bring back zero-stock items that had an image
+      if (zeroStockProducts[group.groupName]) {
+        group.products.push(...zeroStockProducts[group.groupName]);
+      }
+
+      const seen = new Set();
+      group.products = group.products.filter((p) => {
+        if (seen.has(p.productName)) return false;
+        seen.add(p.productName);
+        return true;
       });
     });
 
+    // ---- 7. Inject Last Sync Metadata ---------------------------------------
+    // Add metadata at the start of the array or as a special entry
+    const lastSyncTime = new Date().toISOString();
+    stockData.unshift({
+      groupName: "_META_DATA_",
+      lastSync: lastSyncTime,
+      products: [],
+    });
+
+    // ---- 8. Write updated files ------------------------------------------------
     try {
       await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
-      await fs.writeFile(
-        publicStockDataPath,
-        JSON.stringify(stockData, null, 2)
-      );
+      await fs.writeFile(publicStockDataPath, JSON.stringify(stockData, null, 2));
       console.log("Updated stock-data.json at:", stockDataPath);
     } catch (err) {
       console.error("Error writing stock-data.json:", err.message, err.stack);
@@ -262,6 +329,8 @@ app.post("/api/updateStockData", async (req, res) => {
       .json({ error: `Failed to update stock data: ${error.message}` });
   }
 });
+
+// ... (all other routes unchanged)
 
 app.post("/api/updateImage", async (req, res) => {
   try {
@@ -288,7 +357,11 @@ app.post("/api/updateImage", async (req, res) => {
 
     let updated = false;
     stockData.forEach((group) => {
+      if (group.totalAmount !== undefined) delete group.totalAmount; // Ensure group total is removed
       group.products.forEach((product) => {
+        if (product.rate !== undefined) delete product.rate; // Ensure rate is removed
+        if (product.amount !== undefined) delete product.amount; // Ensure amount is removed
+
         if (product.productName === productName) {
           product.imageUrl = imageUrl;
           updated = true;
@@ -343,7 +416,11 @@ app.post("/api/removeImage", async (req, res) => {
 
     let updated = false;
     stockData.forEach((group) => {
+      if (group.totalAmount !== undefined) delete group.totalAmount; // Ensure group total is removed
       group.products.forEach((product) => {
+        if (product.rate !== undefined) delete product.rate; // Ensure rate is removed
+        if (product.amount !== undefined) delete product.amount; // Ensure amount is removed
+
         if (product.productName === productName && product.imageUrl) {
           product.imageUrl = null;
           updated = true;
