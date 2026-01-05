@@ -21,7 +21,7 @@
     </div>
     <router-link
       to="/"
-      class="block text-center mt-4 text-blue-600 hover:underline"
+      class="block text-center mt-4 text-green-600 hover:underline"
       >Back to Stock Summary</router-link
     >
   </div>

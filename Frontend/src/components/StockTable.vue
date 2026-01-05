@@ -10,7 +10,7 @@
           <div class="flex items-center gap-3">
              <button
               @click="showSidePanel = !showSidePanel"
-              class="p-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors shadow-md active:scale-95"
+              class="p-2 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors shadow-md active:scale-95"
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
             </button>
@@ -51,7 +51,7 @@
               @click="promptAdminLogin"
               title="SF SKLM"
             >
-              <span class="text-blue-600">SF</span> Srikakulam
+              <span class="text-green-600">SF</span> Srikakulam
             </h1>
           </div>
 
@@ -59,7 +59,7 @@
           <div class="flex items-center justify-end gap-2">
              <button
               @click="showCart = !showCart"
-              class="relative group p-2 bg-blue-600 rounded-full hover:bg-blue-700 transition-all shadow-md active:scale-95"
+              class="relative group p-2 bg-green-600 rounded-full hover:bg-green-700 transition-all shadow-md active:scale-95"
               title="Toggle Cart"
             >
               <div v-if="cartTotalItems > 0" class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm z-10 border border-white">{{ cartTotalItems }}</div>
@@ -88,10 +88,10 @@
                 <a
                   href="#"
                   @click.prevent="scrollToGroup(group.groupName)"
-                  class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-blue-50 hover:text-blue-600 group"
-                  :class="activeScrollGroup === group.groupName ? 'bg-blue-50 text-blue-600' : 'text-slate-600'"
+                  class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-green-50 hover:text-green-600 group"
+                  :class="activeScrollGroup === group.groupName ? 'bg-green-50 text-green-600' : 'text-slate-600'"
                 >
-                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-blue-400" :class="activeScrollGroup === group.groupName ? 'bg-blue-600' : ''"></span>
+                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-green-400" :class="activeScrollGroup === group.groupName ? 'bg-green-600' : ''"></span>
                    <span class="truncate">{{ group.groupName }}</span>
                 </a>
              </template>
@@ -114,7 +114,7 @@
       >
         <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-white">
            <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
              Your Cart <span v-if="cart.length" class="text-sm font-normal text-slate-500">({{ cartTotalItems }})</span>
            </h2>
            <button @click="showCart = false" class="p-2 rounded-full hover:bg-slate-50 text-slate-400 hover:text-slate-600 transition-colors">
@@ -126,10 +126,10 @@
            <div v-if="cart.length === 0" class="flex flex-col items-center justify-center h-64 text-slate-400">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
               <p class="text-sm font-medium">Your cart is empty</p>
-              <button @click="showCart = false" class="mt-4 px-4 py-2 bg-blue-50 text-blue-600 rounded-lg text-sm font-bold hover:bg-blue-100 transition-colors">Start Browsing</button>
+              <button @click="showCart = false" class="mt-4 px-4 py-2 bg-green-50 text-green-600 rounded-lg text-sm font-bold hover:bg-green-100 transition-colors">Start Browsing</button>
            </div>
            
-           <div v-for="(item, index) in cart" :key="index" class="flex gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm relative group hover:border-blue-200 transition-colors">
+           <div v-for="(item, index) in cart" :key="index" class="flex gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm relative group hover:border-green-200 transition-colors">
               <!-- Mini Thumbnail -->
               <div class="w-16 h-16 bg-slate-50 rounded-lg border border-slate-100 shrink-0 overflow-hidden">
                  <img v-if="item.product.imageUrl" :src="getOptimizedUrl(item.product.imageUrl)" class="w-full h-full object-cover" />
@@ -140,9 +140,9 @@
                  <h4 class="text-xs font-semibold text-slate-800 line-clamp-2 leading-tight mb-1">{{ item.product.productName }}</h4>
                  <div class="flex items-center justify-between mt-2">
                     <div class="flex items-center gap-2">
-                       <button @click="updateCartQuantity(index, -1)" class="w-6 h-6 flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-all">-</button>
+                       <button @click="updateCartQuantity(index, -1)" class="w-6 h-6 flex items-center justify-center text-white bg-green-600 hover:bg-green-700 rounded-md shadow-sm transition-all">-</button>
                        <span class="text-xs font-bold text-slate-800 min-w-[3rem] text-center">{{ item.quantity }} {{ item.quantity > 1 ? 'Sets' : 'Set' }}</span>
-                       <button @click="updateCartQuantity(index, 1)" class="w-6 h-6 flex items-center justify-center text-white bg-blue-600 hover:bg-blue-700 rounded-md shadow-sm transition-all">+</button>
+                       <button @click="updateCartQuantity(index, 1)" class="w-6 h-6 flex items-center justify-center text-white bg-green-600 hover:bg-green-700 rounded-md shadow-sm transition-all">+</button>
                     </div>
                      <button @click="removeFromCart(index)" class="w-8 h-8 flex items-center justify-center bg-red-50 text-red-600 border border-red-100 hover:bg-red-600 hover:text-white rounded-lg transition-all shadow-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
@@ -155,7 +155,7 @@
         <div class="p-4 border-t border-slate-100 bg-slate-50">
             <div class="flex justify-between items-center mb-4">
                <span class="text-slate-600 font-medium text-sm">Total Quantity</span>
-               <span class="text-xl font-extrabold text-blue-600">{{ cartTotalItems }} Sets</span>
+               <span class="text-xl font-extrabold text-green-600">{{ cartTotalItems }} Sets</span>
             </div>
             <button 
               @click="sendOrderToWhatsapp"
@@ -205,7 +205,7 @@
             :key="brand.name"
             @click="selectGroup(brand.name)"
             class="flex items-center justify-center px-4 py-1.5 rounded-full border transition-all duration-200 min-w-[80px]"
-            :class="selectedGroup === brand.name ? 'bg-white border-blue-500 ring-2 ring-blue-100' : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
+            :class="selectedGroup === brand.name ? 'bg-white border-green-500 ring-2 ring-green-100' : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
           >
             <img :src="brand.logo" :alt="brand.name" class="h-6 object-contain" />
           </button>
@@ -216,7 +216,7 @@
              :key="filter"
              @click="selectGroup(filter)"
              class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 border capitalize"
-             :class="selectedGroup === filter ? 'bg-blue-600 text-white border-blue-600 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
+             :class="selectedGroup === filter ? 'bg-green-600 text-white border-green-600 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
           >
             {{ filter === 'rktraders' ? 'R.K.Traders' : filter === 'jkplastic' ? 'J.K.Plastic' : filter === 'airson' ? 'Airson' : filter === 'GeneralItems' ? 'General Items' : filter }}
           </button>
@@ -234,7 +234,7 @@
               v-model="searchQuery"
               type="text"
               placeholder="Search..."
-              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all text-sm"
             />
           </div>
 
@@ -243,7 +243,7 @@
              <select
                v-model="selectedGroup"
                @change="selectGroup($event.target.value)"
-               class="w-full appearance-none px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 text-sm font-medium"
+               class="w-full appearance-none px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 text-sm font-medium"
              >
                <option value="All">All Categories</option>
                <option value="Kids">Kids Only</option>
@@ -270,7 +270,7 @@
              <!-- Filter Checkboxes -->
              <div class="flex flex-wrap gap-2 flex-grow sm:flex-grow-0 justify-center">
                <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-slate-100 px-3 py-2 rounded-lg border border-slate-200 transition-colors select-none">
-                 <input type="checkbox" v-model="showImagesOnly" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                 <input type="checkbox" v-model="showImagesOnly" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
                  <span class="text-sm font-medium text-slate-700 whitespace-nowrap">Images</span>
                </label>
                <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-slate-100 px-3 py-2 rounded-lg border border-slate-200 transition-colors select-none">
@@ -288,7 +288,7 @@
                 <button
                   @click="viewMode = 'list'"
                   class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                  :class="viewMode === 'list' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
+                  :class="viewMode === 'list' ? 'bg-white text-green-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
                   title="List View"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
@@ -296,7 +296,7 @@
                 <button
                   @click="viewMode = 'image'"
                   class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                  :class="viewMode === 'image' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
+                  :class="viewMode === 'image' ? 'bg-white text-green-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
                   title="Grid View"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
@@ -338,18 +338,18 @@
                   v-for="(product, pIndex) in group.products"
                   :key="`${index}-${pIndex}`"
                   v-show="expandedGroups[index]"
-                  class="group/row hover:bg-blue-50/30 transition-colors"
+                  class="group/row hover:bg-green-50/30 transition-colors"
                 >
                   <td class="px-6 py-6">
-                    <p class="text-sm font-medium text-slate-800 line-clamp-1 group-hover/row:text-blue-600 transition-colors">{{ product.productName }}</p>
+                    <p class="text-sm font-medium text-slate-800 line-clamp-1 group-hover/row:text-green-600 transition-colors">{{ product.productName }}</p>
                   </td>
                   <td class="px-6 py-6">
-                     <span class="inline-block px-2 py-1 text-xs font-bold text-blue-700 bg-blue-50 rounded-md">
+                     <span class="inline-block px-2 py-1 text-xs font-bold text-green-700 bg-green-50 rounded-md">
                        {{ product.quantity }} pcs
                      </span>
                      <button 
                        @click.stop="addToCart(product)"
-                       class="ml-2 w-7 h-7 inline-flex items-center justify-center rounded-lg bg-blue-600 text-white hover:bg-blue-700 hover:scale-105 transition-all shadow-md"
+                       class="ml-2 w-7 h-7 inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition-all shadow-md"
                        title="Add to Cart"
                      >
                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
@@ -376,8 +376,8 @@
                class="flex items-center gap-3 cursor-pointer group select-none scroll-mt-24"
                @click="toggleGroup(index)"
             >
-               <h2 class="text-lg font-bold text-slate-800 group-hover:text-blue-600 transition-colors">{{ group.groupName }}</h2>
-               <div class="h-px flex-1 bg-slate-200 group-hover:bg-blue-100 transition-colors"></div>
+               <h2 class="text-lg font-bold text-slate-800 group-hover:text-green-600 transition-colors">{{ group.groupName }}</h2>
+               <div class="h-px flex-1 bg-slate-200 group-hover:bg-green-100 transition-colors"></div>
                <span class="text-slate-400 transform transition-transform duration-300" :class="{ 'rotate-180': expandedGroups[index] }">▼</span>
             </div>
 
@@ -421,7 +421,7 @@
                        <button
                          v-if="imageFiles[product.productName]"
                          @click="uploadImage(product.productName)"
-                         class="px-3 py-1.5 bg-blue-600 text-xs font-bold text-white rounded-lg hover:bg-blue-500 shadow-lg"
+                         class="px-3 py-1.5 bg-green-600 text-xs font-bold text-white rounded-lg hover:bg-green-500 shadow-lg"
                        >
                          Upload Now
                        </button>
@@ -456,18 +456,18 @@
                        </div>
                        
                        <!-- Conditional Cart Control -->
-                       <div v-if="getCartQty(product) > 0" class="flex items-center gap-0 bg-blue-600 border border-blue-600 rounded-md overflow-hidden shadow-md h-8">
-                          <button @click.stop="updateCart(product, -1)" class="px-3 h-full flex items-center justify-center hover:bg-blue-700 text-white font-bold transition-colors text-sm">-</button>
-                          <span class="px-2 h-full flex items-center justify-center text-[10px] font-bold text-white min-w-[max-content] whitespace-nowrap bg-blue-600 border-x border-blue-500/30">
+                       <div v-if="getCartQty(product) > 0" class="flex items-center gap-0 bg-green-600 border border-green-600 rounded-md overflow-hidden shadow-md h-8">
+                          <button @click.stop="updateCart(product, -1)" class="px-3 h-full flex items-center justify-center hover:bg-green-700 text-white font-bold transition-colors text-sm">-</button>
+                          <span class="px-2 h-full flex items-center justify-center text-[10px] font-bold text-white min-w-[max-content] whitespace-nowrap bg-green-600 border-x border-green-500/30">
                             {{ getCartQty(product) }} {{ getCartQty(product) > 1 ? 'Sets' : 'Set' }}
                           </span>
-                          <button @click.stop="updateCart(product, 1)" class="px-3 h-full flex items-center justify-center hover:bg-blue-700 text-white font-bold transition-colors text-sm">+</button>
+                          <button @click.stop="updateCart(product, 1)" class="px-3 h-full flex items-center justify-center hover:bg-green-700 text-white font-bold transition-colors text-sm">+</button>
                        </div>
                        
                        <button 
                          v-else
                          @click.stop="addToCart(product)"
-                         class="h-8 px-4 flex items-center justify-center rounded-md bg-white border border-blue-200 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 font-bold text-xs transition-colors shadow-sm uppercase tracking-wide"
+                         class="h-8 px-4 flex items-center justify-center rounded-md bg-white border border-green-200 text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600 font-bold text-xs transition-colors shadow-sm uppercase tracking-wide"
                          title="Add"
                        >
                          ADD
@@ -566,7 +566,7 @@
              <div class="px-6 flex-1 overflow-y-auto">
                 <div class="p-4 bg-slate-700/30 rounded-xl border border-white/5 space-y-2 mb-4">
                    <div class="text-sm text-slate-400 font-medium">Available Stock</div>
-                   <div class="text-3xl font-bold text-blue-400 tracking-tight">{{ currentProduct.quantity }} <span class="text-sm font-normal text-slate-500 ml-1">pairs/pcs</span></div>
+                   <div class="text-3xl font-bold text-green-400 tracking-tight">{{ currentProduct.quantity }} <span class="text-sm font-normal text-slate-500 ml-1">pairs/pcs</span></div>
                 </div>
              </div>
 
@@ -581,7 +581,7 @@
                 </button>
                 <button 
                   @click="navigateImage(1)" 
-                  class="flex-1 py-3 px-4 bg-blue-600 text-white text-sm font-bold rounded-xl disabled:opacity-30 active:scale-95 transition-all shadow-lg shadow-blue-900/20"
+                  class="flex-1 py-3 px-4 bg-green-600 text-white text-sm font-bold rounded-xl disabled:opacity-30 active:scale-95 transition-all shadow-lg shadow-green-900/20"
                   :disabled="currentProductIndex >= currentGroupProducts.length - 1"
                 >
                   Next Product
@@ -609,7 +609,7 @@
                     v-model="customerName" 
                     type="text" 
                     placeholder="e.g. Sahil Kumar"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400"
                   >
                </div>
                <div>
@@ -618,7 +618,7 @@
                     v-model="customerPhone" 
                     type="tel" 
                     placeholder="e.g. 9348343310"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400"
+                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400"
                   >
                </div>
             </div>
