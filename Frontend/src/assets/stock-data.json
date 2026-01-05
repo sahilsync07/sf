@@ -1,7 +1,7 @@
 [
   {
     "groupName": "_META_DATA_",
-    "lastSync": "2026-01-05T06:06:32.729Z",
+    "lastSync": "2026-01-05T06:17:51.184Z",
     "products": []
   },
   {
@@ -10,6 +10,346 @@
       {
         "productName": "Aaram 2902 06*10 Mrp 599 /-",
         "quantity": 18,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "AISON HAWAI@12%",
+    "products": [
+      {
+        "productName": "PLAY-2 HAWAI 09*01 R.BLU",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE-07 HAWAI 06*10 BLK",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE-16 HAWAI 02*05 RED / BLU",
+        "quantity": 40,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE-23 HAWAI 06*10 BLK",
+        "quantity": 90,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE-31 HAWAI 06*10 BRN",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE-31 HAWAI 06*10 N.BLUE",
+        "quantity": 36,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "ATHROX",
+    "products": [
+      {
+        "productName": "ATHROX COBRA GENTS 06*09",
+        "quantity": 72,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATHROX FLITE GENTS 06*09",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATHROX LION GENTS 06*09",
+        "quantity": 136,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATHROX MARBAL GENTS 06*09",
+        "quantity": 60,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATHROX ORANGE  KIDS 02*05",
+        "quantity": 80,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATHROX TIGER GENTS 06*09",
+        "quantity": 108,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATHROX VERGO LADIES 36*39",
+        "quantity": 28,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "CUBIX@12%",
+    "products": [
+      {
+        "productName": "Cubix E-24029 Pnk 04*08 Mrp 369 /-",
+        "quantity": 2,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix M-31831 Blu 07*10 Mrp 266 /-",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-50730 Green 05*09 Mrp 319 /-",
+        "quantity": 1,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-52022 Argentina 07*10 Mrp 289 /-",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-52999 BLU 07*11 MRP 289 /-",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-52999 GRY 07*11 MRP 289 /-",
+        "quantity": 11,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-55003 Blu 07*11 Mrp 279/-",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-55102 Blk 07*11 Mrp 299 /-",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-55102 Blu 07*11 Mrp 299 /-",
+        "quantity": 42,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-5999 Blu 06*10 Mrp 310 /-",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix R-5999 Gry 06*10 Mrp 310 /-",
+        "quantity": 1,
+        "imageUrl": null
+      },
+      {
+        "productName": "Cubix S-10033 Blk 06*10 Mrp 339 /-",
+        "quantity": 59,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "DELHI LOOSE MALL",
+    "products": [
+      {
+        "productName": "ACORN 212 Gents 06*09 Rate 190 /-",
+        "quantity": 40,
+        "imageUrl": null
+      },
+      {
+        "productName": "ACORN 346 Gents 02*05 Rate 150 /-",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "ACORN 346 Gents 06*09 Rate 165 /-",
+        "quantity": 60,
+        "imageUrl": null
+      },
+      {
+        "productName": "ACORN 370 Gents 06*09 Rate 165 /-",
+        "quantity": 44,
+        "imageUrl": null
+      },
+      {
+        "productName": "BALLON GENTS 06*09",
+        "quantity": 48,
+        "imageUrl": null
+      },
+      {
+        "productName": "BM-102 LOOSE SIZE 05*08",
+        "quantity": 132,
+        "imageUrl": null
+      },
+      {
+        "productName": "BM-105 LOOSE SIZE 05*08",
+        "quantity": 116,
+        "imageUrl": null
+      },
+      {
+        "productName": "BYD GENTS 06*10 RATE 75 /-",
+        "quantity": 96,
+        "imageUrl": null
+      },
+      {
+        "productName": "DIVYA LADIES PRINT 05*08 RATE 33 /-",
+        "quantity": 480,
+        "imageUrl": null
+      },
+      {
+        "productName": "DRAGON GENTS 06*09 RATE 135 /-",
+        "quantity": 76,
+        "imageUrl": null
+      },
+      {
+        "productName": "EVA KIDE SLIVERS LOOSE 11*03",
+        "quantity": 120,
+        "imageUrl": null
+      },
+      {
+        "productName": "EVA KIDS CROSS TAR 24*29",
+        "quantity": 208,
+        "imageUrl": null
+      },
+      {
+        "productName": "FAUJI-LOOSE 07*10 CROES",
+        "quantity": 464,
+        "imageUrl": null
+      },
+      {
+        "productName": "JAGUAR PRINT GENTS 06*09",
+        "quantity": 84,
+        "imageUrl": null
+      },
+      {
+        "productName": "JAGUAR PRINT KIDS 02*05",
+        "quantity": 48,
+        "imageUrl": null
+      },
+      {
+        "productName": "KANCHAN 01*03 LADIES RATE 27 /-",
+        "quantity": 588,
+        "imageUrl": null
+      },
+      {
+        "productName": "KANCHAN 05*08 LADIES RATE 32 /-",
+        "quantity": 588,
+        "imageUrl": null
+      },
+      {
+        "productName": "KAVITA LADIES LOOSE",
+        "quantity": 1320,
+        "imageUrl": null
+      },
+      {
+        "productName": "KIRAN LADIES LOOSE",
+        "quantity": 168,
+        "imageUrl": null
+      },
+      {
+        "productName": "LYCRA BELLY KIDS SHOES 05*10",
+        "quantity": 132,
+        "imageUrl": null
+      },
+      {
+        "productName": "P-31 LOOSE 06*09",
+        "quantity": 23,
+        "imageUrl": null
+      },
+      {
+        "productName": "P-32 LOOSE GENTS 06*09",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "P-34 LOOSE GENTS 06*09",
+        "quantity": 44,
+        "imageUrl": null
+      },
+      {
+        "productName": "PARO LADIES CHAPPALS SIZE 04*08/05*08",
+        "quantity": 366,
+        "imageUrl": null
+      },
+      {
+        "productName": "PMC-111 LOOSE CROSS 07*10",
+        "quantity": 20,
+        "imageUrl": null
+      },
+      {
+        "productName": "PMC-333 LOOSE CROSS 07*10",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "QUEEN KIDS SIZE 11*03",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "RIDER POPJI KIDE SIZE 02*05",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "ROX (SOWAHTT/PUMA/YT/AIR) SIZE 06*09",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "SKY TIME MOTI PATTA Babals Ladies 05*08",
+        "quantity": 102,
+        "imageUrl": null
+      },
+      {
+        "productName": "SKY TIME MOTI PATTA Ladies 05*08",
+        "quantity": 150,
+        "imageUrl": null
+      },
+      {
+        "productName": "SKY TIME NANCY Ladies 05*08",
+        "quantity": 49,
+        "imageUrl": null
+      },
+      {
+        "productName": "SOFIA-01 G.C FASHION",
+        "quantity": 113,
+        "imageUrl": null
+      },
+      {
+        "productName": "Super Crocs 02*05",
+        "quantity": -11,
+        "imageUrl": null
+      },
+      {
+        "productName": "Super Crocs 06*09",
+        "quantity": 109,
+        "imageUrl": null
+      },
+      {
+        "productName": "TANYA LADIES LOOSE 05*08",
+        "quantity": 198,
+        "imageUrl": null
+      },
+      {
+        "productName": "TARA-2 05*08 G.C FASHION SOFT",
+        "quantity": 13,
+        "imageUrl": null
+      },
+      {
+        "productName": "ZIPPER KIDS SHOES 05*10",
+        "quantity": 130,
+        "imageUrl": null
+      },
+      {
+        "productName": "ZOOM KIDS BANTU 05*10",
+        "quantity": 41,
         "imageUrl": null
       }
     ]
@@ -125,6 +465,501 @@
       {
         "productName": "Eeken I6192 Gents 07*10 TAN Mrp 590 /-",
         "quantity": 24,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "FENCER@12%",
+    "products": [
+      {
+        "productName": "FEBCER GENTS 2051 06*10 MRP 449 /-",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "FEBCER GENTS 3516 06*10 MRP 359 /-",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "FEBCER GENTS 602 06*10 MRP 389 /-",
+        "quantity": 150,
+        "imageUrl": null
+      },
+      {
+        "productName": "FENCER GENTS 603 06*10 MRP 389 /-",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "FENCER GENTS 606 06*10 MRP 389 /-",
+        "quantity": 54,
+        "imageUrl": null
+      },
+      {
+        "productName": "FENCER GENTS OLA-01 06*10 MRP 369 /-",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "FENCER GENTS PRO-03  06*10 MRP 359/-",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "FENCER LADIES AK-246 05*08",
+        "quantity": -1,
+        "imageUrl": null
+      },
+      {
+        "productName": "FENCER LADIES PF-5050 05*08",
+        "quantity": 11,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "HAMPER @5%",
+    "products": [
+      {
+        "productName": "ALISKA Girls Kids 01*03 (Florex)",
+        "quantity": 42,
+        "imageUrl": null
+      },
+      {
+        "productName": "ALISKA Girls Kids 11*13 (Florex)",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATLANTIC KIDS 01*03 (FLOREX)",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATLANTIC KIDS 04*05 (FLOREX)",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "ATLANTIC KIDS 08*10 (FLOREX)",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "BIG DADDY Gents 07*10 Florex",
+        "quantity": 42,
+        "imageUrl": null
+      },
+      {
+        "productName": "BOSTON BOYS 04*05 (FLOREX)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "BOSTON KIDS 01*03 (FLOREX)",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "BOSTON KIDS 08*10 (FLOREX)",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "BOSTON KIDS 11*13 (FLOREX)",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "CENTURY-2 Ladies 09*10 (FLOREX)",
+        "quantity": 78,
+        "imageUrl": null
+      },
+      {
+        "productName": "CHERRY-01 LADIES 05*08 (FLOREX)",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "FIFA Boys Kids 08*10 (Florex)",
+        "quantity": 42,
+        "imageUrl": null
+      },
+      {
+        "productName": "FIFA Kids 01*03 Florex",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "FIFA KIDS 04*05 (FLOERX)",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "FLORIDA GENTS 07*10 (FLOREX)",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "FLORIDA Kids 01*03 Florex",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "FROOTY Kids 01*04 Florex",
+        "quantity": 54,
+        "imageUrl": null
+      },
+      {
+        "productName": "GRAVITY KIDS 01*03 (FLOREX)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER ADDA Gents 07*10 SEMI",
+        "quantity": 84,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER BOSS Gents 07*10 SEMI",
+        "quantity": 56,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER BOUNCER GENTS LOOSE 06*10",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER GP-01",
+        "quantity": -8,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE DAYNA-01",
+        "quantity": 48,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE DL-08",
+        "quantity": -8,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE DL-11",
+        "quantity": 76,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE DYNA-02",
+        "quantity": 308,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GM-05",
+        "quantity": 16,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GM-06 05*08",
+        "quantity": 176,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GP-01",
+        "quantity": 1419,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GP-01SIZE 09*10",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GP-02",
+        "quantity": 348,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GP-07",
+        "quantity": 20,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GP-10",
+        "quantity": 184,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GP-21",
+        "quantity": 124,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE GS-03 06*09",
+        "quantity": 100,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE LS-11",
+        "quantity": 388,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE LS-21",
+        "quantity": 412,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE PP-27",
+        "quantity": 60,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SK-08 LADIES",
+        "quantity": 64,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SO-02",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SO-03 06*09",
+        "quantity": 360,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SR-02",
+        "quantity": 96,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SR-04",
+        "quantity": 100,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SUPRIYA-05",
+        "quantity": 8,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SV-03 06*09",
+        "quantity": 264,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SV-10 06*09",
+        "quantity": 276,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SV-14",
+        "quantity": -20,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SV-15",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LOOSE SV-32",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER LS-11",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER MD Ladies Loose 05*08",
+        "quantity": 288,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER NS-02",
+        "quantity": 7,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER PANTHER GENTS BOX 07*10",
+        "quantity": 94,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER PANTHER GENTS LOOSE 06*09",
+        "quantity": 92,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER PP-29 LOOSE",
+        "quantity": 64,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER SONAM-05 LADIES",
+        "quantity": 9,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER SONAM-07 LADIES",
+        "quantity": 13,
+        "imageUrl": null
+      },
+      {
+        "productName": "HAMPER  SONAM-3 LADIES 05*08",
+        "quantity": 22,
+        "imageUrl": null
+      },
+      {
+        "productName": "JULIE KIDE LADIES 12*01 (FLOREX)",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "MARIYA-5 Ladies 05*08 (FLOREX)",
+        "quantity": 128,
+        "imageUrl": null
+      },
+      {
+        "productName": "MARIYA Girls Kids 01*04 (Florex)",
+        "quantity": 144,
+        "imageUrl": null
+      },
+      {
+        "productName": "MOSCOW Boys Kids 01*03 (Florex)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "OMEGA Boys Kids 01*03 (Florex)",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "OMEGA Boys Kids 08*10 (Florex)",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "PACIFIC KIDS 08*10 (FLOREX)",
+        "quantity": 108,
+        "imageUrl": null
+      },
+      {
+        "productName": "PANDA Kids 05*10 Florex",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "PANTHER Kids 01*03 (FLOREX)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "PANTHER Kids 08*10 (FLOREX)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "PANTHER Kids 11*13 (FLOREX)",
+        "quantity": -6,
+        "imageUrl": null
+      },
+      {
+        "productName": "PRINCIPAL Gents 07*10 Florex",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "SABRINA Kids 05*10 Florex",
+        "quantity": 66,
+        "imageUrl": null
+      },
+      {
+        "productName": "SS-1104 Ladirs 05*08 Mrp 359 /-(Florex)",
+        "quantity": 150,
+        "imageUrl": null
+      },
+      {
+        "productName": "SUZY-2 Ladies 05*08 (FLOREX)",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "THREE STAR Kids 01*03 (FLOREX)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "THREE STAR Kids 08*10 (FLOREX)",
+        "quantity": 1,
+        "imageUrl": null
+      },
+      {
+        "productName": "THREE STAR Kids 11*13 (FLOREX)",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "TULIP-6V Ladies 05*08 (FLOREX)",
+        "quantity": 75,
+        "imageUrl": null
+      },
+      {
+        "productName": "TULIP-9 LADIES 05*08 (FLOREX)",
+        "quantity": 9,
+        "imageUrl": null
+      },
+      {
+        "productName": "TWEETY KIDS 01*04 Florex Mrp 369 /",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "TWEETY KIDS 11*13 Florex Mrp 359 /-",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "URAVSHI-1 Ladies 05*08 (FLOREX)",
+        "quantity": -4,
+        "imageUrl": null
+      },
+      {
+        "productName": "URVASHI-05 LADIES 05*08 (FLOREX)",
+        "quantity": 11,
+        "imageUrl": null
+      },
+      {
+        "productName": "VIRAT Gents 07*10 Florex",
+        "quantity": 30,
+        "imageUrl": null
+      },
+      {
+        "productName": "WALKER-01 GENTS 07*10 (FLOREX)",
+        "quantity": 1,
+        "imageUrl": null
+      },
+      {
+        "productName": "WALKER-03 GENTS 07*10 (FLOREX)",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "WALKER-06 GENTS 07*10 (FLOREX)",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "WILD Kids 11*13 Florex",
+        "quantity": 60,
         "imageUrl": null
       }
     ]
@@ -295,58 +1130,313 @@
     ]
   },
   {
-    "groupName": "Local Mall 05%",
+    "groupName": "K-STAR@ 05%",
     "products": [
       {
-        "productName": "AISON HAWAI@12%",
-        "quantity": 232,
+        "productName": "K-SRAR GENTS 1210 06*09",
+        "quantity": 33,
         "imageUrl": null
       },
       {
-        "productName": "CUBIX@12%",
-        "quantity": 230,
+        "productName": "K-SRAR GENTS ROCKET 06*09",
+        "quantity": 2,
         "imageUrl": null
       },
       {
-        "productName": "DELHI LOOSE MALL",
-        "quantity": 6787,
+        "productName": "K-SRAR GENTS SK-25 06*09",
+        "quantity": 4,
         "imageUrl": null
       },
       {
-        "productName": "FENCER@12%",
-        "quantity": 316,
+        "productName": "KSTAR 054 KIDS 02*05",
+        "quantity": 280,
         "imageUrl": null
       },
       {
-        "productName": "HAMPER @5%",
-        "quantity": 7235,
+        "productName": "KSTAR 057 KIDS 02*05",
+        "quantity": 16,
         "imageUrl": null
       },
       {
-        "productName": "K-STAR@ 05%",
-        "quantity": 3723,
+        "productName": "K-STAR 10755 02*05 BOYS",
+        "quantity": -4,
         "imageUrl": null
       },
       {
-        "productName": "PU MINI@12%",
-        "quantity": 1147,
+        "productName": "K-Star 10755 Gents 06*09",
+        "quantity": 15,
         "imageUrl": null
       },
       {
-        "productName": "STYLE HAWAI@12%",
-        "quantity": 2476,
+        "productName": "K-STAR 10827 GENTS",
+        "quantity": 28,
         "imageUrl": null
       },
       {
-        "productName": "SUNNY01 & TOSS @12%",
-        "quantity": 247,
+        "productName": "K-Star 10828 Gents 07*10 Rate 140 /-",
+        "quantity": 64,
         "imageUrl": null
       },
       {
-        "productName": "VKG RIDE",
-        "quantity": 2522,
+        "productName": "K Star 10830 Gents 7*10",
+        "quantity": 36,
         "imageUrl": null
       },
+      {
+        "productName": "K-STAR 1220 05*08 LADIES",
+        "quantity": 84,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 12539 GENTS 06*09 RATE 140 /-",
+        "quantity": 56,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 12541 GENTS 06*09 RATE 145 /-",
+        "quantity": 56,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 12933 GENTS 06*09 RATE 135 /-",
+        "quantity": 284,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 14242 GENTS 06*09 RATE 130 /-",
+        "quantity": 56,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 14818 GENTS 06*09 RATE 165 /-",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 1978 T.T Gents 06*09 Rate 145 /-",
+        "quantity": 60,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-Star 2115 Kids 24*29",
+        "quantity": 38,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 57 07*10",
+        "quantity": -14,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 616 LADIES 36*39 RATE 110 /-",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 625 Girls 36*39 Rate 125 /-",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-Star 777 Gents 06*09",
+        "quantity": 100,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR 9213 GENTS 07*10",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-Star 9256 Gents 40*43",
+        "quantity": 27,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-Star 9769 Gents 40*43",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "K Star 9772 Kids 2*5",
+        "quantity": 5,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-Star 9961 Gents 40*43",
+        "quantity": -8,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-Star 9982 Gents 06*09",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR APL-01 GENTS 06*09 RATE 100 /-",
+        "quantity": 112,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR APL-07 GENTS 06*09 RATE 100 /-",
+        "quantity": 320,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR BUBBLE 02*05 Boys Rate 75 /-",
+        "quantity": 130,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR C-10 02*05 KIDS",
+        "quantity": 9,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR C-10 GENTS 06*09",
+        "quantity": 9,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR CHINA-7 06*09(K-Star C-10)",
+        "quantity": 9,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR DREAM 06*10",
+        "quantity": 45,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR FIGHTER 06*09",
+        "quantity": 36,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR FL-370 07*10",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS 054 07*10",
+        "quantity": -4,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS 1733 07*10",
+        "quantity": 20,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS ADDA 06*09",
+        "quantity": 46,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS C-11 06*09",
+        "quantity": -4,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS C-21 06*09",
+        "quantity": -4,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS G-32 06*09",
+        "quantity": 16,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS JAMBO 06*09",
+        "quantity": 40,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS PISTA-01 07*10",
+        "quantity": 193,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS PISTA-2 07*10 RATE 72 /-",
+        "quantity": 536,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR GENTS RAFTAR 06*09",
+        "quantity": 33,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR HAMMER 07*10",
+        "quantity": -4,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR HUNTER GENTS 06*09 RATE 100 /-",
+        "quantity": 76,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR KAJU GENTS 06*10",
+        "quantity": -8,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR KIDS G-10 05*10",
+        "quantity": 54,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR KIDS RAJA 11*05",
+        "quantity": 89,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR KS-FOAM GENTS 07*10",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR LADIES PT-701 05*08",
+        "quantity": 56,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR MAZZA KIDS 05*10",
+        "quantity": 58,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR OXYGEN 07*10",
+        "quantity": 4,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR PATLU KIDS 18*23 RATE 60 /-",
+        "quantity": 220,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR ROCKET RAFTAR GENTS 06*09",
+        "quantity": -2,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR STONE GENTS 06*09 RATE 100 /-",
+        "quantity": 140,
+        "imageUrl": null
+      },
+      {
+        "productName": "K-STAR WALKER GENTS 06*10 RATE 80 /-",
+        "quantity": 24,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "Local Mall 05%",
+    "products": [
       {
         "productName": "Apexlite Parkar Hawai Gents 06*09",
         "quantity": 1,
@@ -1930,6 +3020,71 @@
     ]
   },
   {
+    "groupName": "PU MINI@12%",
+    "products": [
+      {
+        "productName": "DEEPIKA-06 HILL SANDAL LADIES",
+        "quantity": 85,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI ALINA-02 LADIES HILL",
+        "quantity": 66,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI DK-03 LADIES",
+        "quantity": 16,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI KANDY-01 LADIES",
+        "quantity": 71,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI M-12 LADIES",
+        "quantity": 395,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI P-033 LADIES HILL",
+        "quantity": 126,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI PINKY SERIES 04*07",
+        "quantity": 106,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI SPEED-05 SHOES",
+        "quantity": 59,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI SPEED-06 SHOES",
+        "quantity": 59,
+        "imageUrl": null
+      },
+      {
+        "productName": "PU MINI SPEED-09 SHOES",
+        "quantity": 48,
+        "imageUrl": null
+      },
+      {
+        "productName": "SIMRAN-03 LADIES HILL SANDAL",
+        "quantity": 12,
+        "imageUrl": null
+      },
+      {
+        "productName": "SONIYA -03 LADIES SANDAL",
+        "quantity": 104,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
     "groupName": "School Shoes @ 05%",
     "products": [
       {
@@ -2565,6 +3720,146 @@
       {
         "productName": "Solea Plus 7709 05*08 Mrp 339 /-",
         "quantity": 71,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "STYLE HAWAI@12%",
+    "products": [
+      {
+        "productName": "Leolite Rubber Chapals BOX",
+        "quantity": 84,
+        "imageUrl": null
+      },
+      {
+        "productName": "Leolite Rubber Chapals LOOSE",
+        "quantity": 630,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappal PARAG S/ Black 04*05",
+        "quantity": 144,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappal PARAG S/ Black 06*10",
+        "quantity": 120,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappals BARFI 04*05",
+        "quantity": 2,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappals BARFI 06*10",
+        "quantity": 638,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappals LEEFOX 06*10",
+        "quantity": 150,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappal Zigzag 04*05",
+        "quantity": 42,
+        "imageUrl": null
+      },
+      {
+        "productName": "Rubber Chappal Zigzag 06*10",
+        "quantity": 33,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE ARMY 3D 06*10 LOOSE",
+        "quantity": 330,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE ARMY HAWAI 06*10",
+        "quantity": 288,
+        "imageUrl": null
+      },
+      {
+        "productName": "STYLE B-2 HAWAI 06*10",
+        "quantity": 15,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "SUNNY01 & TOSS @12%",
+    "products": [
+      {
+        "productName": "HONEY-150 05*08 LEDISH",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "LILY-01 05*08 LEDISH",
+        "quantity": 18,
+        "imageUrl": null
+      },
+      {
+        "productName": "MERY-02 05*08 LEDISH",
+        "quantity": 24,
+        "imageUrl": null
+      },
+      {
+        "productName": "SUNNY-1 LEDISH",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-01 05*08 LADIES PNK",
+        "quantity": 40,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-01 05*08 LEDISH BLU & C.GRN",
+        "quantity": 3,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-02 05*08 LADIES PISTA",
+        "quantity": -2,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-04 05*08 LADIES TAN & PECH",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-07 05*08 LEDISH CHRY & PISTA",
+        "quantity": 52,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-09 05*08 LADIES PISTA",
+        "quantity": -1,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-09 05*08 LEDISH",
+        "quantity": 6,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-10 05*08 LEDISH CHRY & PICH",
+        "quantity": 27,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-10 TAN 05*08 LADIES",
+        "quantity": 3,
+        "imageUrl": null
+      },
+      {
+        "productName": "TOSS-11 05*08 LEDISH",
+        "quantity": 1,
         "imageUrl": null
       }
     ]
@@ -3465,6 +4760,26 @@
       {
         "productName": "Vertex XP650100 Gents 06*10 TAN Mrp 319 /-",
         "quantity": 48,
+        "imageUrl": null
+      }
+    ]
+  },
+  {
+    "groupName": "VKG RIDE",
+    "products": [
+      {
+        "productName": "VKG RIDE RIDHI-05 Blu/Pink/Red 01*03",
+        "quantity": 216,
+        "imageUrl": null
+      },
+      {
+        "productName": "VKG RIDE SELTOS-05 MRP 219 /-",
+        "quantity": 2234,
+        "imageUrl": null
+      },
+      {
+        "productName": "VKG RIDE SELTOS-07 MRP 219 /-",
+        "quantity": 72,
         "imageUrl": null
       }
     ]
