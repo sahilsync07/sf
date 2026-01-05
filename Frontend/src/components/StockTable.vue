@@ -1064,7 +1064,7 @@ export default {
           const response = await axios.get("http://localhost:3000/api/stock");
           data = response.data;
         } else {
-          const response = await fetch("sf/assets/stock-data.json");
+          const response = await fetch("/sf/assets/stock-data.json");
           data = await response.json();
         }
 
