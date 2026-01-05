@@ -770,7 +770,7 @@ export default {
     // Persist cart
     cart: {
       handler(val) {
-        localStorage.setItem('sbe_cart', JSON.stringify(val));
+        localStorage.setItem('sf_cart', JSON.stringify(val));
       },
       deep: true
     }
@@ -947,7 +947,7 @@ export default {
   async mounted() {
     await this.loadStockData();
     // Load Cart
-    const savedCart = localStorage.getItem('sbe_cart');
+    const savedCart = localStorage.getItem('sf_cart');
     if (savedCart) {
       try {
         this.cart = JSON.parse(savedCart);
@@ -1064,7 +1064,7 @@ export default {
           const response = await axios.get("http://localhost:3000/api/stock");
           data = response.data;
         } else {
-          const response = await fetch("/sbe/assets/stock-data.json");
+          const response = await fetch("sf/assets/stock-data.json");
           data = await response.json();
         }
 
@@ -1157,7 +1157,7 @@ export default {
       try {
         const formData = new FormData();
         formData.append("file", this.imageFiles[productName]);
-        formData.append("upload_preset", "sbe-stock");
+        formData.append("upload_preset", "sf-stock");
         const response = await fetch(
           "https://api.cloudinary.com/v1_1/dg365ewal/image/upload",
           {
