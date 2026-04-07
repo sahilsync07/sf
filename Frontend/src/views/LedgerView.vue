@@ -255,7 +255,7 @@ const { stockData, config } = storeToRefs(appStore);
 
 const { ledgerData, allLedgers, loading: ledgerLoading, error, loadLedgerData } = useLedgerData();
 const { isAdmin, isSuperAdmin } = useAdmin();
-const companyName = ref('SBE Rayagada');
+const companyName = ref('SF Srikakulam');
 
 const { loading: stockLoading } = useStockData();
 const { cartTotalItems } = useCart();
