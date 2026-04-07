@@ -1,1332 +1,895 @@
+
 <template>
-  <div class="min-h-screen w-full bg-slate-50 font-sans text-slate-800">
-    <!-- Sticky Header with Glassmorphism -->
-    <header
-      class="sticky top-0 z-[50] w-full bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300"
+  <div class="min-h-screen w-full bg-slate-50 font-sans text-slate-800 pb-20">
+    <DesktopToolbar
+      :loading="loading"
+      :is-caching-images="isCaching"
+      :show-side-panel="showSidePanel"
+      :show-cart="showCart"
+      :company-name="companyName"
+      :cloud-name="cloudName"
+      @toggleSidebar="toggleSidebar"
+      @toggleCart="toggleCart"
+      @updateStockData="updateStockData"
+      @toggleLedgerView="toggleLedgerView"
+      @promptAdminLogin="promptAdminLogin"
+      @cacheImages="handleCacheImages"
+      @refreshData="refreshStockData"
+    />
+
+    <Transition
+      enter-active-class="transition-opacity duration-300 ease-out"
+      enter-from-class="opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="transition-opacity duration-300 ease-in"
+      leave-from-class="opacity-100"
+      leave-to-class="opacity-0"
     >
-      <div class="w-full px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <!-- Left: Sidebar Toggle & Sync -->
-          <div class="flex items-center gap-3">
-             <button
-              @click="showSidePanel = !showSidePanel"
-              class="p-2 rounded-full bg-green-600 text-white hover:bg-green-700 transition-colors shadow-md active:scale-95"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-            </button>
-
-            <button
-              v-if="isAdmin && !isSuperAdmin"
-              @click="updateStockData"
-              class="p-2 rounded-full bg-transparent hover:bg-gray-100 transition-colors relative group"
-              title="Sync Data"
-            >
-              <img
-                src="https://res.cloudinary.com/dg365ewal/image/upload/v1749701539/cloud-sync_nznxzz.png"
-                alt="Refresh"
-                class="w-6 h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-                :class="{ 'animate-spin': loading }"
-              />
-            </button>
-            <button
-              v-if="isSuperAdmin"
-              @click="toggleLedgerView"
-              class="p-2 rounded-full hover:bg-slate-100 transition-colors group"
-              title="Ledger View"
-            >
-              <img
-                src="https://res.cloudinary.com/dg365ewal/image/upload/v1753616091/accounting-book_vh3kg5.png"
-                alt="Ledger"
-                class="w-6 h-6 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            </button>
-            <!-- Spacer for non-admin layout balance -->
-            <div v-if="!isAdmin && !isSuperAdmin" class="hidden sm:block w-10"></div>
-          </div>
-
-          <!-- Center: Title -->
-          <div class="flex-1 text-center">
-            <h1 
-              class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 select-none inline-block cursor-pointer"
-              @click="promptAdminLogin"
-              title="SF SKLM"
-            >
-              <span class="text-green-600">SF</span> Srikakulam
-            </h1>
-          </div>
-
-          <!-- Right: Cart & Sync -->
-          <div class="flex items-center justify-end gap-2">
-             <button
-              @click="showCart = !showCart"
-              class="relative group p-2 bg-green-600 rounded-full hover:bg-green-700 transition-all shadow-md active:scale-95"
-              title="Toggle Cart"
-            >
-              <div v-if="cartTotalItems > 0" class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm z-10 border border-white">{{ cartTotalItems }}</div>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+      <FunLoader v-if="isFiltering" />
+    </Transition>
 
     <div class="flex w-full">
-      <!-- Side Panel (Bird Eye View) -->
-      <aside
-        class="fixed inset-y-0 left-0 bg-white border-r border-slate-200 w-64 z-40 transform transition-transform duration-300 ease-in-out pt-16"
-        :class="showSidePanel ? 'translate-x-0' : '-translate-x-full'"
-      >
-        <div class="p-4 h-full overflow-y-auto">
-           <div class="flex items-center justify-between mb-4 lg:hidden">
-             <h2 class="text-lg font-bold text-slate-800">Brands</h2>
-             <button @click="showSidePanel = false" class="p-1 rounded-full hover:bg-slate-100">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-             </button>
-           </div>
-           <nav class="space-y-1">
-             <template v-for="(group, index) in filteredStockData" :key="group.groupName">
-                <a
-                  href="#"
-                  @click.prevent="scrollToGroup(group.groupName)"
-                  class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-green-50 hover:text-green-600 group"
-                  :class="activeScrollGroup === group.groupName ? 'bg-green-50 text-green-600' : 'text-slate-600'"
-                >
-                   <span class="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-green-400" :class="activeScrollGroup === group.groupName ? 'bg-green-600' : ''"></span>
-                   <span class="truncate">{{ group.groupName }}</span>
-                </a>
-             </template>
-           </nav>
-        </div>
-      </aside>
+      <BrandsSidebar
+        :show-side-panel="showSidePanel"
+        :grouped-sidebar="groupedSidebar"
+        :active-scroll-group="activeScrollGroup"
+        :selected-group="selectedGroup"
+        @update:showSidePanel="showSidePanel = $event"
+        @sidebarClick="handleSidebarClick"
+        @clubClick="handleClubClick"
+      />
 
-      <!-- Overlay for mobile sidebar -->
-      <div 
-        v-if="showSidePanel" 
-        class="fixed inset-0 bg-black/50 z-30 lg:hidden"
-        @click="showSidePanel = false"
-      ></div>
-
-      <!-- Cart Sidebar (Right Side - Push Layout) -->
-      <aside
-        class="fixed inset-y-0 right-0 bg-white border-l border-slate-200 w-80 z-[60] transform transition-transform duration-300 ease-in-out shadow-2xl flex flex-col"
-        :class="showCart ? 'translate-x-0' : 'translate-x-full'"
-        style="height: 100vh; top: 0;" 
-      >
-        <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-white">
-           <h2 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-             Your Cart <span v-if="cart.length" class="text-sm font-normal text-slate-500">({{ cartTotalItems }})</span>
-           </h2>
-           <button @click="showCart = false" class="p-2 rounded-full hover:bg-slate-50 text-slate-400 hover:text-slate-600 transition-colors">
-             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-           </button>
-        </div>
-        
-        <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-slate-50/50">
-           <div v-if="cart.length === 0" class="flex flex-col items-center justify-center h-64 text-slate-400">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4 opacity-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-              <p class="text-sm font-medium">Your cart is empty</p>
-              <button @click="showCart = false" class="mt-4 px-4 py-2 bg-green-50 text-green-600 rounded-lg text-sm font-bold hover:bg-green-100 transition-colors">Start Browsing</button>
-           </div>
-           
-           <div v-for="(item, index) in cart" :key="index" class="flex gap-3 bg-white p-3 rounded-xl border border-slate-100 shadow-sm relative group hover:border-green-200 transition-colors">
-              <!-- Mini Thumbnail -->
-              <div class="w-16 h-16 bg-slate-50 rounded-lg border border-slate-100 shrink-0 overflow-hidden">
-                 <img v-if="item.product.imageUrl" :src="getOptimizedUrl(item.product.imageUrl)" class="w-full h-full object-cover" />
-                 <div v-else class="w-full h-full flex items-center justify-center text-[8px] text-slate-400 text-center p-1">No Image</div>
-              </div>
-              
-               <div class="flex-1 min-w-0">
-                 <h4 class="text-xs font-semibold text-slate-800 line-clamp-2 leading-tight mb-1">{{ item.product.productName }}</h4>
-                 <div class="flex items-center justify-between mt-2">
-                    <div class="flex items-center gap-2">
-                       <button @click="updateCartQuantity(index, -1)" class="w-6 h-6 flex items-center justify-center text-white bg-green-600 hover:bg-green-700 rounded-md shadow-sm transition-all">-</button>
-                       <span class="text-xs font-bold text-slate-800 min-w-[3rem] text-center">{{ item.quantity }} {{ item.quantity > 1 ? 'Sets' : 'Set' }}</span>
-                       <button @click="updateCartQuantity(index, 1)" class="w-6 h-6 flex items-center justify-center text-white bg-green-600 hover:bg-green-700 rounded-md shadow-sm transition-all">+</button>
-                    </div>
-                     <button @click="removeFromCart(index)" class="w-8 h-8 flex items-center justify-center bg-red-50 text-red-600 border border-red-100 hover:bg-red-600 hover:text-white rounded-lg transition-all shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                     </button>
-                 </div>
-              </div>
-           </div>
-        </div>
-        
-        <div class="p-4 border-t border-slate-100 bg-slate-50">
-            <div class="flex justify-between items-center mb-4">
-               <span class="text-slate-600 font-medium text-sm">Total Quantity</span>
-               <span class="text-xl font-extrabold text-green-600">{{ cartTotalItems }} Sets</span>
-            </div>
-            <button 
-              @click="sendOrderToWhatsapp"
-              class="w-full py-3.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold rounded-xl shadow-lg shadow-green-900/10 active:scale-[0.98] transition-all flex items-center justify-center gap-3 group"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-              Send Order via WhatsApp
-            </button>
-        </div>
-      </aside>
+      <!-- Cart Sidebar -->
+      <CartSidebar
+        :show-cart="showCart"
+        @closeCart="showCart = false"
+        @sendOrderToWhatsapp="sendOrderToWhatsapp"
+      />
 
       <main 
-         class="flex-1 w-full px-4 sm:px-6 lg:px-8 py-6 space-y-6 min-w-0 transition-all duration-300"
-         :class="{'mr-0 lg:mr-80': showCart, 'ml-0 lg:ml-64': showSidePanel}"
+         class="flex-1 w-full px-2 sm:px-4 lg:px-6 space-y-8 min-w-0 transition-all duration-300 main-content-offset"
       >
-      
-      <!-- Ledger View Placeholder -->
-      <div
-        v-if="showLedgerView"
-        class="flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-dashed border-slate-300"
-      >
-        <div class="text-xl font-semibold text-slate-500">Tally Ledger Work in Progress</div>
-      </div>
-
-      <!-- Main Content -->
-      <div v-else class="space-y-6">
-        <!-- New Breadcrumb / Sidebar Toggle for Mobile -->
-        <div class="lg:hidden flex items-center justify-between">
-           <span class="text-sm font-semibold text-slate-500">
-             Showing {{ activeScrollGroup || 'All Brands' }}
-           </span>
-        </div>
-        
-        <!-- Brand Filters (Scrollable Horizontal List) -->
-        <div class="flex overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 gap-2 no-scrollbar">
-          <button
-            @click="selectGroup('All')"
-            class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 border"
-            :class="selectedGroup === 'All' ? 'bg-slate-900 text-white border-slate-900 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
-          >
-            All Items
-          </button>
-
-          <!-- Dynamic Brands -->
-          <button
-            v-for="brand in brands"
-            :key="brand.name"
-            @click="selectGroup(brand.name)"
-            class="flex items-center justify-center px-4 py-1.5 rounded-full border transition-all duration-200 min-w-[80px]"
-            :class="selectedGroup === brand.name ? 'bg-white border-green-500 ring-2 ring-green-100' : 'bg-white border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
-          >
-            <img :src="brand.logo" :alt="brand.name" class="h-6 object-contain" />
-          </button>
-
-          <!-- Static Filters (Capsule Style) -->
-          <button
-             v-for="filter in ['Kids', 'Hawai', 'Loose', 'Box', 'Shoe', 'Maruti', 'Magnet', 'rktraders', 'jkplastic', 'airson', 'GeneralItems']"
-             :key="filter"
-             @click="selectGroup(filter)"
-             class="whitespace-nowrap px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 border capitalize"
-             :class="selectedGroup === filter ? 'bg-green-600 text-white border-green-600 shadow-md' : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300 hover:bg-slate-50'"
-          >
-            {{ filter === 'rktraders' ? 'R.K.Traders' : filter === 'jkplastic' ? 'J.K.Plastic' : filter === 'airson' ? 'Airson' : filter === 'GeneralItems' ? 'General Items' : filter }}
-          </button>
-        </div>
-
-        <!-- Toolbar: Search, Filter, View Toggle -->
-        <div class="flex flex-wrap items-center justify-between gap-3 bg-white p-3 rounded-2xl shadow-sm border border-slate-100 transition-all">
-          
-          <!-- Search (Grows to fill space, wraps if < 240px space) -->
-          <div class="relative flex-grow basis-[240px] min-w-[240px]">
-            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-            </span>
-            <input
-              v-model="searchQuery"
-              type="text"
-              placeholder="Search..."
-              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 transition-all text-sm"
-            />
+        <!-- Ledger Placeholder -->
+        <div v-if="showLedgerView" class="flex flex-col items-center justify-center py-32 bg-white rounded-3xl border-2 border-dashed border-slate-200">
+          <div class="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mb-4">
+             <i class="fa-solid fa-book-open text-slate-400 text-2xl"></i>
           </div>
-
-          <!-- Group Select Dropdown (Grows, wraps if < 200px) -->
-          <div class="relative flex-grow basis-[200px] min-w-[200px]">
-             <select
-               v-model="selectedGroup"
-               @change="selectGroup($event.target.value)"
-               class="w-full appearance-none px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 focus:outline-none focus:ring-2 focus:ring-green-500/20 focus:border-green-500 text-sm font-medium"
-             >
-               <option value="All">All Categories</option>
-               <option value="Kids">Kids Only</option>
-               <option value="Hawai">Hawai Only</option>
-               <option value="Loose">Loose Items</option>
-               <option value="Box">Box Items</option>
-               <option value="Shoe">Shoes</option>
-               <option disabled>──────────</option>
-               <option
-                 v-for="group in sortedStockDataForDropdown"
-                 :key="group.groupName"
-                 :value="group.groupName"
-               >
-                 {{ group.groupName }}
-               </option>
-             </select>
-             <span class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-             </span>
-          </div>
-
-          <!-- Toggles & View Options (Wraps independently) -->
-          <div class="flex flex-wrap items-center gap-2 flex-grow basis-auto justify-between sm:justify-end">
-             <!-- Filter Checkboxes -->
-             <div class="flex flex-wrap gap-2 flex-grow sm:flex-grow-0 justify-center">
-               <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-slate-100 px-3 py-2 rounded-lg border border-slate-200 transition-colors select-none">
-                 <input type="checkbox" v-model="showImagesOnly" class="w-4 h-4 text-green-600 rounded border-gray-300 focus:ring-green-500">
-                 <span class="text-sm font-medium text-slate-700 whitespace-nowrap">Images</span>
-               </label>
-               <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-slate-100 px-3 py-2 rounded-lg border border-slate-200 transition-colors select-none">
-                 <input type="checkbox" v-model="showNoImagesOnly" class="w-4 h-4 text-red-600 rounded border-gray-300 focus:ring-red-500">
-                 <span class="text-sm font-medium text-slate-700 whitespace-nowrap">No Images</span>
-               </label>
-               <label class="flex items-center gap-2 cursor-pointer bg-slate-50 hover:bg-slate-100 px-3 py-2 rounded-lg border border-slate-200 transition-colors select-none">
-                 <input type="checkbox" v-model="hideOldArticles" class="w-4 h-4 text-slate-600 rounded border-gray-300 focus:ring-slate-500">
-                 <span class="text-sm font-medium text-slate-700 whitespace-nowrap">Hide Old</span>
-               </label>
-             </div>
-
-             <!-- View Mode Switcher -->
-             <div class="flex bg-slate-100 p-1 rounded-xl shrink-0">
-                <button
-                  @click="viewMode = 'list'"
-                  class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                  :class="viewMode === 'list' ? 'bg-white text-green-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
-                  title="List View"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-                </button>
-                <button
-                  @click="viewMode = 'image'"
-                  class="px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
-                  :class="viewMode === 'image' ? 'bg-white text-green-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'"
-                  title="Grid View"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
-                </button>
-             </div>
-          </div>
+          <div class="text-xl font-bold text-slate-700">Ledger View Under Construction</div>
+          <p class="text-slate-400 mt-2">Check back soon for accounting features.</p>
         </div>
 
-        <!-- Info Bar -->
-        <div class="flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 px-2">
-          <span>
-            Last Synced: 
-            <span class="font-semibold text-slate-700">
-               {{ lastRefresh ? lastRefresh.toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }) : "Never" }}
-            </span>
-          </span>
-          <span v-if="error" class="text-red-500 font-medium mt-1 sm:mt-0">{{ error }}</span>
-        </div>
+        <!-- Welcome Splash Removed -->
 
-        <!-- View: List -->
-        <div v-if="viewMode === 'list'" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-          <table class="w-full text-left border-collapse">
-            <thead class="bg-slate-50 border-b border-slate-200 uppercase text-xs font-semibold text-slate-500">
-              <tr>
-                <th class="px-6 py-4 w-1/3">Product Name</th>
-                <th class="px-6 py-4 w-1/6">Stock</th>
-                <th class="px-6 py-4 w-1/2 text-center">Preview</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <template v-for="(group, index) in filteredStockData" :key="index">
-                <tr :id="'group-row-' + index" class="bg-slate-50/50 hover:bg-slate-100 transition-colors cursor-pointer" @click="toggleGroup(index)">
-                  <td colspan="3" class="px-6 py-3 font-bold text-slate-700 text-sm flex items-center gap-2">
-                    <span class="transform transition-transform text-slate-400" :class="{ 'rotate-90': expandedGroups[index] }">▸</span>
-                    {{ group.groupName }}
-                  </td>
-                </tr>
-                <tr
-                  v-for="(product, pIndex) in group.products"
-                  :key="`${index}-${pIndex}`"
-                  v-show="expandedGroups[index]"
-                  class="group/row hover:bg-green-50/30 transition-colors"
-                >
-                  <td class="px-6 py-6">
-                    <p class="text-sm font-medium text-slate-800 line-clamp-1 group-hover/row:text-green-600 transition-colors">{{ product.productName }}</p>
-                  </td>
-                  <td class="px-6 py-6">
-                     <span class="inline-block px-2 py-1 text-xs font-bold text-green-700 bg-green-50 rounded-md">
-                       {{ product.quantity }} pcs
-                     </span>
-                     <button 
-                       @click.stop="addToCart(product)"
-                       class="ml-2 w-7 h-7 inline-flex items-center justify-center rounded-lg bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition-all shadow-md"
-                       title="Add to Cart"
-                     >
-                       <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
-                     </button>
-                  </td>
-                  <td class="px-6 py-6 text-center">
-                    <div class="relative w-12 h-12 mx-auto rounded-lg bg-slate-100 border border-slate-200 overflow-hidden">
-                       <img v-if="product.imageUrl" :src="getOptimizedUrl(product.imageUrl)" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform" @click="openImagePopup(product, index)" />
-                       <span v-else class="flex items-center justify-center w-full h-full text-[9px] text-slate-400">N/A</span>
-                    </div>
-                  </td>
-                </tr>
-              </template>
-            </tbody>
-          </table>
-        </div>
+        <!-- Brand Landing Page -->
+        <BrandLanding
+          v-else-if="showLanding && !searchQuery"
+          @select-category="handleCategorySelect"
+          @open-image-popup="openImagePopup"
+          @open-catalog-gen="showCatalogGen = true"
+        />
 
-        <!-- View: Image Grid -->
         <div v-else class="space-y-8">
-          <div v-for="(group, index) in filteredStockData" :key="index" class="space-y-4">
-            <!-- Group Header -->
+          <!-- Back to Landing REMOVED -->
+          <!-- Error Banner -->
+          <div v-if="error" class="bg-red-50 text-red-600 px-4 py-3 rounded-xl flex items-center gap-3 border border-red-100">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span class="font-medium text-sm">{{ error }}</span>
+          </div>
+
+          <!-- GROUP LIST -->
+          <div class="flex flex-col gap-1 pb-10">
             <div
-               :id="'group-grid-' + normalizeId(group.groupName)"
-               class="flex items-center gap-3 cursor-pointer group select-none scroll-mt-24"
-               @click="toggleGroup(index)"
+              v-for="(group, index) in filteredStockData"
+              :key="group.groupName"
+              :id="'group-grid-' + normalizeId(group.groupName)"
+              class="relative scroll-mt-28 transition-all duration-300"
+              :class="expandedGroups[group.groupName] ? 'mb-8' : 'mb-1'"
             >
-               <h2 class="text-lg font-bold text-slate-800 group-hover:text-green-600 transition-colors">{{ group.groupName }}</h2>
-               <div class="h-px flex-1 bg-slate-200 group-hover:bg-green-100 transition-colors"></div>
-               <span class="text-slate-400 transform transition-transform duration-300" :class="{ 'rotate-180': expandedGroups[index] }">▼</span>
-            </div>
-
-            <!-- Grid Content -->
-            <div v-show="expandedGroups[index]" class="grid grid-cols-2 sm:grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-3 sm:gap-4">
+              <!-- Group Header (Sticky Glass) -->
               <div
-                v-for="(product, pIndex) in group.products"
-                :key="`${index}-${pIndex}`"
+                @click="toggleGroup(group.groupName)"
+                class="flex items-center justify-between cursor-pointer select-none py-3 sticky z-30 transition-all duration-300 group/header sticky-group-header"
+                :class="expandedGroups[group.groupName] ? 'mb-4' : ''"
               >
-                <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-slate-100 overflow-hidden h-full flex flex-col group/card relative">
-                  
-                  <!-- Image Area (Portrait 3:4) -->
-                  <div class="relative aspect-[3/4] bg-slate-100 overflow-hidden">
-                    <img
-                      v-if="product.imageUrl"
-                      :src="getOptimizedUrl(product.imageUrl)"
-                      alt="Product"
-                      class="w-full h-full object-cover cursor-pointer transition-transform duration-500 group-hover/card:scale-105"
-                      @click="openImagePopup(product, index)"
-                    />
-                    
-                    <!-- Admin Controls Overlay -->
-                    <div
-                      v-if="isAdmin || isSuperAdmin"
-                      class="absolute inset-0 bg-black/40 backdrop-blur-[1px] opacity-0 group-hover/card:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 p-4"
-                    >
-                       <button
-                         v-if="product.imageUrl"
-                         @click.stop="deleteImage(product.productName)"
-                         class="absolute top-2 right-2 p-1.5 bg-red-500 text-white rounded-full shadow-md hover:bg-red-600 transition-colors"
-                         title="Delete Image"
-                       >
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                       </button>
+                <!-- Backdrop for sticky readability -->
+                 <div class="absolute inset-x-[-8px] inset-y-0 bg-slate-50/90 backdrop-blur-md -z-10 border-b border-slate-200/50 shadow-sm transition-all rounded-b-2xl" 
+                      :class="expandedGroups[group.groupName] ? 'opacity-100' : 'opacity-0 delay-200'"></div>
 
-                       <label class="px-3 py-1.5 bg-white/90 text-xs font-bold text-slate-800 rounded-lg cursor-pointer hover:bg-white transition-colors shadow-lg">
-                          {{ uploading[product.productName] ? 'Wait...' : 'Update Img' }}
-                          <input type="file" accept="image/*" @change="handleFileChange($event, product.productName)" class="hidden" :disabled="uploading[product.productName]" />
-                       </label>
-                       
-                       <button
-                         v-if="imageFiles[product.productName]"
-                         @click="uploadImage(product.productName)"
-                         class="px-3 py-1.5 bg-green-600 text-xs font-bold text-white rounded-lg hover:bg-green-500 shadow-lg"
-                       >
-                         Upload Now
-                       </button>
+                 <div class="flex items-center gap-4 z-10 pl-2">
+                   <!-- Special "New Arrivals" Style -->
+                   <div v-if="group.isSpecial" class="flex items-center gap-3">
+                      <h2 class="text-xl lg:text-3xl font-['Clash_Display'] font-bold tracking-wide holographic-text">
+                         ✨ {{ group.groupName }}
+                      </h2>
+                   </div>
+
+                   <!-- Regular Group Style -->
+                   <div v-else class="flex items-center gap-3">
+                       <h2 class="text-lg lg:text-2xl font-semibold text-slate-900 tracking-tight font-heading group-hover/header:text-blue-600 transition-colors">
+                         {{ formatGroupName(group.groupName) }}
+                       </h2>
+                      <span class="px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-600 text-xs font-bold">
+                        {{ group.products.length }}
+                      </span>
+                   </div>
+                 </div>
+
+                 <!-- Actions -->
+                 <div class="flex items-center gap-2 z-10 pr-2">
+                    <button 
+                         @click.stop="shareBrand(group.groupName)"
+                         class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-all shadow-sm border border-slate-100"
+                         title="Share"
+                      >
+                         <i class="fa-solid fa-share-nodes text-xs"></i>
+                    </button>
+                    <div class="w-8 h-8 flex items-center justify-center rounded-full bg-white text-slate-400 shadow-sm border border-slate-100 transition-transform duration-300"
+                         :class="expandedGroups[group.groupName] ? 'rotate-180 bg-slate-100' : ''">
+                       <i class="fa-solid fa-chevron-down text-xs"></i>
                     </div>
-
-                    <!-- Empty State Placeholder -->
-                    <div
-                       v-else-if="!isAdmin && !isSuperAdmin"
-                       class="w-full h-full flex flex-col items-center justify-center text-slate-300 gap-2"
-                    >
-                       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                    </div>
-
-                    <!-- Admin Empty State -->
-                    <div v-else class="absolute inset-0 flex items-center justify-center bg-slate-50 group-hover/card:bg-slate-100 transition-colors">
-                        <label class="cursor-pointer flex flex-col items-center justify-center h-full w-full">
-                           <span class="text-xs font-medium text-slate-400 mb-1">+ Add</span>
-                           <input type="file" accept="image/*" @change="handleFileChange($event, product.productName); uploadImage(product.productName)" class="hidden" />
-                        </label>
-                    </div>
-                  </div>
-
-                  <!-- Card Footer -->
-                  <div class="p-3 flex flex-col justify-between flex-grow bg-white">
-                    <h3 class="text-xs font-semibold text-slate-700 leading-tight line-clamp-2 mb-2 h-8" :title="product.productName">
-                      {{ product.productName }}
-                    </h3>
-                    <div class="flex items-end justify-between border-t border-slate-50 pt-2 h-10">
-                       <div class="flex flex-col justify-end pb-0.5">
-                          <span class="text-[9px] uppercase font-bold text-slate-400 tracking-wider leading-none mb-1">Stock</span>
-                          <span class="text-sm font-bold text-slate-700 leading-none">{{ product.quantity }}</span>
-                       </div>
-                       
-                       <!-- Conditional Cart Control -->
-                       <div v-if="getCartQty(product) > 0" class="flex items-center gap-0 bg-green-600 border border-green-600 rounded-md overflow-hidden shadow-md h-8">
-                          <button @click.stop="updateCart(product, -1)" class="px-3 h-full flex items-center justify-center hover:bg-green-700 text-white font-bold transition-colors text-sm">-</button>
-                          <span class="px-2 h-full flex items-center justify-center text-[10px] font-bold text-white min-w-[max-content] whitespace-nowrap bg-green-600 border-x border-green-500/30">
-                            {{ getCartQty(product) }} {{ getCartQty(product) > 1 ? 'Sets' : 'Set' }}
-                          </span>
-                          <button @click.stop="updateCart(product, 1)" class="px-3 h-full flex items-center justify-center hover:bg-green-700 text-white font-bold transition-colors text-sm">+</button>
-                       </div>
-                       
-                       <button 
-                         v-else
-                         @click.stop="addToCart(product)"
-                         class="h-8 px-4 flex items-center justify-center rounded-md bg-white border border-green-200 text-green-600 hover:bg-green-600 hover:text-white hover:border-green-600 font-bold text-xs transition-colors shadow-sm uppercase tracking-wide"
-                         title="Add"
-                       >
-                         ADD
-                       </button>
-                    </div>
-                  </div>
-
-                  <!-- Upload Error Toast embedded in card -->
-                  <div v-if="uploadErrors[product.productName]" class="absolute bottom-0 inset-x-0 bg-red-500 text-white text-[10px] py-1 text-center z-20">
-                    Failed
-                  </div>
-                </div>
+                 </div>
               </div>
+
+              <!-- Product Grid -->
+              <transition
+                enter-active-class="transition-all duration-500 ease-out"
+                enter-from-class="opacity-0 translate-y-4"
+                enter-to-class="opacity-100 translate-y-0"
+                leave-active-class="transition-all duration-200 ease-in"
+                leave-from-class="opacity-100"
+                leave-to-class="opacity-0"
+              >
+                <div v-show="expandedGroups[group.groupName]">
+                  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-2 gap-y-4">
+                      <ProductCard
+                        v-for="(product, pIndex) in group.products"
+                        :key="product.productName"
+                        :product="product"
+                        :index="index"
+                        @open-image-popup="(p, i) => openImagePopup(p, i)"
+                      />
+                    </div>
+                  </div>
+              </transition>
             </div>
           </div>
         </div>
-
-      </div>
-    </main>
+      </main>
     </div>
 
-    <!-- Floating To Top Button -->
+    <!-- Floating Go To Top -->
     <transition enter-active-class="transition duration-300 ease-out" enter-from-class="translate-y-10 opacity-0" enter-to-class="translate-y-0 opacity-100" leave-active-class="transition duration-200 ease-in" leave-from-class="opacity-100" leave-to-class="opacity-0">
       <button
         v-if="showGoToTop"
         @click="scrollToTop"
-        class="fixed bottom-6 right-6 w-14 h-14 flex items-center justify-center bg-slate-900/90 text-white rounded-full shadow-2xl hover:bg-black transition-all hover:-translate-y-1 hover:shadow-black/20 backdrop-blur-sm z-30"
+        class="fixed bottom-24 lg:bottom-6 right-6 w-12 h-12 flex items-center justify-center bg-slate-900 text-white rounded-full shadow-lg hover:shadow-xl hover:bg-black transition-all hover:-translate-y-1 active:scale-90 z-40"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
+        <i class="fa-solid fa-arrow-up"></i>
       </button>
     </transition>
 
-    <!-- Modern Image Modal -->
-    <transition enter-active-class="transition duration-200 ease-out" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transition duration-150 ease-in" leave-from-class="opacity-100" leave-to-class="opacity-0">
-      <div
-        v-if="showImagePopup"
-        class="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-8"
-        role="dialog"
-      >
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" @click="closeImagePopup"></div>
+    <ImageModal
+      :show-image-popup="showImagePopup"
+      :current-product="currentProduct"
+      :current-product-index="currentProductIndex"
+      :is-last-product="currentProductIndex >= currentGroupProducts.length - 1"
+      :current-group-name="currentGroupName"
+      @close="closeImagePopup"
+      @navigate="navigateImage"
+    />
 
-        <!-- content -->
-        <div
-          class="relative w-full max-w-6xl max-h-[85vh] flex flex-col md:flex-row bg-slate-900 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10"
-          @touchstart="handleTouchStart"
-          @touchend="handleTouchEnd"
-        >
-          
-          <!-- Image Section (Left/Top) -->
-          <div class="flex-1 relative bg-black flex items-center justify-center p-4 min-h-[40vh] md:min-h-0 overflow-hidden">
-             <img
-               v-if="currentProduct.imageUrl"
-               :src="getOptimizedUrl(currentProduct.imageUrl)"
-               class="w-full h-full object-contain drop-shadow-2xl"
-               draggable="false"
-             />
-             <div v-else class="text-white/50">No High-Res Image Available</div>
+    <!-- Order Details Modal -->
+    <OrderModal
+       :show="showOrderDetailsModal"
+       :customer-name="customerName"
+       :customer-phone="customerPhone"
+       @update:customerName="customerName = $event"
+       @update:customerPhone="customerPhone = $event"
+       @close="showOrderDetailsModal = false"
+       @confirm="finalizeOrderAndSend"
+    />
 
-             <!-- Desktop Nav Buttons (Floating) -->
-             <button
-               v-if="currentProductIndex > 0"
-               @click="navigateImage(-1)"
-               class="absolute left-6 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-all hidden md:flex hover:scale-110"
-               title="Previous"
-             >
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-             </button>
-             <button
-               v-if="currentProductIndex < currentGroupProducts.length - 1"
-               @click="navigateImage(1)"
-               class="absolute right-6 top-1/2 -translate-y-1/2 p-3 bg-white/10 hover:bg-white/20 text-white rounded-full backdrop-blur-md transition-all hidden md:flex hover:scale-110"
-               title="Next"
-             >
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-             </button>
-          </div>
+    <!-- Admin Login Modal -->
+    <AdminLoginModal
+       :show="showAdminModal"
+       @close="showAdminModal = false"
+       @login="handleAdminLogin"
+    />
 
-          <!-- Details Section (Right/Bottom) -->
-          <div class="w-full md:w-[320px] lg:w-[380px] flex flex-col bg-slate-800 border-l border-white/5 z-20 shrink-0">
-             
-             <!-- Header / Close -->
-             <div class="p-6 flex justify-between items-start">
-                <div class="flex-1 pr-4">
-                  <span class="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-2">{{ currentGroupName }}</span>
-                  <h2 class="text-lg md:text-xl font-bold text-white leading-snug break-words">
-                    {{ currentProduct.productName }}
-                  </h2>
-                </div>
-                <button @click="closeImagePopup" class="p-2 -mr-2 -mt-2 bg-slate-700/50 hover:bg-slate-700 text-white rounded-full transition-colors flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                </button>
-             </div>
-
-             <!-- Info Content -->
-             <div class="px-6 flex-1 overflow-y-auto">
-                <div class="p-4 bg-slate-700/30 rounded-xl border border-white/5 space-y-2 mb-4">
-                   <div class="text-sm text-slate-400 font-medium">Available Stock</div>
-                   <div class="text-3xl font-bold text-green-400 tracking-tight">{{ currentProduct.quantity }} <span class="text-sm font-normal text-slate-500 ml-1">pairs/pcs</span></div>
-                </div>
-             </div>
-
-             <!-- Mobile Nav Controls (Footer) -->
-             <div class="p-4 flex gap-3 md:hidden bg-slate-900 border-t border-white/5 mt-auto">
-                <button 
-                  @click="navigateImage(-1)" 
-                  class="flex-1 py-3 px-4 bg-slate-800 text-white text-sm font-bold rounded-xl disabled:opacity-30 active:scale-95 transition-all"
-                  :disabled="currentProductIndex <= 0"
-                >
-                  Previous
-                </button>
-                <button 
-                  @click="navigateImage(1)" 
-                  class="flex-1 py-3 px-4 bg-green-600 text-white text-sm font-bold rounded-xl disabled:opacity-30 active:scale-95 transition-all shadow-lg shadow-green-900/20"
-                  :disabled="currentProductIndex >= currentGroupProducts.length - 1"
-                >
-                  Next Product
-                </button>
-             </div>
-          </div>
-
-        </div>
+    <!-- Admin Catalog Generator Overlay -->
+    <transition enter-active-class="transition duration-300 ease-out" enter-from-class="opacity-0 translate-y-4" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-200 ease-in" leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-4">
+      <div v-if="showCatalogGen" class="fixed inset-0 z-[90]">
+        <LatestStock
+          :stock-data-prop="stockData"
+          @close="showCatalogGen = false"
+        />
       </div>
     </transition>
 
-    <!-- Order Details Modal -->
-    <transition enter-active-class="transition duration-200 ease-out" enter-from-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="transition duration-150 ease-in" leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
-      <div v-if="showOrderDetailsModal" class="fixed inset-0 z-[70] flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" @click="showOrderDetailsModal = false"></div>
-        <div class="relative bg-white w-full max-w-md rounded-2xl shadow-xl overflow-hidden">
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-slate-800 mb-2">Finalize Your Order</h3>
-            <p class="text-sm text-slate-500 mb-6">Please provide your details to send the order via WhatsApp.</p>
-            
-            <div class="space-y-4">
-               <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">Your Name</label>
-                  <input 
-                    v-model="customerName" 
-                    type="text" 
-                    placeholder="e.g. Sahil Kumar"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400"
-                  >
-               </div>
-               <div>
-                  <label class="block text-sm font-semibold text-slate-700 mb-1">Phone Number</label>
-                  <input 
-                    v-model="customerPhone" 
-                    type="tel" 
-                    placeholder="e.g. 9348343310"
-                    class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-green-500 focus:ring-2 focus:ring-green-100 outline-none transition-all font-medium text-slate-800 placeholder:text-slate-400"
-                  >
-               </div>
-            </div>
-
-            <div class="flex gap-3 mt-8">
-               <button 
-                 @click="showOrderDetailsModal = false"
-                 class="flex-1 py-3 px-4 bg-slate-100 text-slate-600 font-bold rounded-xl hover:bg-slate-200 transition-colors"
-               >
-                 Cancel
-               </button>
-               <button 
-                 @click="finalizeOrderAndSend"
-                 class="flex-1 py-3 px-4 bg-[#25D366] text-white font-bold rounded-xl hover:bg-[#128C7E] shadow-lg shadow-green-900/10 transition-all active:scale-95"
-               >
-                 Send Order
-               </button>
-            </div>
-          </div>
-        </div>
+    <!-- Admin Data Loading Overlay -->
+     <transition enter-active-class="transition duration-300 ease-out" enter-from-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transition duration-200 ease-in" leave-from-class="opacity-100" leave-to-class="opacity-0">
+      <div v-if="loading" class="fixed inset-0 z-[100] bg-white/50 backdrop-blur-sm flex items-center justify-center pointer-events-none">
+         <div class="bg-white px-6 py-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+             <div class="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+             <span class="text-sm font-bold text-slate-700">Updating...</span>
+         </div>
       </div>
     </transition>
   </div>
 </template>
 
-<script>
-import axios from "axios";
-import { toast } from "vue3-toastify";
-import "vue3-toastify/dist/index.css";
+<script setup>
+import { ref, computed, onMounted, onBeforeUnmount, nextTick, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { Capacitor } from '@capacitor/core';
+import { toast } from 'vue3-toastify';
+// Constants & Utils
+import { FILTER_DELAY_MS } from '../utils/constants';
+import { formatProductName, normalizeId, getOptimizedImageUrl, isNewArrival } from '../utils/formatters';
+// Composables
+import { useCart } from '../composables/useCart';
+import { useProductFilter } from '../composables/useProductFilter';
+import { useBrandGroups } from '../composables/useBrandGroups';
+import { useWhatsAppOrder } from '../composables/useWhatsAppOrder';
+import { useStockData } from '../composables/useStockData';
+import { useAdmin } from '../composables/useAdmin';
+import { useImageCache } from '../composables/useImageCache';
+import { extractColor } from '../utils/colors'; 
+// Components
+import DesktopToolbar from './StockTable/DesktopToolbar.vue';
+import BrandsSidebar from './StockTable/BrandsSidebar.vue';
+import CartSidebar from './StockTable/CartSidebar.vue';
+import ProductCard from './StockTable/ProductCard.vue';
+import { defineAsyncComponent } from 'vue';
 
-export default {
-  name: "StockTable",
-  data() {
-    return {
-      stockData: [],
-      loading: false,
-      error: null,
-      lastRefresh: null,
-      expandedGroups: {},
-      imageFiles: {},
-      uploading: {},
-      uploadErrors: {},
-      searchQuery: "",
-      selectedGroup: "All",
-      showGoToTop: false,
-      isLocal:
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1",
-      isAdmin: false,
-      isSuperAdmin: false,
-      showImagePopup: false,
-      currentProduct: {},
-      currentGroupIndex: null,
-      currentProductIndex: 0,
-      currentGroupProducts: [],
-      currentGroupName: "",
-      touchStartX: 0,
-      viewMode: "image",
-      showLedgerView: false,
-      brands: [
-        {
-          name: "Paragon",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/paragonLogo_rqk3hu.webp",
-        },
-        {
-          name: "Reliance",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/relianceLogo_bvgwwz.png",
-        },
-        {
-          name: "Cubix",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667073/cubixLogo_bwawj3.jpg",
-        },
-        {
-          name: "Florex",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/florexLogo_wn50tj.jpg",
-        },
-        {
-          name: "EEKEN",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749668232/eekenLogo_rg5xwa.webp",
-        },
-        {
-          name: "Escoute",
-          logo: "https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/escouteLogo_maieji.jpg",
-        },
-      ],
-      paragonSubgroups: [
-        "Walkaholic",
-        "VERTEX, SLICKERS & FENDER",
-        "Stimulus",
-        "Solea & Meriva , Mascara",
-        "P-TOES",
-        "Paralite",
-        "PARAGON COMFY",
-        "Paragon Blot",
-        "PARAGON",
-        "Max",
-        "Hawai Chappal",
-      ],
-      marutiSubgroups: ["MARUTI PLASTICS"],
-      magnetSubgroups: ["Magnet"],
-      rktradersSubgroups: ["R K TRADERS"], // Kept for safety, though moved to general
-      jkplasticSubgroups: ["J.K Plastic"],
-      airsonSubgroups: ["Airsun"],
+const ImageModal = defineAsyncComponent(() => import('./StockTable/ImageModal.vue'));
+const OrderModal = defineAsyncComponent(() => import('./StockTable/OrderModal.vue'));
+const FunLoader = defineAsyncComponent(() => import('./StockTable/FunLoader.vue'));
+const AdminLoginModal = defineAsyncComponent(() => import('./StockTable/AdminLoginModal.vue'));
+const CachedImage = defineAsyncComponent(() => import('./StockTable/CachedImage.vue'));
+const BrandLanding = defineAsyncComponent(() => import('./StockTable/BrandLanding.vue'));
+const LatestStock = defineAsyncComponent(() => import('../android/components/LatestStock.vue'));
 
-      // NEW: General Items Group (Updated Order)
-      generalItemsSubgroups: [
-        "AIRFAX",
-        "Airsun",
-        "J.K Plastic",
-        "SRG ENTERPRISES",
-        "VARDHMAN PLASTICS",
-        "NAV DURGA ENTERPRISES",
-        "AAGAM POLYMER",
-        "Magnet",
-        "MARUTI PLASTICS",
-        "Fencer",
-        "PANKAJ PLASTIC",
-        "PARIS",
-        "PU-LION",
-        "SHYAM",
-        "TEUZ",
-        "UAM FOOTWEAR",
-        "Xpania",
-        "R K TRADERS",
-        "Maruti",
-        "rktraders",
-        "jkplastic",
-        "airson"
-      ],
-      showImagesOnly: true, // Default to true
-      showNoImagesOnly: false,
-      showSidePanel: false,
-      activeScrollGroup: '',
-      hideOldArticles: true,
-      showCart: false,
-      cart: [],
-      showOrderDetailsModal: false,
-      customerName: '',
-      customerPhone: '',
-    };
-  },
-  watch: {
-    showImagesOnly(val) {
-      if (val) this.showNoImagesOnly = false;
-    },
-    showNoImagesOnly(val) {
-      if (val) this.showImagesOnly = false;
-    },
-    // Persist cart
-    cart: {
-      handler(val) {
-        localStorage.setItem('sf_cart', JSON.stringify(val));
-      },
-      deep: true
+const route = useRoute();
+const router = useRouter();
+
+// Init Core State
+const isLocal = ref(window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+const isAndroid = ref(Capacitor.getPlatform() === 'android');
+const showGoToTop = ref(false);
+const showSidePanel = ref(false);
+const showCart = ref(false);
+const showCatalogGen = ref(false);
+const showLedgerView = ref(false);
+const showLanding = ref(true); // Brand Landing Page State
+const expandedGroups = ref({});
+const activeScrollGroup = ref('');
+const userHasScrolled = ref(false);
+const isFiltering = ref(false); // New loader state
+const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+
+// Config State
+const config = ref({});
+const companyName = ref('SF Stock');
+
+// --- Use Composables ---
+// 1. Stock Data
+const { 
+  stockData, loading, isRefreshing, error, lastRefresh, 
+  uploading, uploadErrors, imageFiles,
+  loadStockData, updateStockData, refreshStockData, handleFileChange, uploadImage, deleteImage
+} = useStockData(isLocal);
+
+// 2. Admin
+const { isAdmin, isSuperAdmin } = useAdmin();
+const showAdminModal = ref(false);
+
+// 7. Image Cache (Offline Support)
+const { 
+  isCaching, cacheProgress, progressPercent,
+  checkInternetSpeed, cacheAllImages, getCacheStatus 
+} = useImageCache();
+
+// Handle Cache Images button click
+const handleCacheImages = async () => {
+    if (isCaching.value) return;
+    
+    // Check internet speed first
+    toast.info('Checking network speed...', { autoClose: 2000 });
+    const speed = await checkInternetSpeed();
+    
+    if (speed === 'offline') {
+      toast.error('No internet connection. Please connect to download images.', { autoClose: 4000 });
+      return;
     }
-  },
-  computed: {
-    cartTotalItems() {
-      return this.cart.reduce((total, item) => total + item.quantity, 0);
-    },
-    filteredStockData() {
-      let filtered = this.stockData;
-      if (this.searchQuery) {
-        filtered = filtered
-          .map((group) => ({
-            ...group,
-            products: group.products.filter((product) =>
-              product.productName
-                .toLowerCase()
-                .includes(this.searchQuery.toLowerCase())
-            ),
-          }))
-          .filter((group) => group.products.length > 0);
-      }
-      
-      // Filter by Images Only (if enabled)
-      if (this.showImagesOnly) {
-         filtered = filtered.map(group => ({
-            ...group,
-            products: group.products.filter(p => !!p.imageUrl)
-         })).filter(group => group.products.length > 0);
-      }
+    
+    if (speed === 'slow') {
+      toast.warning('Slow connection detected. Download may take longer.', { autoClose: 3000 });
+    }
+    
+    // Get all products with images
+    const allProducts = stockData.value?.flatMap(group => group.products) || [];
+    const productsWithImages = allProducts.filter(p => p.imageUrl);
+    
+    // Collect Extra Assets (Logos)
+    const extraUrls = [
+       // Hardcoded Logos
+       'https://res.cloudinary.com/dg365ewal/image/upload/v1749667072/paragonLogo_rqk3hu.webp',
+       // Add other static assets if needed
+    ];
 
-      // Filter by No Images Only (if enabled)
-      if (this.showNoImagesOnly) {
-         filtered = filtered.map(group => ({
-            ...group,
-            products: group.products.filter(p => !p.imageUrl)
-         })).filter(group => group.products.length > 0);
-      }
+    // Dynamic Logos from Top Brands
+    if (groupedSidebar.value?.topBrands) {
+        groupedSidebar.value.topBrands.forEach(item => {
+            if (item.logo) extraUrls.push(item.logo);
+        });
+    }
 
-      // Filter by Hide Old Articles
-      if (this.hideOldArticles) {
-        filtered = filtered.filter(group => !group.groupName.toLowerCase().includes('old'));
+    if (productsWithImages.length === 0 && extraUrls.length === 0) {
+      toast.info('No images to cache.', { autoClose: 2000 });
+      return;
+    }
+    
+    const totalCount = productsWithImages.length + extraUrls.length;
+
+    // Create persistent progress toast
+    const toastId = toast.loading(`Starting download for ${totalCount} assets...`, { 
+      autoClose: false,
+      closeButton: false
+    });
+    
+    // Start caching with progress updates
+    // Pass extraUrls as second argument
+    const result = await cacheAllImages(allProducts, extraUrls, (current, total) => {
+      // Update toast with live progress
+      const percent = Math.round((current / total) * 100);
+      toast.update(toastId, {
+        render: `Downloading assets ${current}/${total} (${percent}%)...`,
+        type: 'info',
+        isLoading: true,
+        autoClose: false
+      });
+    });
+    
+    // Final success/failure toast
+    if (result.success > 0) {
+      toast.update(toastId, {
+        render: `✓ ${result.success} assets cached for offline use!`,
+        type: 'success',
+        isLoading: false,
+        autoClose: 4000
+      });
+    }
+    
+    if (result.failed > 0) {
+      toast.warning(`${result.failed} assets failed to download.`, { autoClose: 3000 });
+    }
+  };
+
+const promptAdminLogin = () => {
+  showAdminModal.value = true;
+};
+
+const handleAdminLogin = (password) => {
+  showAdminModal.value = false;
+  if (!password) return;
+  if (password === 'admin123') {
+    isAdmin.value = true;
+    isSuperAdmin.value = false;
+    toast.success('Admin Mode Enabled', { autoClose: 2000 });
+  } else if (password === 'superadmin') {
+    isAdmin.value = false;
+    isSuperAdmin.value = true;
+    toast.success('Super Admin Mode Enabled', { autoClose: 2000 });
+  } else {
+    toast.error('Incorrect password', { autoClose: 3000 });
+  }
+};
+
+// 3. Cart
+const { 
+  cart, cartTotalItems, cartItemCount, 
+  getCartQty, addToCart, updateCart, removeFromCart, updateCartQuantity, clearCart 
+} = useCart();
+
+// 4. Product Filter
+const { 
+  searchQuery, selectedGroup, cleanView, hideOldArticles,
+  filteredStockData, sortedStockDataForDropdown 
+} = useProductFilter(stockData, config);
+
+// Lifecycle: Handle Query Navigation
+onMounted(() => {
+    const brand = route.query.brand;
+    const club = route.query.club;
+    
+    if (brand) {
+        showLanding.value = false;
+        // Wait for data to load and components to mount
+        setTimeout(() => {
+            scrollToGroup(brand, 'instant');
+        }, 800);
+    } else if (club) {
+        showLanding.value = false;
+        selectedGroup.value = club;
+        window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+});
+
+// 5. Sidebar Groups
+// Note: Sidebar uses a subset of logic but needs connection to stockData & search.
+const { groupedSidebar, lists } = useBrandGroups(stockData, config, searchQuery);
+
+// 6. WhatsApp Order
+const { 
+  showOrderDetailsModal, customerName, customerPhone, 
+  sendOrderToWhatsapp, finalizeOrderAndSend 
+} = useWhatsAppOrder(cart, config);
+
+
+// --- UI Methods & Logic ---
+
+// Image Popups
+const showImagePopup = ref(false);
+const currentProduct = ref({});
+const currentGroupIndex = ref(null);
+const currentGroupProducts = ref([]);
+const currentGroupName = ref("");
+const currentProductIndex = ref(0);
+
+const openImagePopup = (product, groupIndex) => {
+  currentProduct.value = product;
+  currentGroupIndex.value = groupIndex;
+  const group = filteredStockData.value[groupIndex];
+  if (group) {
+      currentGroupProducts.value = group.products;
+      currentGroupName.value = group.groupName;
+      currentProductIndex.value = group.products.findIndex((p) => p.productName === product.productName);
+  }
+  
+  showImagePopup.value = true;
+  
+  // URL Update
+  const url = new URL(window.location);
+  url.searchParams.set('product', product.productName);
+  window.history.pushState({}, '', url);
+};
+
+const closeImagePopup = ({ isPop = false } = {}) => {
+  showImagePopup.value = false;
+  currentProduct.value = {};
+  currentGroupIndex.value = null;
+  currentGroupProducts.value = [];
+  currentGroupName.value = "";
+  currentProductIndex.value = 0;
+  
+  if (!isPop) {
+     selectedGroup.value = 'All'; // Reset group? Original logic did this.
+     window.history.replaceState(null, '', window.location.pathname);
+  }
+};
+
+const navigateImage = (direction) => {
+  let newIndex = currentProductIndex.value + direction;
+  
+  // 1. Within current group
+  if (newIndex >= 0 && newIndex < currentGroupProducts.value.length) {
+    currentProductIndex.value = newIndex;
+    currentProduct.value = currentGroupProducts.value[newIndex];
+  } 
+  // 2. Next Group
+  else if (newIndex >= currentGroupProducts.value.length) {
+      // Find next group index
+      const nextGroupIndex = currentGroupIndex.value + 1;
+      if (nextGroupIndex < filteredStockData.value.length) {
+          // Switch to next group
+          currentGroupIndex.value = nextGroupIndex;
+          const nextGroup = filteredStockData.value[nextGroupIndex];
+          currentGroupProducts.value = nextGroup.products;
+          currentGroupName.value = nextGroup.groupName;
+          
+          // Start at 0
+          currentProductIndex.value = 0;
+          currentProduct.value = nextGroup.products[0];
+          
+          // Ensure group is expanded (optional interaction)
+          if (!expandedGroups.value[nextGroup.groupName]) {
+             expandedGroups.value[nextGroup.groupName] = true;
+          }
+      } else {
+          toast.info("You've reached the end of the list!");
+          return;
       }
-      
-      if (this.selectedGroup !== "All") {
-        if (this.selectedGroup === "Paragon") {
-          filtered = filtered.filter((group) =>
-            this.paragonSubgroups.includes(group.groupName)
-          );
-        } else if (this.selectedGroup === "Reliance") {
-          filtered = filtered.filter(
-            (group) => group.groupName === "RELIANCE FOOTWEAR"
-          );
-        } else if (this.selectedGroup === "Florex") {
-          filtered = filtered.filter(
-            (group) => group.groupName === "Florex (Swastik)"
-          );
-        } else if (this.selectedGroup === "Cubix") {
-          filtered = filtered.filter((group) => group.groupName === "CUBIX");
-        } else if (this.selectedGroup === "EEKEN") {
-          filtered = filtered.filter((group) => group.groupName === "EEKEN");
-        } else if (this.selectedGroup === "Maruti") {
-          filtered = filtered.filter((group) =>
-            this.marutiSubgroups.includes(group.groupName)
-          );
-        } else if (this.selectedGroup === "Magnet") {
-          filtered = filtered.filter((group) =>
-            this.magnetSubgroups.includes(group.groupName)
-          );
-        } else if (this.selectedGroup === "rktraders") {
-          filtered = filtered.filter((group) =>
-            this.rktradersSubgroups.includes(group.groupName)
-          );
-        } else if (this.selectedGroup === "jkplastic") {
-          filtered = filtered.filter((group) =>
-            this.jkplasticSubgroups.includes(group.groupName)
-          );
-        } else if (this.selectedGroup === "airson") {
-          filtered = filtered.filter((group) =>
-            this.airsonSubgroups.includes(group.groupName)
-          );
+  }
+  // 3. Previous Group
+  else if (newIndex < 0) {
+      const prevGroupIndex = currentGroupIndex.value - 1;
+      if (prevGroupIndex >= 0) {
+          // Switch to prev group
+          currentGroupIndex.value = prevGroupIndex;
+          const prevGroup = filteredStockData.value[prevGroupIndex];
+          currentGroupProducts.value = prevGroup.products;
+          currentGroupName.value = prevGroup.groupName;
+          
+          // Start at last item
+          currentProductIndex.value = prevGroup.products.length - 1;
+          currentProduct.value = prevGroup.products[prevGroup.products.length - 1];
+          
+             // Ensure group is expanded
+          if (!expandedGroups.value[prevGroup.groupName]) {
+             expandedGroups.value[prevGroup.groupName] = true;
+          }
+      } else {
+          toast.info("This is the first item!");
+          return;
+      }
+  }
+
+  // Update URL
+  const url = new URL(window.location);
+  url.searchParams.set('product', currentProduct.value.productName);
+  window.history.replaceState({}, '', url);
+};
+
+const toggleGroup = (groupName) => {
+  expandedGroups.value[groupName] = !expandedGroups.value[groupName];
+};
+
+const shareBrand = async (brandName) => {
+    const url = `${window.location.origin}${window.location.pathname}?brand=${encodeURIComponent(brandName)}`;
+    const shareData = { title: `Check out ${brandName}`, text: `Look at this brand: ${brandName}`, url };
+
+    // 1. Try Native Share (Mobile)
+    try {
+        if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+            await navigator.share(shareData);
+            return;
         }
-        // NEW: General Items Filter
-        else if (this.selectedGroup === "GeneralItems") {
-          filtered = filtered.filter(g => this.generalItemsSubgroups.includes(g.groupName));
-        }
-        else if (this.selectedGroup === "Kids") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/kid|toes|boy|girl|chu|1\*|child/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Hawai") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/hawai|walkaholic|cushion/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Loose") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/loose|era ladies|bond|r.k|r k/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Box") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName
-                  .toLowerCase()
-                  .match(/seltos|airson|airsun|lion/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
-        } else if (this.selectedGroup === "Shoe") {
-          filtered = filtered
-            .map((group) => ({
-              ...group,
-              products: group.products.filter((product) =>
-                product.productName.toLowerCase().match(/shoe/)
-              ),
-            }))
-            .filter((group) => group.products.length > 0);
+    } catch (err) {
+        if (err.name === 'AbortError') return; // User cancelled
+        // Continue to fallback
+    }
+
+    // 2. Fallback: Copy to Clipboard
+    try {
+        // Modern Clipboard API (Secure Context only)
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+             await navigator.clipboard.writeText(url);
+             toast.success("Link copied!");
         } else {
-          filtered = filtered.filter(
-            (group) => group.groupName === this.selectedGroup
-          );
+             // 3. Ultra-Fallback: Legacy execCommand (Insecure Context / Older Browsers)
+             const textArea = document.createElement("textarea");
+             textArea.value = url;
+             
+             // Ensure it's not visible but part of DOM
+             textArea.style.position = "fixed";
+             textArea.style.left = "-9999px";
+             textArea.style.top = "0";
+             document.body.appendChild(textArea);
+             
+             textArea.focus();
+             textArea.select();
+             
+             const successful = document.execCommand('copy');
+             document.body.removeChild(textArea);
+             
+             if (successful) toast.success("Link copied!");
+             else throw new Error("Copy failed");
         }
-      }
-      
-      // --- Sorting Logic Implementation ---
-      // Order: Cubix -> Florex -> Paragon (Ordered) -> General Items (Ordered) -> Others
-      
-      const normalize = (name) => name ? name.toLowerCase().trim() : '';
-      
-      return filtered.sort(this.compareGroups);
-    },
-    sortedStockDataForDropdown() {
-      // Create a sorted list of all groups using the same logic, but on the FULL (non-filtered) stock data
-      // EXCEPT we do want to reflect the "Images Only" filtering if we want the sidebar to be accurate to what's shown? 
-      // Usually sidebar shows all available categories.
-      // However, if we filter by Images Only, some groups might become empty.
-      // Use filteredStockData for sidebar to assume consistency with view?
-      // User said "bird eye view... navigate to any brand... order... same".
-      // If I use filteredStockData, the sidebar items disappear if they have no items matching filter. This is usually desired.
-      
-      // But the dropdown code used `[...this.stockData]`. Let's stick to using the `filteredStockData` for the sidebar list 
-      // to ensure 1:1 mapping with the main view content.
-      // But wait, the dropdown in the toolbar uses `sortedStockDataForDropdown`. If I change this, I change that too.
-      // The toolbar dropdown probably should show all categories? Or only visible ones?
-      // Usually specific group filter dropdown should show all.
-      
-      // Let's keep `sortedStockDataForDropdown` sorting ALL stock data, but with the new sort logic.
-      return [...this.stockData].sort(this.compareGroups);
-    },
+    } catch (clipErr) {
+        console.error("Share failed", clipErr);
+        toast.error("Could not copy link");
+    }
+};
 
-  },
-  async mounted() {
-    await this.loadStockData();
+const toggleSidebar = () => {
+    if (showSidePanel.value) {
+        showSidePanel.value = false;
+    } else {
+        showSidePanel.value = true;
+        searchQuery.value = ''; // Reset search on open
+        window.history.pushState({ pane: 'side' }, '');
+    }
+};
+
+const toggleCart = () => {
+    if (showCart.value) {
+        showCart.value = false;
+    } else {
+        showCart.value = true;
+        searchQuery.value = '';
+        window.history.pushState({ pane: 'cart' }, '');
+    }
+};
+
+const toggleLedgerView = () => {
+    showLedgerView.value = !showLedgerView.value;
+};
+
+// Brand Landing Page
+const handleCategorySelect = (categoryId) => {
+    showLanding.value = false;
+    if (categoryId === 'All') {
+        selectedGroup.value = 'All';
+    } else {
+        selectedGroup.value = categoryId;
+    }
+    // Push a history entry so browser back returns to landing
+    window.history.pushState({ view: 'category', categoryId }, '', '');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+};
+
+const backToLanding = () => {
+    showLanding.value = true;
+    selectedGroup.value = 'All';
+    searchQuery.value = '';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+};
+
+// Scroll Handling
+const handleScroll = () => {
+    showGoToTop.value = window.scrollY > 300;
+};
+const scrollToTop = () => {
+    selectedGroup.value = 'All';
+    window.history.replaceState(null, '', window.location.pathname);
+    window.scrollTo({ top: 0, behavior: "instant" });
+};
+const handleUserScroll = () => {
+   userHasScrolled.value = true;
+};
+
+// Routing & Deep Linking logic
+const handlePopState = () => {
+    if (showImagePopup.value) {
+        closeImagePopup({ isPop: true });
+        return;
+    }
+    if (showSidePanel.value) {
+        showSidePanel.value = false;
+        return;
+    }
+    if (showCart.value) {
+        showCart.value = false;
+        return;
+    }
+    // If not on landing page, go back to it
+    if (!showLanding.value) {
+        backToLanding();
+        return;
+    }
+};
+
+// Config Loading
+const loadConfig = async () => {
+    try {
+        const configFile = import.meta.env.VITE_CONFIG_FILE || 'sbe.json';
+        const response = await fetch(`${import.meta.env.BASE_URL}config/${configFile}?t=${new Date().getTime()}`);
+        config.value = await response.json();
+        companyName.value = config.value.companyName || 'SBE';
+    } catch (err) {
+        toast.error("Failed to load app configuration");
+    }
+};
+
+onMounted(async () => {
+    // Inject FontAwesome
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+    document.head.appendChild(link);
+
+    await loadConfig();
+    await loadStockData();
+    
+    // Auto-expand groups
+    if (stockData.value) {
+        expandedGroups.value = stockData.value.reduce(
+          (acc, group) => ({ ...acc, [group.groupName]: true }),
+          { "New Arrivals": true }
+        );
+    }
+
+    // Sidebar/Search Logic
+    // If brand param exists
+    const params = new URLSearchParams(window.location.search);
+    const brandParam = params.get('brand');
+    const productParam = params.get('product');
+
+    if (brandParam) {
+        if (brandParam.toLowerCase() === 'new arrivals') {
+            nextTick(() => scrollToGroup('New Arrivals', 'auto'));
+        } else {
+            const match = stockData.value.find(g => g.groupName.toLowerCase() === brandParam.toLowerCase());
+            if (match) {
+                nextTick(() => scrollToGroup(match.groupName, 'auto'));
+            }
+        }
+    }
+
+    if (productParam) {
+        // Deep link product
+        stockData.value.forEach((group, gIndex) => {
+             const pIndex = group.products.findIndex(p => p.productName === productParam);
+             if (pIndex !== -1) {
+                 openImagePopup(group.products[pIndex], gIndex);
+             }
+        });
+    }
+
     // Load Cart
     const savedCart = localStorage.getItem('sf_cart');
     if (savedCart) {
-      try {
-        this.cart = JSON.parse(savedCart);
-      } catch (e) {
-        console.error("Failed to load cart");
-      }
+        try {
+            const parsed = JSON.parse(savedCart);
+            clearCart();
+            parsed.forEach(item => {
+                 updateCart(item.product, item.quantity); 
+            });
+        } catch (e) {
+            console.error(e);
+        }
     }
-    this.expandedGroups = this.stockData.reduce(
-      (acc, _, index) => ({ ...acc, [index]: true }),
-      {}
-    );
-    // Default open sidebar on large screens
-    // Default open sidebar logic removed as per user request
-    // if (window.innerWidth >= 1024) {
-    //   this.showSidePanel = true;
-    // }
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  beforeUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    getCartQty(product) {
-       const item = this.cart.find(i => i.product.productName === product.productName);
-       return item ? item.quantity : 0;
-    },
-    updateCart(product, change) {
-       const index = this.cart.findIndex(i => i.product.productName === product.productName);
-       if (index !== -1) {
-          const newQty = this.cart[index].quantity + change;
-          if (newQty <= 0) {
-             this.cart.splice(index, 1);
-          } else {
-             this.cart[index].quantity = newQty;
-          }
-       } else if (change > 0) {
-          this.addToCart(product);
-       }
-    },
-    sendOrderToWhatsapp() {
-      if (this.cart.length === 0) return;
-      this.showOrderDetailsModal = true;
-    },
-    finalizeOrderAndSend() {
-      if (!this.customerName.trim()) {
-        toast.error("Please enter your name", { autoClose: 2000 });
-        return;
-      }
-      if (!this.customerPhone.trim()) {
-        toast.error("Please enter your phone number", { autoClose: 2000 });
-        return;
-      }
 
-      const date = new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'numeric', year: 'numeric' });
-      
-      let message = `Order from ${this.customerName}\n`;
-      message += `Phone: ${this.customerPhone}\n\n`;
-      message += `Order Summary\n`;
-      message += `------------------\n`;
-      
-      this.cart.forEach((item) => {
-        const qtyLabel = item.quantity > 1 ? 'Sets' : 'Set';
-        message += `\n*${item.product.productName}*\n`;
-        message += `> ${item.quantity} ${qtyLabel}\n`;
-      });
-      
-      message += `\n_Generated on ${date}_\n`;
-      
-      const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-      this.showOrderDetailsModal = false;
-    },
-    addToCart(product) {
-      const existingItem = this.cart.find(item => item.product.productName === product.productName);
-      if (existingItem) {
-        existingItem.quantity++;
-        toast.success("Increased quantity in cart", { autoClose: 1000 });
-      } else {
-        this.cart.push({ product, quantity: 1 });
-        toast.success("Added to cart", { autoClose: 1500 });
-      }
-      this.showCart = true; // Auto open cart on add? Maybe better user feedback than just toast
-    },
-    removeFromCart(index) {
-      this.cart.splice(index, 1);
-    },
-    updateCartQuantity(index, diff) {
-      const item = this.cart[index];
-      const newQty = item.quantity + diff;
-      if (newQty <= 0) {
-        this.removeFromCart(index);
-      } else {
-        item.quantity = newQty;
-      }
-    },
-    toggleLedgerView() {
-      this.showLedgerView = !this.showLedgerView;
-    },
-    getOptimizedUrl(imageUrl) {
-      if (!imageUrl) return null;
-      try {
-        const parts = imageUrl.split("/upload/");
-        if (parts.length !== 2) return imageUrl;
-        const transformation = "w_1000,q_70,f_auto";
-        return `${parts[0]}/upload/${transformation}/${parts[1]}`;
-      } catch (e) {
-        return imageUrl;
-      }
-    },
-    async loadStockData() {
-      try {
-        let data = [];
-        if (false) {
-          const response = await axios.get("http://localhost:3000/api/stock");
-          data = response.data;
-        } else {
-          const response = await fetch("/sf/assets/stock-data.json");
-          data = await response.json();
-        }
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("popstate", handlePopState);
+    window.addEventListener('wheel', handleUserScroll, { passive: true });
+    window.addEventListener('touchmove', handleUserScroll, { passive: true });
+    window.addEventListener('keydown', handleUserScroll, { passive: true });
+});
 
-        // Check for Metadata
-        const metaIndex = data.findIndex((g) => g.groupName === "_META_DATA_");
-        if (metaIndex !== -1) {
-          const meta = data[metaIndex];
-          if (meta.lastSync) {
-            this.lastRefresh = new Date(meta.lastSync);
-          }
-          // Remove metadata from display list
-          data.splice(metaIndex, 1);
-        } else {
-           // Fallback if no meta found
-           this.lastRefresh = null; 
-        }
+onBeforeUnmount(() => {
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("popstate", handlePopState);
+    window.removeEventListener('wheel', handleUserScroll);
+    window.removeEventListener('touchmove', handleUserScroll);
+    window.removeEventListener('keydown', handleUserScroll);
+});
 
-        this.stockData = data;
-        this.error = null;
-      } catch (error) {
-        this.error = this.isLocal
-          ? error.response?.data?.error || "Failed to fetch stock data"
-          : "Failed to load stock-data.json";
-        this.stockData = [];
-        toast.error(this.error, { autoClose: 3000 });
-      }
-    },
-    async updateStockData() {
-      this.loading = true;
-      this.error = null;
-      try {
-        const response = await axios.post(
-          "http://localhost:3000/api/updateStockData"
-        );
-        let data = response.data.data;
+// Watchers
+watch(cart, (val) => {
+    localStorage.setItem('sf_cart', JSON.stringify(val));
+}, { deep: true });
 
-        // Check for Metadata
-        const metaIndex = data.findIndex((g) => g.groupName === "_META_DATA_");
-        if (metaIndex !== -1) {
-          const meta = data[metaIndex];
-          if (meta.lastSync) {
-            this.lastRefresh = new Date(meta.lastSync);
-          }
-          data.splice(metaIndex, 1);
-        } else {
-           this.lastRefresh = new Date(); 
-        }
+watch(selectedGroup, (newVal) => {
+    const url = new URL(window.location);
+    if (newVal && newVal !== 'All') {
+        url.searchParams.set('brand', newVal);
+    } else {
+        url.searchParams.delete('brand');
+    }
+    window.history.replaceState(null, '', url);
+});
 
-        this.stockData = data;
-        this.expandedGroups = this.stockData.reduce(
-          (acc, _, index) => ({ ...acc, [index]: true }),
-          {}
-        );
-        toast.success("Stock data updated successfully!", { autoClose: 2500 });
-      } catch (error) {
-        this.error =
-          error.response?.data?.error || "Failed to update stock data";
-        toast.error(this.error, { autoClose: 3000 });
-      } finally {
-        this.loading = false;
-      }
-    },
-    promptAdminLogin() {
-      const password = prompt("Enter admin password:");
-      if (!password) return; // User cancelled or entered empty
-      
-      if (password === "admin123") {
-        this.isAdmin = true;
-        this.isSuperAdmin = false;
-        toast.success("Admin Mode Enabled", { autoClose: 2000 });
-      } else if (password === "superadmin") {
-        this.isAdmin = false;
-        this.isSuperAdmin = true;
-        toast.success("Super Admin Mode Enabled", { autoClose: 2000 });
-      } else {
-        toast.error("Incorrect password", { autoClose: 3000 });
-      }
-    },
-    toggleGroup(index) {
-      this.expandedGroups[index] = !this.expandedGroups[index];
-    },
-    handleFileChange(event, productName) {
-      this.imageFiles[productName] = event.target.files[0];
-      this.uploadErrors[productName] = null;
-    },
-    async uploadImage(productName) {
-      if (!this.imageFiles[productName]) return;
-      this.uploading[productName] = true;
-      this.uploadErrors[productName] = null;
-      try {
-        const formData = new FormData();
-        formData.append("file", this.imageFiles[productName]);
-        formData.append("upload_preset", "sf-stock");
-        const response = await fetch(
-          "https://api.cloudinary.com/v1_1/dg365ewal/image/upload",
-          {
-            method: "POST",
-            body: formData,
-          }
-        );
-        const data = await response.json();
-        if (!data.secure_url) {
-          throw new Error("Upload failed");
-        }
-        await axios.post("http://localhost:3000/api/updateImage", {
-          productName,
-          imageUrl: data.secure_url,
-        });
-        this.stockData = this.stockData.map((group) => ({
-          ...group,
-          products: group.products.map((product) =>
-            product.productName === productName
-              ? { ...product, imageUrl: data.secure_url }
-              : product
-          ),
-        }));
-        toast.success("Image uploaded and stock data updated!", {
-          autoClose: 2500,
-        });
-      } catch (error) {
-        this.uploadErrors[productName] = "Failed to load image";
-        toast.error(this.uploadErrors[productName], { autoClose: 3000 });
-      } finally {
-        this.uploading[productName] = false;
-        this.imageFiles[productName] = null;
-      }
-    },
-    async deleteImage(productName) {
-      try {
-        await axios.post("http://localhost:3000/api/removeImage", {
-          productName,
-        });
-        this.stockData = this.stockData.map((group) => ({
-          ...group,
-          products: group.products.map((product) =>
-            product.productName === productName
-              ? { ...product, imageUrl: null }
-              : product
-          ),
-        }));
-        toast.success(`Image removed for ${productName}.`, { autoClose: 2500 });
-      } catch (error) {
-        toast.error("Failed to remove image", { autoClose: 3000 });
-      }
-    },
-    openImagePopup(product, groupIndex) {
-      this.currentProduct = product;
-      this.currentGroupIndex = groupIndex;
-      this.currentGroupProducts = this.filteredStockData[groupIndex].products;
-      this.currentGroupName = this.filteredStockData[groupIndex].groupName;
-      this.currentProductIndex = this.currentGroupProducts.findIndex(
-        (p) => p.productName === product.productName
-      );
-      this.showImagePopup = true;
-    },
-    closeImagePopup() {
-      this.showImagePopup = false;
-      this.currentProduct = {};
-      this.currentGroupIndex = null;
-      this.currentGroupProducts = [];
-      this.currentGroupName = "";
-      this.currentProductIndex = 0;
-    },
-    navigateImage(direction) {
-      const newIndex = this.currentProductIndex + direction;
-      if (newIndex >= 0 && newIndex < this.currentGroupProducts.length) {
-        this.currentProductIndex = newIndex;
-        this.currentProduct = this.currentGroupProducts[newIndex];
-      }
-    },
-    handleTouchStart(event) {
-      this.touchStartX = event.touches[0].clientX;
-    },
-    handleTouchEnd(event) {
-      const touchEndX = event.changedTouches[0].clientX;
-      const diff = this.touchStartX - touchEndX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          this.navigateImage(1);
-        } else {
-          this.navigateImage(-1);
-        }
-      }
-    },
-    selectGroup(groupName) {
-      this.selectedGroup = groupName;
-    },
-    handleScroll() {
-      this.showGoToTop = window.scrollY > 300;
-    },
-    scrollToTop() {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    },
-    scrollToGroup(groupName) {
-      const id = 'group-grid-' + this.normalizeId(groupName);
-      const element = document.getElementById(id);
-      if (element) {
-        // Adjust for sticky header
-        const y = element.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-        
-        this.activeScrollGroup = groupName;
-        // Close sidebar on mobile after selection
-        if (window.innerWidth < 1024) {
-            this.showSidePanel = false;
-        }
-      }
-    },
-    normalizeId(name) {
-      if (!name) return '';
-      return name.replace(/\s+/g, '-').replace(/[^\w-]/g, '').toLowerCase();
-    },
-    // New Reusable Sort Logic
-    compareGroups(a, b) {
-      const normalize = (name) => name ? name.toLowerCase().trim() : '';
-      const nameA = normalize(a.groupName);
-      const nameB = normalize(b.groupName);
-      
-      // 0. "Old" Check - Force to bottom
-      const isOldA = nameA.includes('old');
-      const isOldB = nameB.includes('old');
-      if (isOldA && !isOldB) return 1;
-      if (!isOldA && isOldB) return -1;
+// Helpers
+const normalizeIdHelper = (name) => normalizeId(name);
 
-      // 1. Cubix
-      const isCubixA = nameA.includes('cubix');
-      const isCubixB = nameB.includes('cubix');
-      if (isCubixA && !isCubixB) return -1;
-      if (!isCubixA && isCubixB) return 1;
-      
-      // 2. Florex
-      const isFlorexA = nameA.includes('florex');
-      const isFlorexB = nameB.includes('florex');
-      if (isFlorexA && !isFlorexB) return -1;
-      if (!isFlorexA && isFlorexB) return 1;
-      
-      // 3. Paragon Subgroups (Explicit Order)
-      const pIndexA = this.paragonSubgroups.findIndex(p => normalize(p) === nameA);
-      const pIndexB = this.paragonSubgroups.findIndex(p => normalize(p) === nameB);
-      
-      if (pIndexA !== -1 && pIndexB !== -1) return pIndexA - pIndexB;
-      if (pIndexA !== -1) return -1; // Paragon first
-      if (pIndexB !== -1) return 1;
-      
-      // 4. General Items Subgroups (Explicit Order)
-      const gIndexA = this.generalItemsSubgroups.findIndex(g => normalize(g) === nameA);
-      const gIndexB = this.generalItemsSubgroups.findIndex(g => normalize(g) === nameB);
-      
-      if (gIndexA !== -1 && gIndexB !== -1) return gIndexA - gIndexB;
-      if (gIndexA !== -1) return -1; // General items before others
-      if (gIndexB !== -1) return 1;
-      
-      // 5. Default: Alphabetical
-      return nameA.localeCompare(nameB);
-    },
-  },
+// Helper to extract clean price number
+const getPriceInfo = (name) => {
+    if (!name) return { label: 'Net Rate', price: '?' };
+    // Try to find specific price patterns first: MRP 123, RS 123, @ 123
+    const match = name.match(/((?:RS|MRP|@))[\.\s]*(\d+(\.\d+)?)/i);
+    if (match) {
+        const prefix = match[1].toUpperCase();
+        return {
+            label: prefix === 'MRP' ? 'MRP' : 'Net Rate',
+            price: match[2]
+        };
+    }
+    // Fallback: just find the last number
+    const fallback = name.match(/(\d+(\.\d+)?)(?!.*\d)/);
+    return {
+        label: 'Net Rate', 
+        price: fallback ? fallback[0] : '?' 
+    };
 };
-</script>
 
-<style scoped>
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-</style>
+const getProductSize = (name) => {
+    if (!name) return null;
+    const match = name.match(/(?:^|[\s\(])(\d{1,2})\s*[xX*]\s*(\d{1,2})(?:[\s\)]|$)/);
+    if (match) {
+        const n1 = parseInt(match[1]);
+        const n2 = parseInt(match[2]);
+        const low = Math.min(n1, n2);
+        const high = Math.max(n1, n2);
+        return `${low}x${high}`;
+    }
+    return null;
+};
+
+const getProductColor = (name) => {
+    return extractColor(name);
+};
+
+const getCleanProductName = (name) => {
+    if (!name) return '';
+    let clean = name;
+    
+    // Remove Colors
+    const colorData = extractColor(name);
+    if (colorData && colorData.originalTokens) {
+        colorData.originalTokens.forEach(token => {
+            const regex = new RegExp(`\\b${token}\\b`, 'gi');
+            clean = clean.replace(regex, '');
+        });
+    }
+
+    // Remove Price pattern
+    clean = clean.replace(/((?:RS|MRP|@))[\.\s]*(\d+(\.\d+)?)/gi, '');
+    // Remove Size pattern
+    clean = clean.replace(/(?:^|[\s\(])(\d{1,2})\s*[xX*]\s*(\d{1,2})(?:[\s\)]|$)/g, ' ');
+    
+    clean = clean.replace(/\(\s*\)/g, '');
+    clean = clean.replace(/[\/\-\.]+\s*$/g, '') 
+                 .replace(/^\s*[\/\-\.]+/g, '') 
+                 .replace(/\s*[\/\-\.]+\s*/g, ' '); 
+    
+    const cleanedString = clean.replace(/\s+/g, ' ').trim();
+    return formatProductName(cleanedString);
+};
+
+// Scroll Logic Re-implementation
+const scrollToGroup = (groupName, behavior = 'instant') => {
+    expandedGroups.value[groupName] = true;
+
+    const currentList = filteredStockData.value.map(g => g.groupName);
+    if (!currentList.includes(groupName)) {
+        selectedGroup.value = 'All'; 
+    }
+
+    nextTick(() => {
+        const id = 'group-grid-' + normalizeId(groupName);
+        const element = document.getElementById(id);
+        if (element) {
+             const y = element.getBoundingClientRect().top + window.scrollY - 85; // Adjusted offset for sticky header
+             window.scrollTo({ top: y, behavior });
+             activeScrollGroup.value = groupName;
+             
+             const url = new URL(window.location);
+             url.searchParams.set('brand', groupName);
+             window.history.replaceState(null, '', url);
+             
+             if (window.innerWidth < 1024 && showSidePanel.value) {
+                 showSidePanel.value = false;
+             }
+        }
+    });
+};
+
+const handleSidebarClick = (group) => {
+    showLanding.value = false;
+    scrollToGroup(group.groupName, 'instant');
+};
+
+const handleClubClick = (clubName) => {
+    showLanding.value = false;
+    selectedGroup.value = clubName;
+    if (window.innerWidth < 1024) {
+        showSidePanel.value = false;
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' });
+};
+
+
+const handleCleanViewToggle = (newValue) => {
+  if (cleanView.value === newValue) return;
+  
+  isFiltering.value = true;
+  
+  // Use setTimeout to allow the loader to render before the heavy filter operation
+  setTimeout(() => {
+    cleanView.value = newValue;
+    
+    // Ensure loader stays for at least a fun duration
+    setTimeout(() => {
+      isFiltering.value = false;
+    }, FILTER_DELAY_MS); 
+  }, 10); // Reduced initial delay
+};
+
+const formatGroupName = (name) => {
+  if (!name) return '';
+  return name.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+};
+
+</script>

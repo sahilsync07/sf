@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-4xl mx-auto">
+  <div class="max-w-4xl mx-auto p-4 pt-[max(env(safe-area-inset-top),20px)]">
     <h1 class="text-2xl font-bold mb-4 text-center">Image Upload</h1>
     <input
       type="file"
@@ -21,7 +21,7 @@
     </div>
     <router-link
       to="/"
-      class="block text-center mt-4 text-green-600 hover:underline"
+      class="block text-center mt-4 text-blue-600 hover:underline"
       >Back to Stock Summary</router-link
     >
   </div>
@@ -52,7 +52,7 @@ export default {
       try {
         const formData = new FormData();
         formData.append("file", this.file);
-        formData.append("upload_preset", "sf-stock");
+        formData.append("upload_preset", "sbe-stock");
         const response = await fetch(
           "https://api.cloudinary.com/v1_1/dg365ewal/image/upload",
           {

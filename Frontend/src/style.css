@@ -2,58 +2,150 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: #ffffff;
+  --foreground: #020617;
+}
+
 body {
-  @apply bg-gray-100 text-white font-sans;
+  @apply bg-slate-50 text-slate-800 antialiased font-sans selection:bg-blue-500 selection:text-white;
 }
 
-.table-container {
-  @apply w-full;
+/* Root app container */
+#app {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-table {
-  @apply w-full border-collapse text-sm;
+/* ============================================
+   ANDROID-ONLY SAFE AREA STYLES
+   These only apply when running in Capacitor Android app
+   ============================================ */
+
+/* Safe Area Utilities - Android Only */
+.platform-android .safe-area-top {
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
-th,
-td {
-  @apply border-b border-gray-600 px-2 py-4 align-middle;
+.platform-android .safe-area-top-fixed {
+  top: 0;
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
-th {
-  @apply bg-gray-500 text-gray-300 font-semibold uppercase text-xs tracking-wide text-center;
+.platform-android .safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-tr.group-row {
-  @apply bg-green-800 text-white font-bold cursor-pointer;
+/* Main content offset - Android Only */
+.platform-android .main-content-offset {
+  margin-top: calc(54px + env(safe-area-inset-top, 0px));
+}
+@media (min-width: 768px) {
+  .platform-android .main-content-offset {
+    margin-top: calc(72px + env(safe-area-inset-top, 0px));
+  }
 }
 
-tr.product-row {
-  @apply bg-gray-800;
+/* Web fallback - no safe area adjustments */
+body:not(.platform-android) .main-content-offset {
+  margin-top: 60px;
+}
+@media (min-width: 768px) {
+  body:not(.platform-android) .main-content-offset {
+    margin-top: 72px;
+  }
 }
 
-button {
-  @apply px-4 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-500 transition-colors;
+/* Sticky Group Header Offset */
+/* Mobile: 54px navbar + safe-area */
+.sticky-group-header {
+  top: calc(54px + env(safe-area-inset-top, 20px));
+}
+/* Desktop: 72px navbar */
+@media (min-width: 768px) {
+  .sticky-group-header {
+    top: 72px;
+  }
 }
 
-input[type="file"] {
-  @apply text-sm text-gray-300;
+/* Android-only elements - hidden by default, visible on Android */
+.android-only-btn {
+  display: none !important;
+}
+.platform-android .android-only-btn {
+  display: flex !important;
 }
 
-.image-box {
-  @apply w-20 h-28 bg-gray-700 rounded-md overflow-hidden mx-auto relative flex items-center justify-center;
+/* Custom Scrollbar */
+/* Custom Scrollbar - Hidden but functional */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
-.image-box img {
-  @apply w-full h-full object-cover absolute inset-0;
+/* For Firefox */
+html {
+  scrollbar-width: none;
 }
 
-.image-box div {
-  @apply flex items-center justify-center w-full h-full text-center text-gray-500 text-xs;
+/* Utilities */
+.holographic-text {
+  background: linear-gradient(to right, #2563eb, #e11d48, #2563eb);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
 }
 
-.go-to-top {
-  @apply p-2 text-sm;
+@keyframes shine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
+
+.holographic-border {
+  position: relative;
+  z-index: 0;
+}
+
+.holographic-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(to right, #2563eb, #e11d48, #2563eb);
+  background-size: 200% auto;
+  z-index: -1;
+  animation: shine 3s linear infinite;
+}
+
+/* Transitions */
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.list-leave-active {
+  position: absolute;
+}
+
 
 @media (max-width: 640px) {
   table {
@@ -84,11 +176,37 @@ input[type="file"] {
     @apply w-20 h-28;
   }
 
-  button {
-    @apply w-full;
-  }
 
-  .go-to-top {
-    @apply p-1 w-8 h-8 text-xs;
-  }
+}
+
+
+/* Replaced by App.vue global styles for better cache persistence */
+
+/* 
+ * Infinite Marquee Animations for Horizontal Galleries
+ * These are applied to flex containers to make them scroll automatically
+ */
+.animate-marquee-left {
+  animation: marquee-left 35s linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 35s linear infinite;
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* Scrolls half of its duplicated width */
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); } /* Starts half-scrolled */
+  100% { transform: translateX(0%); }
+}
+
+/* Pause animations when user hovers or touches the container */
+.pause-marquee:hover,
+.pause-marquee:active,
+.pause-marquee:focus-within {
+  animation-play-state: paused;
 }

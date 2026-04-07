@@ -18,11 +18,11 @@ app.use(express.json());
 const tallyUrl = "http://localhost:9000/";
 const stockDataPath = path.resolve(
   __dirname,
-  "../../frontend/src/assets/stock-data.json"
+  "../../Frontend/public/assets/stock-data.json"
 );
-const publicStockDataPath = path.resolve(
+const ledgerDataPath = path.resolve(
   __dirname,
-  "../../frontend/public/assets/stock-data.json"
+  "../../Frontend/public/assets/ledger-data.json"
 );
 const tallyTimeout = 30000;
 
@@ -38,9 +38,76 @@ const tallyRequestXML = `<?xml version="1.0"?>
         <STATICVARIABLES>
           <EXPLODEFLAG>Yes</EXPLODEFLAG>
           <SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT>
+          <SVZEROQTY>Yes</SVZEROQTY>
         </STATICVARIABLES>
       </REQUESTDESC>
     </EXPORTDATA>
+  </BODY>
+</ENVELOPE>`;
+
+// Fetch all ledgers with their parent group and balances
+const ledgerListXML = `<?xml version="1.0"?>
+<ENVELOPE>
+  <HEADER>
+    <VERSION>1</VERSION>
+    <TALLYREQUEST>Export</TALLYREQUEST>
+    <TYPE>Collection</TYPE>
+    <ID>AllLedgers</ID>
+  </HEADER>
+  <BODY>
+    <DESC>
+      <STATICVARIABLES>
+        <SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT>
+      </STATICVARIABLES>
+      <TDL>
+        <TDLMESSAGE>
+          <COLLECTION NAME="AllLedgers">
+            <TYPE>Ledger</TYPE>
+            <NATIVEMETHOD>Name</NATIVEMETHOD>
+            <NATIVEMETHOD>Parent</NATIVEMETHOD>
+            <NATIVEMETHOD>OpeningBalance</NATIVEMETHOD>
+            <NATIVEMETHOD>ClosingBalance</NATIVEMETHOD>
+          </COLLECTION>
+        </TDLMESSAGE>
+      </TDL>
+    </DESC>
+  </BODY>
+</ENVELOPE>`;
+
+// Server-side aggregation: GROUP BY (LedgerName, VoucherType, Date, VoucherNo) SUM(Amount)
+const voucherSummaryXML = `<?xml version="1.0"?>
+<ENVELOPE>
+  <HEADER>
+    <VERSION>1</VERSION>
+    <TALLYREQUEST>Export</TALLYREQUEST>
+    <TYPE>Collection</TYPE>
+    <ID>LedgerSummary</ID>
+  </HEADER>
+  <BODY>
+    <DESC>
+      <STATICVARIABLES>
+        <SVEXPORTFORMAT>$$SysName:XML</SVEXPORTFORMAT>
+        <SVFROMDATE>20250401</SVFROMDATE>
+        <SVTODATE>20260331</SVTODATE>
+      </STATICVARIABLES>
+      <TDL>
+        <TDLMESSAGE>
+          <COLLECTION NAME="AllVch" ISINITIALIZE="Yes">
+            <TYPE>Voucher</TYPE>
+            <FETCH>VoucherTypeName, Date, VoucherNumber</FETCH>
+          </COLLECTION>
+          <COLLECTION NAME="LedgerSummary">
+            <SOURCECOLLECTION>AllVch</SOURCECOLLECTION>
+            <WALK>Ledger Entries</WALK>
+            <BY>LdgName : $LedgerName</BY>
+            <BY>VchType : $..VoucherTypeName</BY>
+            <BY>VchDate : $..Date</BY>
+            <BY>VchNo : $..VoucherNumber</BY>
+            <AGGRCOMPUTE>TotalAmt : Sum : $Amount</AGGRCOMPUTE>
+          </COLLECTION>
+        </TDLMESSAGE>
+      </TDL>
+    </DESC>
   </BODY>
 </ENVELOPE>`;
 
@@ -83,87 +150,26 @@ async function fetchTallyData() {
       throw new Error("Mismatched DSPACCNAME and DSPSTKINFO counts");
     }
 
+    require("dotenv").config({ path: path.resolve(__dirname, "../../Frontend/.env") });
+
+    // Load Company Config
+    const configFileName = process.env.VITE_CONFIG_FILE || 'sf.json';
+    const configPath = path.resolve(__dirname, `../../Frontend/public/config/${configFileName}`);
+    let companyConfig = {};
+    try {
+      const configFileContent = await fs.readFile(configPath, 'utf-8');
+      companyConfig = JSON.parse(configFileContent);
+      console.log(`Loaded company config: ${configFileName}`);
+    } catch (err) {
+      console.error(`Failed to load config file: ${configPath}`, err.message);
+      throw new Error(`Critical: Cannot load config file ${configFileName}`);
+    }
+
     const stockGroups = {};
     let currentGroup = "Stock";
 
-    // Hardcoded list of group names (case-insensitive comparison)
-    const groupNames = [
-      "4WAY SPORT",
-      "AAGAM POLYMER",
-      "ADDA",
-      "ADDOXY",
-      "A G ENTERPRISES",
-      "AGRA",
-      "AIRFAX",
-      "AIRSON",
-      "AIRSUN",
-      "AMBIKA FOOTWEAR",
-      "ASHU",
-      "Avon International (WOODS)",
-      "Balaji",
-      "Barun",
-      "CUBIX",
-      "Eeken",
-      "Electrical & Electronic",
-      "Escoute",
-      "Fencer",
-      "Fender",
-      "Florex (Swastik)",
-      "GLAMIUM",
-      "GOKUL FOOTWEAR",
-      "Hawai Chappal",
-      "HITWAY",
-      "J.K Plastic",
-      "J.K.Plastic",
-      "KHADIM",
-      "Kohinoor",
-      "LEO",
-      "Magnet",
-      "MARUTI PLASTICS",
-      "Max",
-      "Mini F/w",
-      "NAV DURGA ENTERPRISES",
-      "NEXGEN FOOTWEAR",
-      "NEXUS",
-      "NON BRAND",
-      "NX KIDS SANDEL",
-      "OTHERS",
-      "PANKAJ PLASTIC",
-      "PARAGON",
-      "Paragon Blot",
-      "PARAGON COMFY",
-      "PARAGON GENTS",
-      "PARAGON LADIES",
-      "Paralite",
-      "Pareek Soucks",
-      "PARIS",
-      "Polish Liquid @18%",
-      "P-TOES",
-      "PU-LION",
-      "RELIANCE FOOTWEAR",
-      "R K TRADERS",
-      "R R POLYPLAST",
-      "Ruban F/w",
-      "Safety",
-      "School",
-      "SCHOOL SHOE DUROLITE",
-      "Shree Shyam Ind",
-      "SHYAM",
-      "Solea & Meriva , Mascara",
-      "SRG ENTERPRISES",
-      "S S BANSAL",
-      "Stimulus",
-      "TEUZ",
-      "UAM FOOTWEAR",
-      "VAISHNO PLASTIC",
-      "VARDHMAN PLASTICS",
-      "VERTEX, SLICKERS & FENDER",
-      "Walkaholic",
-      "Xpania",
-      "YASH FOOTWEAR",
-      "ZYF TEX",
-      "ARITCLE WRONGLY ENTERED"
-    ];
+    // Use groups from config (case-insensitive comparison)
+    const groupNames = companyConfig.tallyGroups || [];
 
     dspAccNames.forEach((acc, index) => {
       const name = acc.DSPDISPNAME || `Unknown ${index}`;
@@ -172,7 +178,6 @@ async function fetchTallyData() {
       const rate = parseFloat(stkCl.DSPCLRATE || "0");
       const amount = parseFloat(stkCl.DSPCLAMTA || "0");
 
-      // Check if the name matches any hardcoded group name (case-insensitive)
       const isGroup =
         !quantity.trim() ||
         groupNames.some((group) => name.toLowerCase() === group.toLowerCase());
@@ -191,7 +196,6 @@ async function fetchTallyData() {
         stockGroups[currentGroup].products.push({
           productName: name,
           quantity: qtyValue,
-          // rate and amount removed for privacy
           imageUrl: null,
         });
         stockGroups[currentGroup].totalAmount += amount;
@@ -201,7 +205,6 @@ async function fetchTallyData() {
     const stockData = Object.entries(stockGroups).map(([groupName, value]) => ({
       groupName,
       products: value.products,
-      // totalAmount removed for privacy
     }));
 
     if (!stockData.length) {
@@ -210,87 +213,195 @@ async function fetchTallyData() {
 
     return stockData;
   } catch (error) {
-    console.error("Error fetching Tally data:", error.message, error.stack);
+    if (error.code === 'ECONNREFUSED') {
+      console.error(`❌ Cannot connect to Tally at ${tallyUrl}`);
+      throw new Error("Tally connection refused. Ensure Tally is running.");
+    } else {
+      console.error("Error fetching Tally data:", error.message);
+      throw error;
+    }
+  }
+}
+
+async function fetchLedgerData() {
+  try {
+    console.log("📒 Fetching ledger data from Tally...");
+    const ledgerResponse = await axios.post(tallyUrl, ledgerListXML, {
+      headers: { "Content-Type": "text/xml" },
+      timeout: tallyTimeout,
+    });
+
+    if (!ledgerResponse.data || !ledgerResponse.data.toString().trim()) {
+      throw new Error("Empty ledger list response from Tally");
+    }
+
+    const ledgerParsed = parser.parse(ledgerResponse.data);
+    const ledgerCollection =
+      ledgerParsed?.ENVELOPE?.BODY?.DATA?.COLLECTION?.LEDGER ||
+      ledgerParsed?.ENVELOPE?.COLLECTION?.LEDGER ||
+      ledgerParsed?.ENVELOPE?.LEDGER;
+
+    if (!ledgerCollection) {
+      throw new Error("No ledger data found in Tally response");
+    }
+
+    const ledgers = Array.isArray(ledgerCollection) ? ledgerCollection : [ledgerCollection];
+    console.log(`  ✅ Found ${ledgers.length} ledgers`);
+
+    const groupMap = {};
+    ledgers.forEach((ledger) => {
+      const name = ledger["@_NAME"] || ledger.NAME || "Unknown";
+      const parent = typeof ledger.PARENT === "object" ? (ledger.PARENT["#text"] || "Ungrouped") : (ledger.PARENT || "Ungrouped");
+      const openingBalRaw = typeof ledger.OPENINGBALANCE === "object" ? (ledger.OPENINGBALANCE["#text"] || "0") : (ledger.OPENINGBALANCE || "0");
+      const closingBalRaw = typeof ledger.CLOSINGBALANCE === "object" ? (ledger.CLOSINGBALANCE["#text"] || "0") : (ledger.CLOSINGBALANCE || "0");
+
+      if (!groupMap[parent]) groupMap[parent] = [];
+      groupMap[parent].push({
+        ledgerName: name,
+        openingBalance: parseFloat(openingBalRaw),
+        closingBalance: parseFloat(closingBalRaw),
+        entries: [],
+      });
+    });
+
+    try {
+      console.log("  → Fetching voucher summaries...");
+      const voucherResponse = await axios.post(tallyUrl, voucherSummaryXML, {
+        headers: { "Content-Type": "text/xml" },
+        timeout: tallyTimeout * 2,
+      });
+
+      if (voucherResponse.data && voucherResponse.data.toString().trim()) {
+        const voucherParsed = parser.parse(voucherResponse.data);
+        const summaryCollection =
+          voucherParsed?.ENVELOPE?.BODY?.DATA?.COLLECTION?.OBJECT ||
+          voucherParsed?.ENVELOPE?.COLLECTION?.OBJECT ||
+          voucherParsed?.ENVELOPE?.BODY?.DATA?.COLLECTION?.LEDGERSUMMARY;
+
+        if (summaryCollection) {
+          const entries = Array.isArray(summaryCollection) ? summaryCollection : [summaryCollection];
+          const getVal = (obj) => {
+            if (obj === null || obj === undefined) return "";
+            if (typeof obj === "object") return obj["#text"] || "";
+            return obj.toString();
+          };
+
+          const ledgerEntriesMap = {};
+          entries.forEach((entry) => {
+            const ledgerName = getVal(entry.LDGNAME) || "Unknown";
+            const totalAmt = parseFloat(getVal(entry.TOTALAMT) || "0");
+            const drCr = totalAmt < 0 ? "Dr" : "Cr";
+            const amount = Math.round(Math.abs(totalAmt) * 100) / 100;
+
+            if (!ledgerEntriesMap[ledgerName]) ledgerEntriesMap[ledgerName] = [];
+            ledgerEntriesMap[ledgerName].push({
+              date: getVal(entry.VCHDATE),
+              voucherNo: getVal(entry.VCHNO),
+              type: getVal(entry.VCHTYPE),
+              amount,
+              drCr,
+            });
+          });
+
+          Object.values(groupMap).forEach((list) => {
+            list.forEach((l) => {
+              if (ledgerEntriesMap[l.ledgerName]) l.entries = ledgerEntriesMap[l.ledgerName];
+            });
+          });
+        }
+      }
+    } catch (vErr) { console.warn("Voucher fetch failed", vErr.message); }
+
+    const ledgerData = Object.entries(groupMap).map(([groupName, ledgers]) => ({ groupName, ledgers }));
+    ledgerData.sort((a, b) => a.groupName.localeCompare(b.groupName));
+    return ledgerData;
+  } catch (error) {
+    console.error("Error fetching ledger data:", error.message);
     throw error;
   }
 }
 
-app.get("/api/stock", async (req, res) => {
+async function syncLedgerToFile() {
+  console.log("📒 Syncing ledger data to file...");
+  let data;
   try {
-    const stockData = await fetchTallyData();
-    res.json(stockData);
-  } catch (error) {
-    console.error("Error in /api/stock:", error.message);
-    res
-      .status(500)
-      .json({ error: `Failed to fetch stock data: ${error.message}` });
+    data = await fetchLedgerData();
+  } catch (err) {
+    try {
+      const existing = await fs.readFile(ledgerDataPath, "utf-8");
+      if (existing.trim()) return { success: false, fallback: true, error: err.message };
+    } catch (_) {}
+    return { success: false, fallback: false, error: err.message };
   }
+
+  const lastSyncTime = new Date().toISOString();
+  data.unshift({ groupName: "_META_DATA_", lastSync: lastSyncTime, ledgers: [] });
+
+  try {
+    await fs.writeFile(ledgerDataPath, JSON.stringify(data, null, 2));
+    return { success: true, groups: data.length - 1, lastSync: lastSyncTime };
+  } catch (err) {
+    throw new Error(`Cannot write ledger-data.json: ${err.message}`);
+  }
+}
+
+app.get("/api/stock", async (req, res) => {
+  try { res.json(await fetchTallyData()); }
+  catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-// ... (all imports, constants, fetchTallyData, other routes unchanged)
+app.get("/api/ledger", async (req, res) => {
+  try { res.json(await fetchLedgerData()); }
+  catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+app.post("/api/updateLedgerData", async (req, res) => {
+  try { res.json(await syncLedgerToFile()); }
+  catch (e) { res.status(500).json({ error: e.message }); }
+});
 
 app.post("/api/updateStockData", async (req, res) => {
   try {
-    console.log("Starting updateStockData, stockDataPath:", stockDataPath);
-
-    // ---- 1. Verify file access ------------------------------------------------
-    try {
-      await fs.access(stockDataPath, fs.constants.R_OK | fs.constants.W_OK);
-      console.log("stock-data.json is readable and writable");
-    } catch (err) {
-      console.error("File access error:", err.message, err.code);
-      throw new Error(`Cannot access stock-data.json: ${err.message}`);
-    }
-
-    // ---- 2. Load existing JSON ------------------------------------------------
     let existingData = [];
-    try {
-      const fileContent = await fs.readFile(stockDataPath, "utf-8");
-      if (fileContent.trim()) {
-        existingData = JSON.parse(fileContent);
-        console.log("Existing stock-data.json loaded, groups:", existingData.length);
-      }
-    } catch (err) {
-      console.error("Error reading stock-data.json:", err.message, err.stack);
-      existingData = [];
-    }
+    try { existingData = JSON.parse(await fs.readFile(stockDataPath, "utf-8")); }
+    catch (_) { existingData = []; }
 
-    // ---- 3. Preserve images + zero-stock products that have images ----------
-    const imageUrls = {};               // productName → imageUrl
-    const zeroStockProducts = {};       // groupName → [product,…]
+    const productMeta = {};
+    const zeroStockProducts = {};
 
     existingData.forEach((group) => {
-      if (!group.products) return;
-
-      group.products.forEach((product) => {
-        if (product.imageUrl) {
-          imageUrls[product.productName] = product.imageUrl;
-        }
+      (group.products || []).forEach((product) => {
+        productMeta[product.productName] = {
+          imageUrl: product.imageUrl || null,
+          imageUploadedAt: product.imageUploadedAt || null,
+          firstSeenAt: product.firstSeenAt || null
+        };
         if (product.quantity === 0 && product.imageUrl) {
-          const { rate, amount, ...cleanProduct } = product; // Remove sensitive data
-          (zeroStockProducts[group.groupName] ??= []).push(cleanProduct);
+          (zeroStockProducts[group.groupName] ??= []).push(product);
         }
       });
     });
-    console.log("Preserved image URLs:", Object.keys(imageUrls).length);
-    console.log("Preserved zero-stock products with images:", Object.keys(zeroStockProducts).length);
 
-    // ---- 4. Fetch fresh data from Tally --------------------------------------
-    const stockData = await fetchTallyData();
+    let stockData;
+    try { stockData = await fetchTallyData(); }
+    catch (tallyError) {
+      if (existingData.length === 0) return res.status(503).json({ error: "Tally unavailable" });
+      return res.json({ message: "Using existing data", data: existingData });
+    }
 
-    // ---- 5. Re-attach images & re-inject zero-stock items --------------------
-    // ---- 6. De-duplicate by productName ------------------------------------
     stockData.forEach((group) => {
-      // attach saved images to live products
       group.products.forEach((p) => {
-        p.imageUrl = imageUrls[p.productName] ?? null;
+        const saved = productMeta[p.productName];
+        if (saved) {
+          p.imageUrl = saved.imageUrl;
+          p.imageUploadedAt = saved.imageUploadedAt;
+          p.firstSeenAt = saved.firstSeenAt;
+        } else {
+          p.imageUrl = null;
+          p.firstSeenAt = new Date().toISOString();
+        }
       });
-
-      // bring back zero-stock items that had an image
-      if (zeroStockProducts[group.groupName]) {
-        group.products.push(...zeroStockProducts[group.groupName]);
-      }
-
+      if (zeroStockProducts[group.groupName]) group.products.push(...zeroStockProducts[group.groupName]);
       const seen = new Set();
       group.products = group.products.filter((p) => {
         if (seen.has(p.productName)) return false;
@@ -299,175 +410,49 @@ app.post("/api/updateStockData", async (req, res) => {
       });
     });
 
-    // ---- 7. Inject Last Sync Metadata ---------------------------------------
-    // Add metadata at the start of the array or as a special entry
     const lastSyncTime = new Date().toISOString();
-    stockData.unshift({
-      groupName: "_META_DATA_",
-      lastSync: lastSyncTime,
-      products: [],
-    });
+    stockData.unshift({ groupName: "_META_DATA_", lastSync: lastSyncTime, products: [] });
 
-    // ---- 8. Write updated files ------------------------------------------------
-    try {
-      await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
-      await fs.writeFile(publicStockDataPath, JSON.stringify(stockData, null, 2));
-      console.log("Updated stock-data.json at:", stockDataPath);
-    } catch (err) {
-      console.error("Error writing stock-data.json:", err.message, err.stack);
-      throw new Error(`Cannot write to stock-data.json: ${err.message}`);
-    }
+    await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
+    const ledgerSync = await syncLedgerToFile();
 
-    res.json({
-      message: "Stock data updated successfully",
-      data: stockData,
-    });
-  } catch (error) {
-    console.error("Error in updateStockData:", error.message, error.stack);
-    res
-      .status(500)
-      .json({ error: `Failed to update stock data: ${error.message}` });
-  }
+    res.json({ message: "Stock updated successfully", data: stockData, ledgerSync });
+  } catch (error) { res.status(500).json({ error: error.message }); }
 });
-
-// ... (all other routes unchanged)
 
 app.post("/api/updateImage", async (req, res) => {
   try {
     const { productName, imageUrl } = req.body;
-    if (!productName || !imageUrl) {
-      throw new Error("Missing productName or imageUrl");
-    }
-
-    try {
-      await fs.access(stockDataPath, fs.constants.R_OK | fs.constants.W_OK);
-    } catch (err) {
-      throw new Error(`Cannot access stock-data.json: ${err.message}`);
-    }
-
-    let stockData = [];
-    try {
-      const fileContent = await fs.readFile(stockDataPath, "utf-8");
-      if (fileContent.trim()) {
-        stockData = JSON.parse(fileContent);
-      }
-    } catch (err) {
-      throw new Error(`Error reading stock-data.json: ${err.message}`);
-    }
-
+    let stockData = JSON.parse(await fs.readFile(stockDataPath, "utf-8"));
     let updated = false;
-    stockData.forEach((group) => {
-      if (group.totalAmount !== undefined) delete group.totalAmount; // Ensure group total is removed
-      group.products.forEach((product) => {
-        if (product.rate !== undefined) delete product.rate; // Ensure rate is removed
-        if (product.amount !== undefined) delete product.amount; // Ensure amount is removed
-
-        if (product.productName === productName) {
-          product.imageUrl = imageUrl;
-          updated = true;
-        }
-      });
-    });
-
-    if (!updated) {
-      throw new Error(`Product ${productName} not found`);
-    }
-
-    try {
-      await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
-      await fs.writeFile(
-        publicStockDataPath,
-        JSON.stringify(stockData, null, 2)
-      );
-      console.log(`Updated imageUrl for ${productName} in stock-data.json`);
-    } catch (err) {
-      throw new Error(`Cannot write to stock-data.json: ${err.message}`);
-    }
-
-    res.json({ message: `Image URL updated for ${productName}` });
-  } catch (error) {
-    console.error("Error in updateImage:", error.message, error.stack);
-    res.status(500).json({ error: `Failed to update image: ${error.message}` });
-  }
+    stockData.forEach(g => g.products.forEach(p => {
+      if (p.productName === productName) {
+        p.imageUrl = imageUrl;
+        p.imageUploadedAt = new Date().toISOString();
+        updated = true;
+      }
+    }));
+    if (!updated) throw new Error("Product not found");
+    await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
+    res.json({ message: "Image updated" });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 app.post("/api/removeImage", async (req, res) => {
   try {
     const { productName } = req.body;
-    if (!productName) {
-      throw new Error("Missing productName");
-    }
-
-    try {
-      await fs.access(stockDataPath, fs.constants.R_OK | fs.constants.W_OK);
-    } catch (err) {
-      throw new Error(`Cannot access stock-data.json: ${err.message}`);
-    }
-
-    let stockData = [];
-    try {
-      const fileContent = await fs.readFile(stockDataPath, "utf-8");
-      if (fileContent.trim()) {
-        stockData = JSON.parse(fileContent);
-      }
-    } catch (err) {
-      throw new Error(`Error reading stock-data.json: ${err.message}`);
-    }
-
+    let stockData = JSON.parse(await fs.readFile(stockDataPath, "utf-8"));
     let updated = false;
-    stockData.forEach((group) => {
-      if (group.totalAmount !== undefined) delete group.totalAmount; // Ensure group total is removed
-      group.products.forEach((product) => {
-        if (product.rate !== undefined) delete product.rate; // Ensure rate is removed
-        if (product.amount !== undefined) delete product.amount; // Ensure amount is removed
-
-        if (product.productName === productName && product.imageUrl) {
-          product.imageUrl = null;
-          updated = true;
-        }
-      });
-    });
-
-    if (!updated) {
-      throw new Error(`Product ${productName} not found or has no image`);
-    }
-
-    try {
-      await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
-      await fs.writeFile(
-        publicStockDataPath,
-        JSON.stringify(stockData, null, 2)
-      );
-      console.log(`Removed image for ${productName} in stock-data.json`);
-    } catch (err) {
-      throw new Error(`Cannot write to stock-data.json: ${err.message}`);
-    }
-
-    res.json({ message: `Image removed for ${productName}` });
-  } catch (error) {
-    console.error("Error in removeImage:", error.message, error.stack);
-    res.status(500).json({ error: `Failed to remove image: ${error.message}` });
-  }
+    stockData.forEach(g => g.products.forEach(p => {
+      if (p.productName === productName && p.imageUrl) {
+        p.imageUrl = null;
+        updated = true;
+      }
+    }));
+    if (!updated) throw new Error("Product not found or image missing");
+    await fs.writeFile(stockDataPath, JSON.stringify(stockData, null, 2));
+    res.json({ message: "Image removed" });
+  } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.get("/api/tally-health", async (req, res) => {
-  try {
-    const response = await axios.post(tallyUrl, tallyRequestXML, {
-      timeout: tallyTimeout,
-      headers: { "Content-Type": "text/xml" },
-    });
-    console.log("Tally health check success:", response.status);
-    res.json({
-      status: "success",
-      data: "Tally is reachable",
-      code: response.status,
-    });
-  } catch (error) {
-    console.error("Tally health check failed:", error.message, error.stack);
-    res.status(500).json({ error: `Tally unreachable: ${error.message}` });
-  }
-});
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+app.listen(port, () => console.log(`Server running at http://localhost:${port}`));
