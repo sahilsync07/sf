@@ -3,7 +3,7 @@
   <div>
     <!-- Desktop Toolbar (Hidden on Mobile) -->
     <header 
-      class="hidden lg:block fixed inset-x-0 top-0 z-[60] bg-black/90 backdrop-blur-md border-b border-white/10 shadow-sm transition-all duration-300 safe-area-top-fixed rounded-b-3xl"
+      class="hidden lg:block fixed inset-x-0 top-0 z-[60] bg-blue-950/95 backdrop-blur-md border-b border-white/10 shadow-sm transition-all duration-300 safe-area-top-fixed rounded-b-3xl"
     >
       <!-- Inner content wrapper with fixed height -->
       <div class="h-[72px] flex items-center justify-between px-6">
@@ -12,7 +12,7 @@
           <!-- Sidebar Toggle -->
           <button
             @click="$emit('toggleSidebar')"
-            class="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-900 text-slate-400 hover:bg-blue-600 hover:text-white transition-all active:scale-95 shrink-0"
+            class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-900/60 text-slate-400 hover:bg-blue-600 hover:text-white transition-all active:scale-95 shrink-0"
             :class="{ 'opacity-0 pointer-events-none': showCart }"
           >
              <i v-if="showSidePanel" class="fa-solid fa-house text-sm"></i>
@@ -24,7 +24,7 @@
             <button
                v-if="isAdmin && !isSuperAdmin"
                @click="$emit('updateStockData')"
-               class="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-900 text-slate-400 hover:bg-neutral-800 hover:text-blue-500 transition-all border border-white/5"
+               class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-900/60 text-slate-400 hover:bg-blue-800 hover:text-blue-400 transition-all border border-white/5"
                title="Sync Data"
             >
               <i class="fa-solid fa-rotate" :class="{ 'animate-spin': loading }"></i>
@@ -32,7 +32,7 @@
              <button
               v-if="isSuperAdmin"
               @click="$router.push('/ledger')"
-              class="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-900 text-slate-400 hover:bg-neutral-800 transition-colors border border-white/5"
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-900/60 text-slate-400 hover:bg-blue-800 transition-colors border border-white/5"
               title="Ledger View"
             >
                <i class="fa-solid fa-book-open"></i>
@@ -51,7 +51,7 @@
                 @focus="showDesktopDropdown = true"
                 type="text"
                 placeholder="Search..."
-                class="w-full pl-10 pr-4 py-2.5 rounded-full bg-neutral-900 border border-white/20 ring-1 ring-white/10 focus:bg-black focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 focus:outline-none transition-all text-sm font-medium text-white placeholder-slate-400"
+                class="w-full pl-10 pr-4 py-2.5 rounded-full bg-blue-900/60 border border-white/20 ring-1 ring-white/10 focus:bg-blue-950 focus:border-blue-400 focus:ring-2 focus:ring-blue-400/50 focus:outline-none transition-all text-sm font-medium text-white placeholder-slate-400"
               />
               
               <!-- Desktop Smart Dropdown -->
@@ -64,7 +64,7 @@
                 leave-to-class="translate-y-2 opacity-0"
               >
                 <div v-if="showDesktopDropdown && localQuery.trim().length > 0" 
-                     class="fixed top-[84px] left-4 right-4 lg:left-1/2 lg:-translate-x-1/2 lg:w-[800px] max-w-full bg-neutral-900 border border-white/20 rounded-2xl shadow-2xl overflow-hidden z-[70] max-h-[60vh] flex flex-col">
+                     class="fixed top-[84px] left-4 right-4 lg:left-1/2 lg:-translate-x-1/2 lg:w-[800px] max-w-full bg-blue-950 border border-white/20 rounded-2xl shadow-2xl overflow-hidden z-[70] max-h-[60vh] flex flex-col">
                   <div class="overflow-y-auto overscroll-contain flex-1 p-2 space-y-1 custom-scrollbar">
                     <button 
                       @click="executeSearch(localQuery)"
@@ -132,7 +132,7 @@
                <span class="text-slate-400 font-['Clash_Display'] font-light text-3xl tracking-wide ml-1.5">{{ companyRestName }}</span>
           </h1>
           <!-- Status Pill -->
-          <div class="flex items-center gap-1.5 text-[10px] font-medium text-slate-400 bg-neutral-900 border border-white/10 px-2 py-0.5 rounded-full shadow-sm">
+          <div class="flex items-center gap-1.5 text-[10px] font-medium text-slate-400 bg-blue-900/60 border border-white/10 px-2 py-0.5 rounded-full shadow-sm">
                <span class="w-1.5 h-1.5 rounded-full" :class="statusColor"></span>
                <span>{{ formattedLastRefresh || 'Offline' }}</span>
           </div>
@@ -144,7 +144,7 @@
            <button
               v-if="isAdmin"
               @click="$router.push('/pdf-gen')"
-              class="w-10 h-10 flex items-center justify-center rounded-xl bg-neutral-900 text-slate-400 hover:bg-neutral-800 hover:text-red-500 transition-all border border-white/5 shrink-0"
+              class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-900/60 text-slate-400 hover:bg-blue-800 hover:text-red-400 transition-all border border-white/5 shrink-0"
               title="Generate PDF"
             >
               <i class="fa-solid fa-file-pdf"></i>
@@ -155,7 +155,7 @@
                <button 
                   @click="cleanView = !cleanView"
                   class="w-10 h-10 flex items-center justify-center rounded-xl border transition-all duration-300"
-                  :class="cleanView ? 'bg-gradient-to-br from-slate-200 to-slate-300 border-slate-400 text-black shadow-md' : 'bg-neutral-900 border-white/5 text-slate-400 hover:bg-neutral-800 hover:text-slate-200'"
+                  :class="cleanView ? 'bg-gradient-to-br from-slate-200 to-slate-300 border-slate-400 text-black shadow-md' : 'bg-blue-900/60 border-white/5 text-slate-400 hover:bg-blue-800 hover:text-slate-200'"
                   title="Clean View (Images Only & In Stock)"
                >
                   <i class="fa-solid fa-wand-magic-sparkles text-sm transition-all duration-500"></i>
@@ -181,7 +181,7 @@
 
     <!-- Mobile Top Bar (Visible on Mobile) -->
     <header 
-      class="lg:hidden fixed inset-x-0 top-0 z-[60] bg-black/90 backdrop-blur-md border-b border-white/10 shadow-sm transition-all"
+      class="lg:hidden fixed inset-x-0 top-0 z-[60] bg-blue-950/95 backdrop-blur-md border-b border-white/10 shadow-sm transition-all"
       style="padding-top: env(safe-area-inset-top, 20px)"
     >
       <!-- Inner content wrapper with fixed height -->
@@ -191,7 +191,7 @@
             <!-- Sidebar Toggle -->
             <button
                @click="$emit('toggleSidebar')"
-               class="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-900 text-slate-400 active:bg-blue-600 active:text-white transition-all"
+               class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-900/60 text-slate-400 active:bg-blue-600 active:text-white transition-all"
             >
                <i v-if="showSidePanel" class="fa-solid fa-house text-sm"></i>
                <i v-else class="fa-solid fa-bars text-sm"></i>
@@ -231,7 +231,7 @@
             <button
                v-if="isAdmin"
                @click="$router.push('/pdf-gen')"
-               class="w-9 h-9 flex items-center justify-center rounded-full bg-neutral-900 text-slate-400 border border-white/10"
+               class="w-9 h-9 flex items-center justify-center rounded-full bg-blue-900/60 text-slate-400 border border-white/10"
             >
               <i class="fa-solid fa-file-pdf"></i>
            </button>
@@ -251,7 +251,7 @@
     <!-- Mobile Bottom Bar (Fixed) — hidden on routes like ledger/daybook -->
     <div
       v-if="!hideMobileBottomBar"
-      class="lg:hidden fixed bottom-0 left-0 w-full z-[60] bg-black border-t border-white/10 p-3 pb-[max(env(safe-area-inset-bottom),12px)] shadow-[0_-4px_20px_rgba(255,255,255,0.05)] rounded-t-3xl"
+      class="lg:hidden fixed bottom-0 left-0 w-full z-[60] bg-blue-950 border-t border-white/10 p-3 pb-[max(env(safe-area-inset-bottom),12px)] shadow-[0_-4px_20px_rgba(255,255,255,0.05)] rounded-t-3xl"
     >
        <div class="flex items-center gap-3">
           <!-- Search -->
@@ -266,7 +266,7 @@
                 @focus="showMobileDropdown = true"
                 type="text"
                 placeholder="Search products..."
-                class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-neutral-900 border border-white/20 ring-1 ring-white/10 focus:bg-black focus:ring-2 focus:ring-blue-500/50 transition-all text-sm font-medium text-white placeholder-slate-400"
+                class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-blue-900/60 border border-white/20 ring-1 ring-white/10 focus:bg-blue-950 focus:ring-2 focus:ring-blue-400/50 transition-all text-sm font-medium text-white placeholder-slate-400"
               />
               
               <!-- Mobile Smart Dropdown (Opens Upward) -->
@@ -279,7 +279,7 @@
                 leave-to-class="translate-y-2 opacity-0"
               >
                 <div v-if="showMobileDropdown && localQuery.trim().length > 0" 
-                     class="fixed bottom-[calc(max(env(safe-area-inset-bottom),12px)+74px)] left-3 right-3 bg-neutral-900 border border-white/20 rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-hidden z-[70] max-h-[60vh] flex flex-col">
+                     class="fixed bottom-[calc(max(env(safe-area-inset-bottom),12px)+74px)] left-3 right-3 bg-blue-950 border border-white/20 rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] overflow-hidden z-[70] max-h-[60vh] flex flex-col">
                   <div class="overflow-y-auto overscroll-contain flex-1 p-2 space-y-1 custom-scrollbar">
                     <button 
                       @click="executeSearch(localQuery)"
@@ -349,7 +349,7 @@
                <button 
                   @click="cleanView = !cleanView"
                   class="w-10 h-10 rounded-xl flex items-center justify-center transition-all relative border overflow-hidden"
-                  :class="cleanView ? 'bg-gradient-to-br from-slate-200 to-slate-300 border-slate-400 text-black shadow-md' : 'bg-neutral-900 border-white/10 text-slate-400'"
+                  :class="cleanView ? 'bg-gradient-to-br from-slate-200 to-slate-300 border-slate-400 text-black shadow-md' : 'bg-blue-900/60 border-white/10 text-slate-400'"
                   title="Clean View"
                >
                   <i class="fa-solid fa-wand-magic-sparkles text-sm transition-all duration-500"></i>
