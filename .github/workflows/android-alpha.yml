@@ -57,7 +57,7 @@ jobs:
 
       - name: Build Release Bundle
         working-directory: Frontend/android
-        run: ./gradlew bundleRelease
+        run: chmod +x ./gradlew && ./gradlew bundleRelease
 
       - name: Upload to Play Store (Alpha)
         uses: r0adkll/upload-google-play@v1.1.3
