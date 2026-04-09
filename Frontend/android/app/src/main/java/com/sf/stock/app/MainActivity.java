@@ -1,4 +1,4 @@
-package com.sbe.stock.app;
+package com.sf.stock.app;
 
 import com.getcapacitor.BridgeActivity;
 
