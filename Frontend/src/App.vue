@@ -114,7 +114,7 @@ const loadConfig = async () => {
     }
 };
 
-const { checkAdminState, isAdmin, isSuperAdmin } = useAdmin();
+const { checkAdminState, isAdmin, isSuperAdmin, login } = useAdmin();
 
 const { 
   loading: stockLoading, isRefreshing, error,
@@ -147,20 +147,10 @@ const toggleCart = () => {
     }
 };
 
-const handleAdminLogin = (password) => {
+const handleAdminLogin = async (password) => {
   showAdminModal.value = false;
   if (!password) return;
-  if (password === 'admin123') {
-    isAdmin.value = true;
-    isSuperAdmin.value = false;
-    toast.success('Admin Mode Enabled', { autoClose: 2000 });
-  } else if (password === 'superadmin') {
-    isAdmin.value = false;
-    isSuperAdmin.value = true;
-    toast.success('Super Admin Mode Enabled', { autoClose: 2000 });
-  } else {
-    toast.error('Incorrect password', { autoClose: 3000 });
-  }
+  await login(password);
 };
 
 const handleSidebarClick = (group) => {

@@ -4,7 +4,6 @@ import { useAppStore } from '../stores/appStore';
 import { toast } from 'vue3-toastify';
 import { Preferences } from '@capacitor/preferences';
 
-let initialized = false;
 const isLoginModalOpen = ref(false);
 
 const hashPassword = async (msg) => {
@@ -20,8 +19,6 @@ export function useAdmin() {
     const { isAdmin, isSuperAdmin } = storeToRefs(appStore);
 
     const checkAdminState = async () => {
-        if (initialized) return;
-        initialized = true;
         try {
             const { value } = await Preferences.get({ key: 'sf_admin_role' });
             if (value === 'admin') {
@@ -36,12 +33,15 @@ export function useAdmin() {
         }
     };
 
-    // Call immediately (it will only run once)
-    checkAdminState();
-
     const openAdminLogin = () => {
-        if (isAdmin.value || isSuperAdmin.value) return;
         isLoginModalOpen.value = true;
+    };
+
+    const logout = async () => {
+        appStore.setAdmin(false);
+        appStore.setSuperAdmin(false);
+        await Preferences.remove({ key: 'sf_admin_role' });
+        toast.info("Logged out", { autoClose: 2000 });
     };
 
     const login = async (password) => {
@@ -49,6 +49,7 @@ export function useAdmin() {
 
         const hash = await hashPassword(password);
 
+        // Hashes for 'admin123' and 'superadmin'
         if (hash === "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9") {
             appStore.setAdmin(true);
             appStore.setSuperAdmin(false);
@@ -75,6 +76,7 @@ export function useAdmin() {
         isLoginModalOpen,
         openAdminLogin,
         login,
+        logout,
         checkAdminState
     };
 }
