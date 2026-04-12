@@ -154,7 +154,8 @@ const handleAdminLogin = async (password) => {
 };
 
 const handleSidebarClick = (group) => {
-    router.push({ path: '/', query: { brand: group.groupName } });
+    // Use a timestamp to force route change even when same brand is re-clicked
+    router.push({ path: '/', query: { brand: group.groupName, t: Date.now() } });
 };
 
 const handleClubClick = (clubName) => {
