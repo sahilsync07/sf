@@ -430,7 +430,7 @@ app.post("/api/updateStockData", async (req, res) => {
     catch (_) { existingData = []; }
 
     const productMeta = {};
-    const zeroStockProducts = {};
+    const imageProducts = {};             // groupName → { productName → product }
 
     existingData.forEach((group) => {
       (group.products || []).forEach((product) => {
@@ -439,8 +439,10 @@ app.post("/api/updateStockData", async (req, res) => {
           imageUploadedAt: product.imageUploadedAt || null,
           firstSeenAt: product.firstSeenAt || null
         };
-        if (product.quantity === 0 && product.imageUrl) {
-          (zeroStockProducts[group.groupName] ??= []).push(product);
+        // Save ALL products with images (not just zero-qty ones)
+        // so we can re-inject them if Tally stops returning them
+        if (product.imageUrl) {
+          (imageProducts[group.groupName] ??= {})[product.productName] = product;
         }
       });
     });
@@ -464,7 +466,15 @@ app.post("/api/updateStockData", async (req, res) => {
           p.firstSeenAt = new Date().toISOString();
         }
       });
-      if (zeroStockProducts[group.groupName]) group.products.push(...zeroStockProducts[group.groupName]);
+      // Re-inject products that had images but are missing from fresh Tally data
+      const freshNames = new Set(group.products.map(p => p.productName));
+      if (imageProducts[group.groupName]) {
+        Object.values(imageProducts[group.groupName]).forEach(oldProduct => {
+          if (!freshNames.has(oldProduct.productName)) {
+            group.products.push({ ...oldProduct, quantity: 0 });
+          }
+        });
+      }
       const seen = new Set();
       group.products = group.products.filter((p) => {
         if (seen.has(p.productName)) return false;
