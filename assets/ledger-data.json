@@ -1,0 +1,6074 @@
+[
+  {
+    "groupName": "_META_DATA_",
+    "lastSync": "2026-04-08T03:18:14.414Z",
+    "ledgers": []
+  },
+  {
+    "groupName": "&#4; Primary",
+    "ledgers": [
+      {
+        "ledgerName": "Profit & Loss A/c",
+        "openingBalance": -237697.43,
+        "closingBalance": -417233.37,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Bank Accounts",
+    "ledgers": [
+      {
+        "ledgerName": "CANARA BANK",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "HDFC BANK",
+        "openingBalance": -170587.95,
+        "closingBalance": -188066.32,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 4,
+            "type": "Receipt",
+            "amount": 100000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 5,
+            "type": "Receipt",
+            "amount": 20203,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 44886,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Payment",
+            "amount": 37800,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Payment",
+            "amount": 4200,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 4,
+            "type": "Payment",
+            "amount": 2500,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 5,
+            "type": "Payment",
+            "amount": 25000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Contra",
+            "amount": 100000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 6,
+            "type": "Receipt",
+            "amount": 4140,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 8,
+            "type": "Receipt",
+            "amount": 70000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 9,
+            "type": "Receipt",
+            "amount": 28000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 2,
+            "type": "Contra",
+            "amount": 235000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 13,
+            "type": "Receipt",
+            "amount": 55044,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 8,
+            "type": "Payment",
+            "amount": 6000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 3,
+            "type": "Contra",
+            "amount": 275900,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 14,
+            "type": "Receipt",
+            "amount": 30693,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 15,
+            "type": "Receipt",
+            "amount": 30000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 4,
+            "type": "Contra",
+            "amount": 385000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 19,
+            "type": "Receipt",
+            "amount": 36787,
+            "drCr": "Dr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 20,
+            "type": "Receipt",
+            "amount": 105000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 5,
+            "type": "Contra",
+            "amount": 70000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 10,
+            "type": "Payment",
+            "amount": 15000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 21,
+            "type": "Receipt",
+            "amount": 82522,
+            "drCr": "Dr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 6,
+            "type": "Contra",
+            "amount": 90000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 11,
+            "type": "Payment",
+            "amount": 741.63,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 7,
+            "type": "Contra",
+            "amount": 75000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 8,
+            "type": "Contra",
+            "amount": 69100,
+            "drCr": "Dr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 22,
+            "type": "Receipt",
+            "amount": 111445,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "INDUSLND BANK (PROSSESSING)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "STATE BANK OF INDIA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Bank OD A/c",
+    "ledgers": [
+      {
+        "ledgerName": "HDFC EEG OVER DRAFT ACCOUNT",
+        "openingBalance": 9374834.16,
+        "closingBalance": 8419834.16,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Contra",
+            "amount": 100000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 2,
+            "type": "Contra",
+            "amount": 235000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 4,
+            "type": "Contra",
+            "amount": 385000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 5,
+            "type": "Contra",
+            "amount": 70000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 6,
+            "type": "Contra",
+            "amount": 90000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 7,
+            "type": "Contra",
+            "amount": 75000,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "INDUSLND BANK",
+        "openingBalance": -9919.03,
+        "closingBalance": -9919.03,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Capital Account",
+    "ledgers": [
+      {
+        "ledgerName": "Advances Tax",
+        "openingBalance": -30000,
+        "closingBalance": -30000,
+        "entries": []
+      },
+      {
+        "ledgerName": "Early Years Professional Tax",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Gift to Wife",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Gst 9",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "IT FILLING",
+        "openingBalance": -25000,
+        "closingBalance": -25000,
+        "entries": []
+      },
+      {
+        "ledgerName": "Self Asst Tax",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Self Drawings",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Self Transfers",
+        "openingBalance": -100000,
+        "closingBalance": -100000,
+        "entries": []
+      },
+      {
+        "ledgerName": "SLNP LIFE INSURANCE",
+        "openingBalance": -208614,
+        "closingBalance": -208614,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.Lokanath Patro",
+        "openingBalance": 2364894.7,
+        "closingBalance": 2364894.7,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Cash-in-Hand",
+    "ledgers": [
+      {
+        "ledgerName": "Cash",
+        "openingBalance": -3116109.02,
+        "closingBalance": -3156149.02,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Receipt",
+            "amount": 6000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 7000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 67660,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 116180,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 76020,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 94620,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 16,
+            "type": "Receipt",
+            "amount": 45770,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 9,
+            "type": "Payment",
+            "amount": 45770,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 3,
+            "type": "Contra",
+            "amount": 275900,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 6,
+            "type": "Payment",
+            "amount": 15560,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 7,
+            "type": "Payment",
+            "amount": 35980,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 17,
+            "type": "Receipt",
+            "amount": 3000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 66100,
+            "drCr": "Dr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 8,
+            "type": "Contra",
+            "amount": 69100,
+            "drCr": "Cr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "groupName": "Current Assets",
+    "ledgers": [
+      {
+        "ledgerName": "Advances",
+        "openingBalance": -160000,
+        "closingBalance": -160000,
+        "entries": []
+      },
+      {
+        "ledgerName": "MAHINDRA SUPRO (K Umamaheswararao)",
+        "openingBalance": -393550,
+        "closingBalance": -393550,
+        "entries": []
+      },
+      {
+        "ledgerName": "TCS CHARGES",
+        "openingBalance": -235481.43,
+        "closingBalance": -235481.43,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Current Liabilities",
+    "ledgers": [
+      {
+        "ledgerName": "Balance Cash Exp.",
+        "openingBalance": -200,
+        "closingBalance": -200,
+        "entries": []
+      },
+      {
+        "ledgerName": "Bhagaban Panda",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Bharat Gas",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Biswa Ranjan Staff Salary",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Cash Bill Discount",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Debasish Acharjya",
+        "openingBalance": -2100000,
+        "closingBalance": -2100000,
+        "entries": []
+      },
+      {
+        "ledgerName": "Dillip Picup",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "I V RAMANA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Kunal Roadways",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Maddi Saiteja Sai",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P.JAGANATHA PATRO",
+        "openingBalance": 500000,
+        "closingBalance": 500000,
+        "entries": []
+      },
+      {
+        "ledgerName": "Prafula Kumar Nayak ,Staff",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Prakas Baba,Staff",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Prakash Baba",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P.SANKAR NARAYAN PATRO",
+        "openingBalance": 1000000,
+        "closingBalance": 1000000,
+        "entries": [
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 10,
+            "type": "Payment",
+            "amount": 15000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 14,
+            "type": "Journal",
+            "amount": 15000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SHAIL KUMAR, RGDA",
+        "openingBalance": 561050,
+        "closingBalance": 561050,
+        "entries": []
+      },
+      {
+        "ledgerName": "Shop Rent Payble",
+        "openingBalance": 37800,
+        "closingBalance": 37800,
+        "entries": []
+      },
+      {
+        "ledgerName": "Shyam Sir",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.RAJA REMESH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Srinu Transport,Vijaywada",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Sunil Transport",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Tds Pay (VMRAO Ca)",
+        "openingBalance": -56200,
+        "closingBalance": -62900,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Payment",
+            "amount": 4200,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 4,
+            "type": "Payment",
+            "amount": 2500,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "TIRMULA INFOTECH",
+        "openingBalance": -5000,
+        "closingBalance": -5000,
+        "entries": []
+      },
+      {
+        "ledgerName": "TR AKHIL COMPUTERS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VARALAKSHMI MOTORS,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Deposits (Asset)",
+    "ledgers": [
+      {
+        "ledgerName": "RENT ADVANCE",
+        "openingBalance": -240000,
+        "closingBalance": -240000,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Duties & Taxes",
+    "ledgers": [
+      {
+        "ledgerName": "CGST@ 09%",
+        "openingBalance": -11378.95,
+        "closingBalance": -11378.95,
+        "entries": []
+      },
+      {
+        "ledgerName": "CGST@2.5 %",
+        "openingBalance": 280893.36,
+        "closingBalance": 291275.79,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Sales",
+            "amount": 568.9,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Sales",
+            "amount": 50.86,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 3,
+            "type": "Sales",
+            "amount": 710.22,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 5,
+            "type": "Sales",
+            "amount": 395.7,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 6,
+            "type": "Sales",
+            "amount": 5317.94,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 7,
+            "type": "Sales",
+            "amount": 651.03,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 8,
+            "type": "Sales",
+            "amount": 312.72,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 9,
+            "type": "Sales",
+            "amount": 264.87,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 10,
+            "type": "Sales",
+            "amount": 978.63,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 11,
+            "type": "Sales",
+            "amount": 919.19,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 12,
+            "type": "Sales",
+            "amount": 212.37,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "CGST@6%",
+        "openingBalance": 2982078.94,
+        "closingBalance": 2983738.27,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 4,
+            "type": "Sales",
+            "amount": 1659.33,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Exp Cgst",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Exp Igst",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Exp Sgst",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GST FILL PAYMENTS",
+        "openingBalance": -1053647,
+        "closingBalance": -1053647,
+        "entries": []
+      },
+      {
+        "ledgerName": "IGST",
+        "openingBalance": -5472008.26,
+        "closingBalance": -5472008.26,
+        "entries": []
+      },
+      {
+        "ledgerName": "SGST@ 09%",
+        "openingBalance": -11378.95,
+        "closingBalance": -11378.95,
+        "entries": []
+      },
+      {
+        "ledgerName": "SGST@2.5%",
+        "openingBalance": 280040.91,
+        "closingBalance": 292082.67,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Sales",
+            "amount": 568.9,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Sales",
+            "amount": 50.86,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 3,
+            "type": "Sales",
+            "amount": 710.22,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 4,
+            "type": "Sales",
+            "amount": 1659.33,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 5,
+            "type": "Sales",
+            "amount": 395.7,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 6,
+            "type": "Sales",
+            "amount": 5317.94,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 7,
+            "type": "Sales",
+            "amount": 651.03,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 8,
+            "type": "Sales",
+            "amount": 312.72,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 9,
+            "type": "Sales",
+            "amount": 264.87,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 10,
+            "type": "Sales",
+            "amount": 978.63,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 11,
+            "type": "Sales",
+            "amount": 919.19,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 12,
+            "type": "Sales",
+            "amount": 212.37,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SGST@6%",
+        "openingBalance": 2982950.39,
+        "closingBalance": 2982950.39,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Fixed Assets",
+    "ledgers": [
+      {
+        "ledgerName": "Cc Cemaras",
+        "openingBalance": -20305,
+        "closingBalance": -20305,
+        "entries": []
+      },
+      {
+        "ledgerName": "COMPUTER",
+        "openingBalance": -29200,
+        "closingBalance": -29200,
+        "entries": []
+      },
+      {
+        "ledgerName": "Furniture",
+        "openingBalance": -6991,
+        "closingBalance": -6991,
+        "entries": []
+      },
+      {
+        "ledgerName": "Laptop",
+        "openingBalance": -3841,
+        "closingBalance": -3841,
+        "entries": []
+      },
+      {
+        "ledgerName": "Printer",
+        "openingBalance": -4080,
+        "closingBalance": -4080,
+        "entries": []
+      },
+      {
+        "ledgerName": "Tally",
+        "openingBalance": -7633,
+        "closingBalance": -7633,
+        "entries": []
+      },
+      {
+        "ledgerName": "Yamaha Bike",
+        "openingBalance": -29366,
+        "closingBalance": -29366,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Indirect Expenses",
+    "ledgers": [
+      {
+        "ledgerName": "ARC TRANSPORT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Audit Fee",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Bajaj General Insurence Ltd.",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Bank Charges",
+        "openingBalance": 0,
+        "closingBalance": -741.63,
+        "entries": [
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 11,
+            "type": "Payment",
+            "amount": 741.63,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "CHOLAMANDALM INSURANCE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CHOLA MS GIC LTD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Commercial Taxes",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT MEMO FOR PL1190 SCHEME",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CUSHION SCHEM 01.03.2023 TO 25.03.2023",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Cushion Scheme ON 01.06.2023 TO 30.06.2023",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CUSHION SCHEME ON 13.02.2023 TO 28.02.2023",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CUSHION SCHEM ON 21.04.2023 TO 31.05.2023",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DASAHARA PUJA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DEALER MEET BGLR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DISCOUNT",
+        "openingBalance": 0,
+        "closingBalance": -14658,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Journal",
+            "amount": 842,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 6,
+            "type": "Journal",
+            "amount": 2537,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 9,
+            "type": "Journal",
+            "amount": 1483,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 15,
+            "type": "Journal",
+            "amount": 703,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 16,
+            "type": "Journal",
+            "amount": 1472,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 3,
+            "type": "Journal",
+            "amount": 2992,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 5,
+            "type": "Journal",
+            "amount": 344,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 7,
+            "type": "Journal",
+            "amount": 355,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 8,
+            "type": "Journal",
+            "amount": 652,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 11,
+            "type": "Journal",
+            "amount": 575,
+            "drCr": "Dr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 12,
+            "type": "Journal",
+            "amount": 1266,
+            "drCr": "Dr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 13,
+            "type": "Journal",
+            "amount": 1437,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Electricty Charges",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "EXPENCESS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Food Expenceses",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Go Digit General Insurance Ltd.",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Gst Filing and Tds Filing Fee",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GST FILL PAYMENT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Hdfc Bank Interest",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "IB PG TXN",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "INCENTIVE",
+        "openingBalance": 0,
+        "closingBalance": -51540,
+        "entries": [
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 6,
+            "type": "Payment",
+            "amount": 15560,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 7,
+            "type": "Payment",
+            "amount": 35980,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "INDUSLND BANK(INTEREST)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Lift Mentance",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LOADING CHARGES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MAHINDRA SUPRO MAX VECHICLE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NSDL TAX",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "OD BGL CWH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ORANGE TRANSPORT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Pongal Sadar",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Postage",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Professional Tax",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "R C Sklm",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Repairs and Maintenance",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ROOM RENT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ROUND OFF",
+        "openingBalance": 0,
+        "closingBalance": -0.38,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Sales",
+            "amount": 0.25,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Sales",
+            "amount": 0.26,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 3,
+            "type": "Sales",
+            "amount": 0.28,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 4,
+            "type": "Sales",
+            "amount": 0.43,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 5,
+            "type": "Sales",
+            "amount": 0.45,
+            "drCr": "Dr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 6,
+            "type": "Sales",
+            "amount": 0.2,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 7,
+            "type": "Sales",
+            "amount": 0.01,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 8,
+            "type": "Sales",
+            "amount": 0.06,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 9,
+            "type": "Sales",
+            "amount": 0.35,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 10,
+            "type": "Sales",
+            "amount": 0.08,
+            "drCr": "Dr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 11,
+            "type": "Sales",
+            "amount": 0.16,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 12,
+            "type": "Sales",
+            "amount": 0.47,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Sadar",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Sale Tax Audit",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SCHEME  FOR 05 JAN TO 10 MAR. 2022",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SCHEME ON 06.09.2021 TO 06.11.2021",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Scheme ON 10.06.2021 TO 10.07.2021",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.G. Communications",
+        "openingBalance": 0,
+        "closingBalance": -6000,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 8,
+            "type": "Payment",
+            "amount": 6000,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Shop Rent",
+        "openingBalance": 0,
+        "closingBalance": -37800,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Payment",
+            "amount": 37800,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "S.LOKANATH PATRA TURE & MARKETING CHARGES",
+        "openingBalance": 0,
+        "closingBalance": -45770,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 9,
+            "type": "Payment",
+            "amount": 45770,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "S.LOKANATH PATRO INCURANCE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S LOKANATH PATRO LIFE INSURANCE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SMS ADDNL CHRGS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SPECIAL DISCOUNT 20.12.2021 TO 30.12.2021",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SPECIAL PONGAL CASH DISCOUNT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Staff Salarys",
+        "openingBalance": 0,
+        "closingBalance": -48000,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 4,
+            "type": "Journal",
+            "amount": 25000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 1,
+            "type": "Journal",
+            "amount": 8000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 14,
+            "type": "Journal",
+            "amount": 15000,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Stationery Epenses",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TALLY PRIME",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TCI TRANSPORT,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TDS FILLINGS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Telephone & Internet Charges",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Transport Expenses",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Travelling Charges",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Unloading Charges",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Vehicle Maintanance",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Indirect Incomes",
+    "ledgers": [
+      {
+        "ledgerName": "Additional Discount",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ATR FOR FY 2021-2022",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Billing Rong",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CHECK REJETED",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT MEMO FOR FREIGHT REIMBURSEMENT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT MEMO FOR INCENTIVE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT MEMO FOR PU SCHEME",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT NOTE ATR FOR FY 2022-23",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT NOTE FOR DEALER MEET",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREDIT NOTE QTR FOR FY 2022-23",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CREIDT MEMO FOR CASH DISCOUNT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "HAWAI INCETIVE SCHEME MAY 2022",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAMRUDHI SCHEME INC.25/05 TO 20/6/2022",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SUB DEALERS SCHEME",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Misc. Expenses (ASSET)",
+    "ledgers": [
+      {
+        "ledgerName": "RETAILERS MEET EXP.",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "NON RANNING LINE",
+    "ledgers": [
+      {
+        "ledgerName": "AMBIKA FOOTWEAR,ICHHAPURAM",
+        "openingBalance": -5611.71,
+        "closingBalance": -5611.71,
+        "entries": []
+      },
+      {
+        "ledgerName": "AMRUTHA HASPITALS,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CHANDRA MOULI FOOTWEAR,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DURGA BHABANI F/W,TEKALLI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "FRIENDS FOOTWEAR , BHAMINI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOUTHAMI FOOTWEAR,PONDUR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "INDHRAKSHI FANCY,JALUMURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JAGADAMBA FANCY & GENERALS,HRM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JANAPRIYA FOOTWEAR, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JAYALAKSHMI PANSHOP,NEELAMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JAY LAXMI PAN SHOP,NELAMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KAMESWAR RAO,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KANAKA MAHALAKSHMI F/W,BUDIIHI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KARITHEEK FOOTWEAR,ICHAPURAM",
+        "openingBalance": -4214,
+        "closingBalance": -4214,
+        "entries": []
+      },
+      {
+        "ledgerName": "KDM FOOTWEAR,TEKKALI",
+        "openingBalance": -13513,
+        "closingBalance": -13513,
+        "entries": []
+      },
+      {
+        "ledgerName": "KVR FOOTWEAR,ICHHAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAKSHMI GANAPATHI DISTRIBUTORS , SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LALITA FOOTWEAR,RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAXMI BHABANI FOOTWEAR,PKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MADHU SHOE MARTE,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MEGHA METRO SHOE MART,SKLM",
+        "openingBalance": -7594,
+        "closingBalance": -7594,
+        "entries": []
+      },
+      {
+        "ledgerName": "METRO WALK PRO,PALASA",
+        "openingBalance": -18556,
+        "closingBalance": -18556,
+        "entries": []
+      },
+      {
+        "ledgerName": "M.GOPAL RAO,JANGALAPADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "M.SUNDAR BANIYA,TEMBURU",
+        "openingBalance": -8524,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 8180,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 5,
+            "type": "Journal",
+            "amount": 344,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NAYAK FOOTWEAR,SETHAMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW VASHU  CHAPALS,TEKKALI",
+        "openingBalance": -2385,
+        "closingBalance": -2385,
+        "entries": []
+      },
+      {
+        "ledgerName": "NICE FOOTWEAR SKLM",
+        "openingBalance": -10073,
+        "closingBalance": -10073,
+        "entries": []
+      },
+      {
+        "ledgerName": "N.NAGESWAR RAO,CHALPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "N SANTOSH,PARALAKHEMUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PARAGON SHOES MART,KOTTURU",
+        "openingBalance": -18223,
+        "closingBalance": -18223,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAJU CELL POINT & FOOTWEAR,RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ROYAL FOOTWEAR,PALASA",
+        "openingBalance": -24121,
+        "closingBalance": -24121,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI BABA SHOE MART,RANASTHALAM",
+        "openingBalance": -2307,
+        "closingBalance": -2307,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI FOOTWEAR, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI JANAPRIYA FOOTWEAR, PUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SIMADRI FOOTWESR,METURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SIVA GANESH FOOTWEAR AND GENERALS STORES",
+        "openingBalance": -81534,
+        "closingBalance": -81534,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI ABHAYA ANJANYA LEDISH CORNER , SARAUKATA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI BALAJI FOOTWEAR,KTR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI GANESH SHOES MART,TEKKALI",
+        "openingBalance": -16238,
+        "closingBalance": -16238,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI JAGADESWARI SHOES & F/W,TEKKALI",
+        "openingBalance": -8430,
+        "closingBalance": -8430,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KANAKA MAHALAXMI F/W,PLKD",
+        "openingBalance": -5353,
+        "closingBalance": -5353,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI LEKHA FOOTWEAR, RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRINIVASH FOOTWEAR,SARABUKATA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRINU FANCY, HERAMANDALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI RAJESWARI FOOTWEAR,KOLLIVALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI RAMA KIRANA GS & F/W, BHAMINI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI DURGA FOOT WEAR, PKD",
+        "openingBalance": -17138,
+        "closingBalance": -17138,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI ENTERPRISES,RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI FOOTWEAR,TEKKALI",
+        "openingBalance": -5470,
+        "closingBalance": -5470,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI LAXMI FOOTWEAR , TEKKLI",
+        "openingBalance": -2172,
+        "closingBalance": -2172,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI MANIKANTA FANCY AND F/W",
+        "openingBalance": -2820,
+        "closingBalance": -2820,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI RAM ENTERPRISES,RANASTALAM",
+        "openingBalance": -1072,
+        "closingBalance": -1072,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SATYA SAI FOOTWEAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SITHARAM FOOTWEAR,RANASTALAM",
+        "openingBalance": -4351,
+        "closingBalance": -4351,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SIVASHANKAR FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SURYA SHOE MART, SKLM",
+        "openingBalance": -17200,
+        "closingBalance": -17200,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SURYA SHOE WORLD,SKLM",
+        "openingBalance": -4272,
+        "closingBalance": -4272,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VALLI FANCY AND F/W,HERAMANDALAM",
+        "openingBalance": -2136,
+        "closingBalance": -2136,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VENKETESWAR GF & FANCY,CHALPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURESH FOOTWEAR(L),SKLM",
+        "openingBalance": -385,
+        "closingBalance": -385,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURESH FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TIRUMULA FOOTWEAR,NEELIMERALA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VIJAYALAXMI FOOTWEAR,PYDIBIMAVARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VINAYAK FOOTWEAR,PONDURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Old Balance",
+    "ledgers": [
+      {
+        "ledgerName": "Cgst",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Gst Expencess",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Gst Rcm 21-22",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Gst Rcm Paid 20-21",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Igst Expen",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Sgst",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Purchase Accounts",
+    "ledgers": [
+      {
+        "ledgerName": "Credit Notes",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DEBIT MEMO",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DIFF. AMT. OF BILLING RATE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Purchase Gst",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Sales Accounts",
+    "ledgers": [
+      {
+        "ledgerName": "Sales Gst",
+        "openingBalance": 0,
+        "closingBalance": 481670.86,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "SKLM LOCAL LINE",
+    "ledgers": [
+      {
+        "ledgerName": "ADITYA WOODLAND SHOES, SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "A K FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "AMMAJI CONSTRUCTION",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ASTIMET BILL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BASHIR SARIFF , SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BHARAT FOOTWEAR, SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BHARAT SHOE MART,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BHARAT SHOES MART,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "B. VAMSI FOOTWEAR, SRIKAKULAM",
+        "openingBalance": -28394,
+        "closingBalance": -26394,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "CHANDAN SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CHITTI. LOKESWARA RAO, SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "D A RAJU,AKKULAPATA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DASH FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DELHI FOOTWEAR AGENCY,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DELHI FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DURGA COLORS FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOLIVI HOSPITAL, SRIKAKULAM",
+        "openingBalance": -1769,
+        "closingBalance": -1769,
+        "entries": []
+      },
+      {
+        "ledgerName": "HAPPY SHOE MART,SKLM",
+        "openingBalance": -979,
+        "closingBalance": -979,
+        "entries": []
+      },
+      {
+        "ledgerName": "KIRAN FOOTWEAR,(MAHALAXMI),SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LOHITH CONSTRUCTIONS,SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MAHALAXMI FOOTWEAR,SKLM",
+        "openingBalance": -432756,
+        "closingBalance": -402447,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 4,
+            "type": "Sales",
+            "amount": 69691,
+            "drCr": "Dr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 100000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "MAMUNA SHARIFF, SKLM",
+        "openingBalance": -77562,
+        "closingBalance": -71562,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 17,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "MANIKANTA FOOTWEAR & GENERAL",
+        "openingBalance": -31819,
+        "closingBalance": -30819,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "MANIKANTA FOOTWEAR,GUJARATIPETA",
+        "openingBalance": -28536,
+        "closingBalance": -23536,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 5000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "MEGHA METRO SHOES,SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MEGHA STORE, SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "METRO SHOES, SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NAKUL FOOTWEAR (MAHALAXMI),SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEELAPU VENKETESH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW DIAMOND SHOE MART,SKLM",
+        "openingBalance": -31188,
+        "closingBalance": -38313,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 17,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 9,
+            "type": "Sales",
+            "amount": 11125,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NEW FRIENDS FOOTWEAR & LIFESTYLE,SKLM",
+        "openingBalance": -9138,
+        "closingBalance": -8138,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NEW FRIENDS SHOES MART,SKLM",
+        "openingBalance": -46075,
+        "closingBalance": -43075,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 10,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NEW LOOK FOOTWEAR, SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW PRASAD FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW PRIYANKA SHOE MART,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NIKESH FOOTWEAR, SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NOKA AMBIKA FOOTWEAR, SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "OMKAR FOOTWEAR,SKLM",
+        "openingBalance": 404,
+        "closingBalance": 404,
+        "entries": []
+      },
+      {
+        "ledgerName": "PALLA RAMANA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PALLA SURESH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PEOPLE SHOE MART, SRIKAKULAM",
+        "openingBalance": -2711,
+        "closingBalance": -711,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "PIONEER FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PONDURRU NAGESEARA RAO",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURU NAGARAJU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRINCE FOOTWEAR,COMPIEX SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P. SAPNA, SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAGODA NAVEEN, SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RASNA MEDICAL & GS , HARICHANDRAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RATANAKAR K,SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SEKHAR FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI GOURI SHANKAR FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI JANAPRIYA FOOTWEAR,SKLM",
+        "openingBalance": -5004,
+        "closingBalance": -29834,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Receipt",
+            "amount": 3000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 2000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 3,
+            "type": "Sales",
+            "amount": 29830,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRIKANTA DASH,SKLM(HLR)",
+        "openingBalance": -4522,
+        "closingBalance": -6141,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 5,
+            "type": "Sales",
+            "amount": 16619,
+            "drCr": "Dr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 15000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI VENKET SAI FOOTWEAR , SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SUNIL",
+        "openingBalance": -2148,
+        "closingBalance": -2148,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURIYA FOOTWEAR,SKLM",
+        "openingBalance": -47026,
+        "closingBalance": -41103,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 17026,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 15,
+            "type": "Receipt",
+            "amount": 30000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 10,
+            "type": "Sales",
+            "amount": 41103,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SURYA FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": -38606,
+        "entries": [
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 11,
+            "type": "Sales",
+            "amount": 38606,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "T. SIVA KARTHIK , SRIKAKULAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VALLA APPALA NAIDU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VANI FOOTWEAR,SRIKAKULAM",
+        "openingBalance": -1005,
+        "closingBalance": -1005,
+        "entries": []
+      },
+      {
+        "ledgerName": "VARANASI LAKSHMANARAO,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "V.BUDDEMMA,GT ROAD SKLM",
+        "openingBalance": -16682,
+        "closingBalance": -15682,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "VENKETESWAR FOOTWEAR,OPPANGI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "YOGESH FOOTWEAR,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "YOUTH FOOTWEAR, SRIKAKULAM",
+        "openingBalance": -29127,
+        "closingBalance": -26127,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 17,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "groupName": "SKLM- Parvatipuram Line",
+    "ledgers": [
+      {
+        "ledgerName": "CHIRANJIVI FOOTWAER, VGT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NAVYA SHOE MART, KRUPAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURUMADHAVA RAO",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURU VASAVI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SANTOSHMATHA FOOTWEAR,VGT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "T. GOURI,VEERGHATTAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "T.LALITHA  KUMARI,PARVATHIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "T. NARASHIMHA , VEERAGHATTAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "SKLM-PLKD-BATILI",
+    "ledgers": [
+      {
+        "ledgerName": "A RAMESH (SRIKANTA),PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "A.VENKET RAO FANCY AND F/W",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "AYYAPA KIRANI & G.S, L.N PETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "AYYAP PAN SHOP, SINGIBALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BABA FOOTWEAR,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BALAJI FOOTWEAR, RAGABALU",
+        "openingBalance": -29721,
+        "closingBalance": -29721,
+        "entries": []
+      },
+      {
+        "ledgerName": "BALAJI SHOE MARTE,HERAMANDALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "B.NAGESWAR RAO,HERAMANDALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "B.SRINIVASH RAO,PLKD(SRIKANTA)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "B.TRINATH RAO,SEETAMPETA",
+        "openingBalance": -7612,
+        "closingBalance": -7612,
+        "entries": []
+      },
+      {
+        "ledgerName": "DIVYA FOOTWEAR,PLKD(SRIKANTA)",
+        "openingBalance": -26853,
+        "closingBalance": -37047,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 1,
+            "type": "Sales",
+            "amount": 23894,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 5000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 19,
+            "type": "Receipt",
+            "amount": 3000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 21,
+            "type": "Receipt",
+            "amount": 5700,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "FRIENDS POINT, KOTTURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GANESH FOOTWEAR, KOTTURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GIRI BENGELS,SETAMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GPR FASHION, METUR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JAGADISH PANSHOP,BHAMINI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JAMI MANMADHA RAO, METURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JANATHA FOOTWEAR,RAGULU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KALI MATHA FOOTWEAR, SRB",
+        "openingBalance": -694,
+        "closingBalance": -694,
+        "entries": []
+      },
+      {
+        "ledgerName": "KAMADHENU ENTERPRISES,L.N.PETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "K.ANUSA,SEETAMPETA(K.L)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KISHORE FOOTWEAR(PRABIN),KOTTURU",
+        "openingBalance": -153555,
+        "closingBalance": -125555,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 9,
+            "type": "Receipt",
+            "amount": 28000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "K.KALPANA FOOTWEAR (SURIYA RAO)",
+        "openingBalance": -3423,
+        "closingBalance": -3423,
+        "entries": []
+      },
+      {
+        "ledgerName": "K.LAKSHMINARAYAN FOOTWEAR & GENERAL",
+        "openingBalance": -64567,
+        "closingBalance": -54567,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 13,
+            "type": "Receipt",
+            "amount": 10000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "K.NARAYAN RAO,BHAMINI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KODANDARAMA FOOTWEAR,BATILI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KONARK SHOES MART,AMBDABALASA",
+        "openingBalance": -14362,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 19,
+            "type": "Receipt",
+            "amount": 13787,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 11,
+            "type": "Journal",
+            "amount": 575,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "K.R. FOOTWEAR,KOTTURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KRISHNA G.S.,METTURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "K.VENUGOPAL RAO,KOTTURU",
+        "openingBalance": -1313,
+        "closingBalance": -1313,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAKSHMI GANAPATI FANCY STORE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LALITA ENTERPRISES,AMBDABALSA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LALITA LEDISH CORNER,MATIKIBALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAXMI FOOTWEAR, CHANTHADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAXMINARASHIMALU FOOTWEAR,SINGABALASA",
+        "openingBalance": -33458,
+        "closingBalance": -33458,
+        "entries": []
+      },
+      {
+        "ledgerName": "MARIDAMMATHALLI BENGEL STORE, FC GODAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MEENAKSHI FOOTWEAR,NIVAGAON",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "METRO SHOE MARTE,PLKD",
+        "openingBalance": -379,
+        "closingBalance": -379,
+        "entries": []
+      },
+      {
+        "ledgerName": "MINAKHI FOOTWEAR ,NIVAGAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "M.RAMA RAO , HADUBHANGI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NAGARAJU PAPULAR SHOE MARTE,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NANI BANGELES F/W AND GS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEELAMANI BENGALS,SARUBUJJILI",
+        "openingBalance": -164,
+        "closingBalance": -164,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEELAMANI WATCH LADIESCOURNER",
+        "openingBalance": -25260,
+        "closingBalance": -22260,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 2000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 13,
+            "type": "Receipt",
+            "amount": 1000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NEW CHANDANA BOOKS & SPORTS , KTR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW METRO SHOES ,AMDABALASA",
+        "openingBalance": -2910,
+        "closingBalance": -2910,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW PARAGON SHOE MART,KTR",
+        "openingBalance": -24379,
+        "closingBalance": -19379,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 5000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NEW VERAIT SHOE MART,PLKD",
+        "openingBalance": -7584,
+        "closingBalance": -4584,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 3000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "PADHAMAVATHI GENERALS , BHAMINI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P NARAYAN MURTHY , NIBAGOM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PODUGU SARITA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRABIN FOOTWEAR,KOTUR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAJESH FOOTWEAR(R.K),BATHILI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAJESWARI FANCY,HERAMANDALAM",
+        "openingBalance": -4765,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 4410,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 7,
+            "type": "Journal",
+            "amount": 355,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "RAJU FOOTWEAR, SEETAMPETA",
+        "openingBalance": -39140,
+        "closingBalance": -29140,
+        "entries": [
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 19,
+            "type": "Receipt",
+            "amount": 10000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "RAMESH FOOTWEAR(R.K),BATHILI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAVI KUMAR,LAHIRJOLA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "R.K.CHAPALS,BATHILI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI DURGA G.S,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI DURGA SEETHA GENERALS, PLKD.",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI GAYATRI FOOTWEAR,HRM",
+        "openingBalance": -11118,
+        "closingBalance": -11118,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI MANIKANTA LEDISH CORNER",
+        "openingBalance": -31649,
+        "closingBalance": -6649,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 13,
+            "type": "Receipt",
+            "amount": 25000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SAI PARVATHI FOOTWEAR,KULIVALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI PRAKESH KIRANA , SHAYAMALAPURAM",
+        "openingBalance": -18501,
+        "closingBalance": -13501,
+        "entries": [
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 20,
+            "type": "Receipt",
+            "amount": 5000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Sairaj Footwear, Hiramandalam",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI RAMA RAJESWARI FANCY,KOTURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI VENKETESWAR  FOOTWEAR,KOTTURU",
+        "openingBalance": -1814,
+        "closingBalance": -1814,
+        "entries": []
+      },
+      {
+        "ledgerName": "SANTOSH G.S,BATHILI (R.K.)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Santosh Shoe Mart, PLKD",
+        "openingBalance": -3727,
+        "closingBalance": -3727,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAPTAGIRI FOOTWEAR,SETAMPETA",
+        "openingBalance": -9905,
+        "closingBalance": -5043,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 4210,
+            "drCr": "Cr"
+          },
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 8,
+            "type": "Journal",
+            "amount": 652,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SAPTHAGIRI PAN SHOP,METURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SEETARAM FOOTWEAR,KOTURU",
+        "openingBalance": -71772,
+        "closingBalance": -61772,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 10000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "S GOBINDA RAO, MADANAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SIVA KRISHNA G.S ,METURU",
+        "openingBalance": -51020,
+        "closingBalance": -51020,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.RAVI KUMAR,NIVAGAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI CHANDRA GENERALS STORES,SINGIDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRIDHARA, PALKONDA",
+        "openingBalance": -37443,
+        "closingBalance": -37443,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI DURGA FOOTWEAR AND GENERAL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI FOOTWEAR,AMDABALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KAMADHENU ENTERPRISES,L.N.PETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KANAKA DURGA GS, CHEMALAVALAS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KOTADURGA,HERAMANDALAM",
+        "openingBalance": -21119,
+        "closingBalance": -13119,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 8000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI MATHA GENERAL STORE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI RAMA SHOE MART,PALKONDA",
+        "openingBalance": -3669,
+        "closingBalance": -3669,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SRINIVAS SHOE MART,PLKD",
+        "openingBalance": -73640,
+        "closingBalance": -23640,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 50000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI TIRUMALESA  ENTERPRISES,SINGIDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI UMA RAMALIGNESWARAM FOOTWEAR",
+        "openingBalance": -2178,
+        "closingBalance": -2178,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VALLI FANCY,KOTTURU",
+        "openingBalance": -22665,
+        "closingBalance": -14665,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 12,
+            "type": "Receipt",
+            "amount": 8000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI VARALAXMI DEVI FOOTWEAR,PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SUNDAR RAO,HRM",
+        "openingBalance": -40500,
+        "closingBalance": -30500,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 13,
+            "type": "Receipt",
+            "amount": 10000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SURES,SEETAMPETA",
+        "openingBalance": -9044,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 13,
+            "type": "Receipt",
+            "amount": 9044,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SURYA NARAYANA, METURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TALASU KANTHA, PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TALASU KEERTHAN, PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TEJA FOOTWEAR, SEETAMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "THREE BROTHERS,SARBUJULI",
+        "openingBalance": -1959,
+        "closingBalance": -1959,
+        "entries": []
+      },
+      {
+        "ledgerName": "T.KRISHNA PRASAD,PLKD",
+        "openingBalance": -33,
+        "closingBalance": -33,
+        "entries": []
+      },
+      {
+        "ledgerName": "V.CHANDRA CEKHAR,HERAMANDALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VENKETRAMANA FOOTWEAR,MARRIPADU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "V.LAKSHMAN RAO,L.N.PETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "V SRINIVASH RAO, PLKD",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "SKLM-RJM-RANNASTHALAM",
+    "ledgers": [
+      {
+        "ledgerName": "ANEM LALITA , RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ANIL LEDISH CORNER,KOSTA JUNCTION",
+        "openingBalance": -26016,
+        "closingBalance": -26016,
+        "entries": []
+      },
+      {
+        "ledgerName": "AYYAPPA FANCY , BADANGI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BABU FOOTWEAR,KAMMASIGADAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BALAJI FOOTWEAR,PONDURU",
+        "openingBalance": -11802,
+        "closingBalance": -9802,
+        "entries": [
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 2000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "BHAGYA LAKSHMI F/W,PONDURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BODROTHU MOHAN RAO, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BODROTHU VIJAYA LAKSHMI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "B.PRASAD(SIVA GANESH),RAJAM",
+        "openingBalance": -15314,
+        "closingBalance": -15314,
+        "entries": []
+      },
+      {
+        "ledgerName": "CEEL DEN FOOTWEAR,RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DEPAK FANCY ,KAMMASINGADAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "D KRISHNA RAO, CHILAKPALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DURGA FOOTWEAR , RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "FRIENDS FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GANESH FOOT WEAR , RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GANESH FOOTWEAR,RANNASTHALAM",
+        "openingBalance": -1690,
+        "closingBalance": -1690,
+        "entries": []
+      },
+      {
+        "ledgerName": "G GOVINDA RAO,PONDURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOBINDA RAO,KUPULI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOURI SANKAR SHOEMART,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "J.D.R FOOTWEAR,PONDURU",
+        "openingBalance": -20,
+        "closingBalance": -20,
+        "entries": []
+      },
+      {
+        "ledgerName": "KANAKA MAHALAKSHMI FANCY AND GENERAL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KANAKMAHALAXMI BENGALS, RANASTALAM",
+        "openingBalance": -634,
+        "closingBalance": -634,
+        "entries": []
+      },
+      {
+        "ledgerName": "KARTHIKAYA TRIENDS FOOTWEAR,PONDURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KRUPA FOOTWEAR, RAJAM",
+        "openingBalance": -36368,
+        "closingBalance": -16368,
+        "entries": [
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 21,
+            "type": "Receipt",
+            "amount": 20000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "K SARTYANARAYAN FOOTWEAR, SALUR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "K SURIYA BABU , RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LALITTA FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LASYA FOOTWEAR, CHILAKPALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MANI  BABU FOOTWEAR,SUBHADRAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MANIKANTA FOOTWEAR,PONDURU",
+        "openingBalance": -33866,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 32600,
+            "drCr": "Cr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 12,
+            "type": "Journal",
+            "amount": 1266,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "M.N.MOBILLES & SHOES,RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NADITOKA VENKATARAMANA , RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NAVADURGA FOOTWEAR , RAJAM",
+        "openingBalance": -4837,
+        "closingBalance": -22180,
+        "entries": [
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 7,
+            "type": "Sales",
+            "amount": 27343,
+            "drCr": "Dr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 21,
+            "type": "Receipt",
+            "amount": 10000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "N BHANGARAJU FOOTWEAR, RAMBHADRAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW FRIENDS FOOTWEAR, PND",
+        "openingBalance": -9321,
+        "closingBalance": -9321,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW METRO SHOES , RAJAM",
+        "openingBalance": -15546,
+        "closingBalance": -13546,
+        "entries": [
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 2000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "NVR FOOTWEAR & GENERAL STORES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P. NARISINGA RAO,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POLI NAIDU FOOTWEAR & FANCY,KINTHALI",
+        "openingBalance": -3449,
+        "closingBalance": -3449,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRASAD FOOTWEAR, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P S GUPTA, ETCHERLA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RADHAKRISHNA BENGELS,RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAVI FANCY,KOSTA JUNCTION",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAVI FOOTWEAR , KOCHARLA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAVI FOOTWEAR, VENKETAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "R K FOOTWEAR , RAMBHADRAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI BENGALS, RAJAM",
+        "openingBalance": 150,
+        "closingBalance": 150,
+        "entries": []
+      },
+      {
+        "ledgerName": "SANKAR SHOE MART,PONDURU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SATHYA SAI CLOTH & F/W,CHILAKPALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.DURGA , RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.E.FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SIVA LAKSHMI SHOE MART,RANNASTHALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S N R FOOTWEAR, RAJAM",
+        "openingBalance": -77132,
+        "closingBalance": -70000,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 6,
+            "type": "Receipt",
+            "amount": 4140,
+            "drCr": "Cr"
+          },
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 3,
+            "type": "Journal",
+            "amount": 2992,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "S.R.C. FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI DURGA BHABANI FOOTWEAR,RAJAM",
+        "openingBalance": -1541,
+        "closingBalance": -1541,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KRANTI FOOTWEAR,RAJAM",
+        "openingBalance": -1007,
+        "closingBalance": -1007,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRINIVASH FOOTWEAR, BADANGI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI DURGA FOOTWEAR,SUBHADRAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI GENERAL STORE, RAMBHADRAPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SURIYA FOOTWEAR,POGIRI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VARAHI MEDICALS , LOLUGU",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRT FOOTWEAR & FANCY , THADAVALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S S FOOTWEAR, RANASTALAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURESH FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TIRMULA FOOTWEAR, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TIRUMALA METRO CHAPPALS, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TIRUMALA SHOE MART,RAJAM",
+        "openingBalance": -28937,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 18,
+            "type": "Receipt",
+            "amount": 27500,
+            "drCr": "Cr"
+          },
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 13,
+            "type": "Journal",
+            "amount": 1437,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "T.TEJESWARI REDYMEDY,MANDAKURTHI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VARALAKSHMI KIRANA G.S, GOUINDHA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VENKATA PADHMA FOOTWEAR, SALUR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VENKETESWAR DURGA ,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VENKETESWAR FOOTWEAR , SALUR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VENKETESWAR SAI DURGA ,RAJAM",
+        "openingBalance": -80022,
+        "closingBalance": -80022,
+        "entries": []
+      },
+      {
+        "ledgerName": "V SRINIVASA RAO, RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "SKLM-TKL-PSA-SMPT-ICCHAPURAM",
+    "ledgers": [
+      {
+        "ledgerName": "ADITYA FOOTWEAR,TKL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "AMMA MECHING CENTER,KOTABAMALLI",
+        "openingBalance": -21307,
+        "closingBalance": -19307,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 2000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "AMRAVATHI ENTERPRISES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ANJILI BENGELES, KOTANOMALLI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BALAJI FOOTWEAR,NARASANNAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BHASKAR FOOTWEAR , PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "B.LOKANATH , LINGALAVALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BRUNDABATI FOOTWEAR,TEKKALI",
+        "openingBalance": -39231,
+        "closingBalance": -35231,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 4000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "CHANDINI SHOE MARTE,KASIBUGA",
+        "openingBalance": -111445,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "7-Apr-26",
+            "voucherNo": 22,
+            "type": "Receipt",
+            "amount": 111445,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "CHANDU FOOTWEAR,PUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ESWARI FOOTWEAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "FAMOUS SHOEMART, NARASENNAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GANAPATHI FOOTWEAR,KOYYAKONDA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GANDHI FOOTWEAR,NARSENNAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GENNI RAVI,PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GKR FOOTWEAR, TEKKALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOPAL FOOTWEAR,N.S.P",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOPI FOOTWEAR , TEKKALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOURI FANCY AND GENERALS, IPM",
+        "openingBalance": -8143,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 6660,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 9,
+            "type": "Journal",
+            "amount": 1483,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "GOURI SANTOSHI FOOTWEAR, ICHHAPURAM",
+        "openingBalance": -7337,
+        "closingBalance": -15471,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 5000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 8,
+            "type": "Sales",
+            "amount": 13134,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "GUPTHA SAI BENGELESS, KOTHAPALLI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "INDIAN FOOTWEAR , PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JOTHI FOOTWEAR, HARIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KAMARAJU FOOTWEAR,ICCHAPURAM",
+        "openingBalance": -8833,
+        "closingBalance": -8833,
+        "entries": []
+      },
+      {
+        "ledgerName": "KEERTHI SHOE MART,N.S.P",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "K.LAXMINARAYANA,SINGIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "K.VIDHA,PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAKSHMI GANAPATI FOOTWEAR,PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAKSMI ENTERPRISES, NARASENAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAXMI DURGA BENGALS STORE ,SIGIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAXMI SAI LEDISH CORNER, SINGIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "L KURMA RAO , KOTHAPALLI",
+        "openingBalance": -2000,
+        "closingBalance": -2000,
+        "entries": []
+      },
+      {
+        "ledgerName": "LOKANATH SAHU , SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MEGA FOOTWE,PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MELLESWARA RAO PAN SHOP,KOTHAPALLI",
+        "openingBalance": -19690,
+        "closingBalance": -19690,
+        "entries": []
+      },
+      {
+        "ledgerName": "MODREN FOOTWEAR,PALASA",
+        "openingBalance": -28651,
+        "closingBalance": -28651,
+        "entries": []
+      },
+      {
+        "ledgerName": "MOHAN RAO , PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MORDEN SHOES ,PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MURTHY ENTERPRISES,SOMPETA",
+        "openingBalance": -4539,
+        "closingBalance": -4539,
+        "entries": []
+      },
+      {
+        "ledgerName": "NAGARAJU FOOTWEAR,ICHHAPURAM",
+        "openingBalance": -13349,
+        "closingBalance": -13349,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEELAPU  SAI  KRISHNA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NOKA AMBIKA FOOTWEAR,NARASANNAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POPULAR FOOTWEAR,NARASANNAPETA",
+        "openingBalance": -13771,
+        "closingBalance": -13771,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURU GOVINDARAO, PINNINTIPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURU MURALI,KOTABOMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURU PADMAVATHI , KOTABOMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POTNURU RAVI KUMAR, KOTABOMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRASAD SHOES MART, NARASENNAPETA",
+        "openingBalance": -17572,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 16869,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 15,
+            "type": "Journal",
+            "amount": 703,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "PRASANTH FOOTWEAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRASANTI SHOES MART,N.S.P",
+        "openingBalance": -29720,
+        "closingBalance": -29720,
+        "entries": []
+      },
+      {
+        "ledgerName": "P.S.R. FOOTWEAR,SOMPETA",
+        "openingBalance": -26814,
+        "closingBalance": -24814,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 2000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "PURNO DHAYA MEDICAL, KOTHAPALLI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P.VARAHA NARESHMLU F/W,TEKILI",
+        "openingBalance": -32081,
+        "closingBalance": -32081,
+        "entries": []
+      },
+      {
+        "ledgerName": "QUALITY FOOTWEAR,NARSANNAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "QUALITY SHOE MART (NAVEEN), NSP",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "QUALITY SHOE MART,N.S.P",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAJU READYMADE,KOTABOMALI",
+        "openingBalance": -1,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Sales",
+            "amount": 2136,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 2137,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "RATHNLAMMA BENGELS STORE,KOTABAMMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAVI READY MADE , KOTABOMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "R K FOOTWEAR , PALASA",
+        "openingBalance": -1530,
+        "closingBalance": -1530,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.ADHINARAYANA, NELAMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI GANESH CHAPALS,TEKKALI",
+        "openingBalance": -99216,
+        "closingBalance": -79216,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 20000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SAI MANIKANTA FOOTWEAR, BUDHI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAI NANDINI FOOTWEAR , SINGIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SANTOSH FOOTWEAR,TKL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SATVIK FOOTWEAR,HARIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SINGAMPALLI SRINU,TKL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SISINTI RADIKA,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SISINTI RAJA,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SISINTI RAJSEKHAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SIVA SAI FOOTWEAR,BELAMARA JN.",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.K.CHAPALS AND GENERALS,KASIBUGGA",
+        "openingBalance": -242635,
+        "closingBalance": -214635,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 3,
+            "type": "Receipt",
+            "amount": 28000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SKML READYMADE CHAPALS,KOTABOMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.K.SHOES MART",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SPORTIVA FOOTWEAR,PALASA",
+        "openingBalance": -16852,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 15380,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 16,
+            "type": "Journal",
+            "amount": 1472,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI DATTA SHOE MART, NANDIGAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI DURGABHABANI LADISH CORNER",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI GANESH KRISHNA BENGALS, SINGUPURAM",
+        "openingBalance": -26019,
+        "closingBalance": -26019,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KRISHNA FOOTWEAR,NSP",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI LAXMI BENGALS, SINGIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI LAXMI CHAPPLS,TKL",
+        "openingBalance": -143703,
+        "closingBalance": -143703,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRINIVASH FOOTWEAR,ICCHAPURAM",
+        "openingBalance": -13655,
+        "closingBalance": -12155,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 1500,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI SAI FOOTWEAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SARWA MANGALA STORE, KOTABOMALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SEETARAM BUTTERFLY, PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SEETHARAMA MEGA FOOT WORLD",
+        "openingBalance": -16811,
+        "closingBalance": -16811,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SEETHARAMA MEGA STORES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SRINIVASH FANCY & GS, SINGIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VENKATESWARA F/W & G.S",
+        "openingBalance": -2087,
+        "closingBalance": -2087,
+        "entries": []
+      },
+      {
+        "ledgerName": "SUJAN FOOTWEAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURIYA FOOTWEAR,NARSENAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURYA KIRANA,LINGALAVALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURYA SHOE MART,SOMPETA",
+        "openingBalance": -19976,
+        "closingBalance": -15976,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 7,
+            "type": "Receipt",
+            "amount": 4000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SWATHY FOOTWEAR,NARSANNAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "THANSI FOOTWEAR, PALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "T.NARENDRA,NARSENNAPETA",
+        "openingBalance": -36994,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 11,
+            "type": "Receipt",
+            "amount": 36994,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "T N FOOTWEAR,NARASANNAPETA",
+        "openingBalance": -133230,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 4,
+            "type": "Receipt",
+            "amount": 100000,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 6,
+            "type": "Journal",
+            "amount": 2537,
+            "drCr": "Cr"
+          },
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 14,
+            "type": "Receipt",
+            "amount": 30693,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "TRILOCHANA FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "T. VENKATA RAMANA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VARALAXMI GENERAL STORE , NEELAMPEA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VASHU CHAPALS, TEKKALI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "SKLM-VIZANAGARAM",
+    "ledgers": [
+      {
+        "ledgerName": "AJARUDHIN, PARVATHIKURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "AMANANA FOOTWEAR,VIZANAGARAM",
+        "openingBalance": -1818,
+        "closingBalance": -1818,
+        "entries": []
+      },
+      {
+        "ledgerName": "A. SANGEETHA , MONDEMKHALLU",
+        "openingBalance": -3078,
+        "closingBalance": -3078,
+        "entries": []
+      },
+      {
+        "ledgerName": "BANDARU KAMALA, GAJAPATINAGARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BASINA RAMANA",
+        "openingBalance": -29502,
+        "closingBalance": -29502,
+        "entries": []
+      },
+      {
+        "ledgerName": "BASINA SUJATHA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BHEEMA GENERALS STORE,GAJAPATI NAGARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "CHILAKALAPUDI RAVI SHANKARARAO",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DELIGHT FOOTWEAR,VIZANAGARAM",
+        "openingBalance": -799196,
+        "closingBalance": -799196,
+        "entries": []
+      },
+      {
+        "ledgerName": "FAMOUS FOOTWEAR",
+        "openingBalance": -573495,
+        "closingBalance": -503495,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 8,
+            "type": "Receipt",
+            "amount": 70000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "GANESH FOOTWEAR & GENERAL STORE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "HARIKA FANCY & BANGILES",
+        "openingBalance": -169911,
+        "closingBalance": -169911,
+        "entries": []
+      },
+      {
+        "ledgerName": "INKULA ESWAR RAO, GAJAPATINAGARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JANAPRIYA FOOTWEAR,VIZIANAARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JANAPRIYA SHOES MART , VZM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "K.G.N. FOOTWEAR,PARVATHIPURAM",
+        "openingBalance": -48426,
+        "closingBalance": -271780,
+        "entries": [
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 6,
+            "type": "Sales",
+            "amount": 223354,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "LADI BALARASWAMI,(NEW FAMILY)",
+        "openingBalance": -66323,
+        "closingBalance": -64006,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 16,
+            "type": "Receipt",
+            "amount": 2317,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "MAHAVEER CHAPPALS AND FANCY STORES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MANIKANTA FOOTWEAR, SALUR",
+        "openingBalance": -22062,
+        "closingBalance": -17062,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 16,
+            "type": "Receipt",
+            "amount": 5000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "MANOGNI FOOTWEAR, SALUR",
+        "openingBalance": -19870,
+        "closingBalance": -19870,
+        "entries": []
+      },
+      {
+        "ledgerName": "MODERN SHOES,VIZIANAGARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "M SATISH,MENTADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW FAMILY FOOTWEAR, PARVATIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEW K.G.N FOOTWEAR,PARVATHIPURAM",
+        "openingBalance": -421860,
+        "closingBalance": -421860,
+        "entries": []
+      },
+      {
+        "ledgerName": "PAMPANI VENKATESH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PARIS FOOTWEAR,VZM",
+        "openingBalance": -166894,
+        "closingBalance": -166894,
+        "entries": []
+      },
+      {
+        "ledgerName": "PATNANA  BHAGYA RAJU(NEW FAMILY)",
+        "openingBalance": -18453,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 16,
+            "type": "Receipt",
+            "amount": 18453,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "PATNANA SUNIL KUMAR,PARVATHIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PATNANA SURAJ KUMAR,PARVATHIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PAVITRA BANGLES & FOOTWEAR",
+        "openingBalance": -141191,
+        "closingBalance": -41191,
+        "entries": [
+          {
+            "date": "5-Apr-26",
+            "voucherNo": 20,
+            "type": "Receipt",
+            "amount": 100000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "P.RAMANA ( FAMOUSH)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "P.S.FOOTWEAR,VZM",
+        "openingBalance": 3769,
+        "closingBalance": 3769,
+        "entries": []
+      },
+      {
+        "ledgerName": "PUVUIU KAMESHSWARI FOOTWEAR,VGTM",
+        "openingBalance": -27386,
+        "closingBalance": -27386,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAJA RAJESWARI FOOTWEAR,VZM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAMA FOOTWEAR , VIZIANAGARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RENUKA SHOES MART, VGTM",
+        "openingBalance": -46822,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "6-Apr-26",
+            "voucherNo": 21,
+            "type": "Receipt",
+            "amount": 46822,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SAMMEMGA AYYAPPA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SIVA DURGA GS , VIRAGOTTAM",
+        "openingBalance": -26643,
+        "closingBalance": -6643,
+        "entries": [
+          {
+            "date": "3-Apr-26",
+            "voucherNo": 16,
+            "type": "Receipt",
+            "amount": 20000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "SRI ADITYA FOOT CARE,VIZIANAGARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRIKANYA FOOTWEAR, CHEEPURUPALLI",
+        "openingBalance": -102486,
+        "closingBalance": -102486,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI MAHALAKSHMI FOOTWEAR,VZM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRINU EXCELLENT FOOTWEAR,RAJAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI RAJRAJESWARI FANCY & FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI RAJ RAJESWARI FOOTWEAR,PAYDIVIMABARAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SHARVANI TRADERS , VSKP",
+        "openingBalance": -879718,
+        "closingBalance": -879718,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SURIYA FOOTWEAR,PARVATIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VASAVI FOOTWEAR, BOBBILI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.SANTHA KUMAR,CHEEPURPPALLI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURU ANUSHA , PARVATHIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SURU SURYANARAYANA, PARVATHIPURAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "THALADA ESWARA RAO",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VARANASI RAVIKUMAR,PPM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VERITY SHOE MART, PARVATHIPURAM",
+        "openingBalance": -27739,
+        "closingBalance": -27739,
+        "entries": []
+      },
+      {
+        "ledgerName": "VIJAPU MUKESH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "V.SUNNY KUMAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "YEDUKONDALU FOOTWEAR,GAJAPETINAGAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "SKML-PKD LINE",
+    "ledgers": [
+      {
+        "ledgerName": "AJAYA KUMAR PATRO , PARALAKHEMUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "BALAJI FOOTWEAR , SARABAKOTA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DEPAK FOOTWEAR,PATHAPATNAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "DHANALAKSHMI SHOE MART,CHALAPETA",
+        "openingBalance": -41107,
+        "closingBalance": -41107,
+        "entries": []
+      },
+      {
+        "ledgerName": "FAMOUS FOOTWEAR, SARABKOTA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "HEMA ENTERPRISES,PARALAKHEMUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KNR FOOTWEAR,PATHAPATNAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KOTNI PITAMBARM,GANGUWADA",
+        "openingBalance": -22931,
+        "closingBalance": -12931,
+        "entries": [
+          {
+            "date": "4-Apr-26",
+            "voucherNo": 19,
+            "type": "Receipt",
+            "amount": 10000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "LAXMAN RAO FANCY, GANGUWADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MADHU FOOTWEAR,CHALAPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MEGHA LEADISH CORNER, SARABUKATA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MEGHANA LEDISH CORNER, ALDU",
+        "openingBalance": -804,
+        "closingBalance": -804,
+        "entries": []
+      },
+      {
+        "ledgerName": "MIRZA STORE,PARALAKHEMUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAMESH SHAPING MALL, BUDTHI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAGAR FOOTWEAR, PATHAPATNAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SATIESH READYMADE F/W,MALLIYAPUTTI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SHIRIDI SAI FOOTWEAR,PATHAPATNAM",
+        "openingBalance": -336,
+        "closingBalance": -336,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.K. FOOTWEAR , PATHAPATNAM",
+        "openingBalance": -21045,
+        "closingBalance": -8919,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 5,
+            "type": "Receipt",
+            "amount": 20203,
+            "drCr": "Cr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 2,
+            "type": "Journal",
+            "amount": 842,
+            "drCr": "Cr"
+          },
+          {
+            "date": "8-Apr-26",
+            "voucherNo": 12,
+            "type": "Sales",
+            "amount": 8919,
+            "drCr": "Dr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "S.NAVEEN FOOTWEAR,PATHAPATNAM",
+        "openingBalance": -14404,
+        "closingBalance": -14404,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI KAN SAI FOOTWEAR,PATHAPATNAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI NEELAMANI FOOTWEAR,PATHAPATNAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI BRUNDABATI FOOTWEAR,PATHAPATMAN",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI MANI FOOTWEAR, PATHAPATNAM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VENKET BALAJI F/W,SARABUKATA",
+        "openingBalance": -3137,
+        "closingBalance": -3137,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI VENKETESWAR BOOK & GS,KARSWADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S S ENTERPRISES,PARALAKHEMUNDI",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "T.HARI NATH,KORASAVADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "TRENDY FOOTWAR,PATHAPATANM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "YERRA SURYALINGAM SON (BATA SHOP)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Y S L ENTERPRISES,PKD",
+        "openingBalance": -2977,
+        "closingBalance": -2977,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "STAFF",
+    "ledgers": [
+      {
+        "ledgerName": "B SARAT",
+        "openingBalance": -8000,
+        "closingBalance": 0,
+        "entries": [
+          {
+            "date": "2-Apr-26",
+            "voucherNo": 1,
+            "type": "Journal",
+            "amount": 8000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "Debasish Staff",
+        "openingBalance": -710,
+        "closingBalance": -710,
+        "entries": [
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 5,
+            "type": "Payment",
+            "amount": 25000,
+            "drCr": "Dr"
+          },
+          {
+            "date": "1-Apr-26",
+            "voucherNo": 4,
+            "type": "Journal",
+            "amount": 25000,
+            "drCr": "Cr"
+          }
+        ]
+      },
+      {
+        "ledgerName": "DEPAK SAHU STAFF",
+        "openingBalance": -3500,
+        "closingBalance": -3500,
+        "entries": []
+      },
+      {
+        "ledgerName": "Dillip",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "D. NAVEEN",
+        "openingBalance": -1002,
+        "closingBalance": -1002,
+        "entries": []
+      },
+      {
+        "ledgerName": "D. RAMESH",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "G.RAJA SEKHAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "JAGANANTHA MARANGI STAFF",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KISHORE STAFF",
+        "openingBalance": -8859,
+        "closingBalance": -8859,
+        "entries": []
+      },
+      {
+        "ledgerName": "Prabhakar Sahu",
+        "openingBalance": -2259,
+        "closingBalance": -2259,
+        "entries": []
+      },
+      {
+        "ledgerName": "Prabhakar Sahu Staff",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRAFULA ,STAFF",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Prasad Trock",
+        "openingBalance": -1995,
+        "closingBalance": -1995,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAMANA STAFF",
+        "openingBalance": -1700,
+        "closingBalance": -1700,
+        "entries": []
+      },
+      {
+        "ledgerName": "RAMESH FOOT WEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SAHIL KUMAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "V.KESHORE STAFF",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Sundry Creditors",
+    "ledgers": [
+      {
+        "ledgerName": "AAGAMPOLYMERS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "AMBIKA FOOTWEAR PVT.LTD.",
+        "openingBalance": 5,
+        "closingBalance": 5,
+        "entries": []
+      },
+      {
+        "ledgerName": "ANNIMAL TRANSPORT,VIJAYAWADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ATHARV PLASTIC",
+        "openingBalance": 97772,
+        "closingBalance": 97772,
+        "entries": []
+      },
+      {
+        "ledgerName": "CUBIX FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Elastrex Polymers Pvt. Ltd.,Bengaluru",
+        "openingBalance": -0.53,
+        "closingBalance": -0.53,
+        "entries": []
+      },
+      {
+        "ledgerName": "G..C FASHION FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GOKUL FOOTWEAR PVT.LTD.",
+        "openingBalance": 3,
+        "closingBalance": 3,
+        "entries": []
+      },
+      {
+        "ledgerName": "HAPPY FEET ENTERPRISESUNIT-II",
+        "openingBalance": 31104,
+        "closingBalance": 31104,
+        "entries": []
+      },
+      {
+        "ledgerName": "HAPPY RUBBER INDUSTRIES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "J.K. PLASSTIC INDUSTRIES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "KRISHNA SALES AGENCY",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MAGNET POLYMERS",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "MARUTI PLASTICS",
+        "openingBalance": 128824,
+        "closingBalance": 128824,
+        "entries": []
+      },
+      {
+        "ledgerName": "MINI FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "M/S.SRI BRUNDABANA ENTERPRISES",
+        "openingBalance": -232629,
+        "closingBalance": -232629,
+        "entries": []
+      },
+      {
+        "ledgerName": "NAV DURGA ENTERPRISES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "NEXUS VENTURE",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragon Polymer Products (Banglore)",
+        "openingBalance": 57607,
+        "closingBalance": 57607,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragon Polymer Products ( Delhi)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragon Polymer Products (Hyderabad)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragon Polymer Products (Kottayam)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragonpolymer Products Pvt Ltd",
+        "openingBalance": 5602623.09,
+        "closingBalance": 5602623.09,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragon Polymer Products (Salem)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Paragon Polymer Products ( Weat Bengal)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "POPULAR RUBBER INDUSTRIES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "PRASAD TRANCEPORT VIJAYAWADA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Preston India Pvt. Ltd. (Bengaluru)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "R.K. TRADERS",
+        "openingBalance": 3,
+        "closingBalance": 3,
+        "entries": []
+      },
+      {
+        "ledgerName": "R R POLYPLAST PRIVATE LIMITED",
+        "openingBalance": 11640,
+        "closingBalance": 11640,
+        "entries": []
+      },
+      {
+        "ledgerName": "SALASAR BALAJEE ENTERPRISES",
+        "openingBalance": 38712,
+        "closingBalance": 38712,
+        "entries": []
+      },
+      {
+        "ledgerName": "SANTOSH KU. PATRO",
+        "openingBalance": 296000,
+        "closingBalance": 296000,
+        "entries": []
+      },
+      {
+        "ledgerName": "SHANKAR FOOTWEAR PVT. LTD.(FANCER)",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SHREE FOOTWEAR",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRG ENTERPRISES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRI SAI MANIKANTA ENTERPRISES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SUBHAM KUMAR PATRO",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "VIJAYA DURGA ENTERPRISES",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  },
+  {
+    "groupName": "Sundry Debtors",
+    "ledgers": [
+      {
+        "ledgerName": "CHANDAN FOOTWEAR,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "ESR FOOTWEAR,KORAPUT",
+        "openingBalance": -7276,
+        "closingBalance": -7276,
+        "entries": []
+      },
+      {
+        "ledgerName": "EXTIMATE BILL",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "GAYATRI CANTEN,SKLM",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "LAKSHMAN RAO,TULUG JN",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Own A/c",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "RETAL",
+        "openingBalance": -629.56,
+        "closingBalance": -629.56,
+        "entries": []
+      },
+      {
+        "ledgerName": "SHREE ENTERPRISES, KORAPUT",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "SRC BUSINESS , AMDABALASA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "Suspences",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      },
+      {
+        "ledgerName": "S.V.SHOES MART,SOMPETA",
+        "openingBalance": 0,
+        "closingBalance": 0,
+        "entries": []
+      }
+    ]
+  }
+]
